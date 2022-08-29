@@ -592,7 +592,7 @@ APPLES,"Taste: sweet, astringent"
 APPLES,Function: cooling
 APPLES,Weight: medium
 APPLES,Volume: quiet–moderate
-APPLES,"Techniques: bake, caramelize, deep-fry (e.g., as fritters), grill, poach, raw, saut�, stew"
+APPLES,"Techniques: bake, caramelize, deep-fry (e.g., as fritters), grill, poach, raw, sauté, stew"
 APPLES,allspice
 APPLES,almonds
 APPLES,apple cider or juice
@@ -863,7 +863,7 @@ AROMA,vanilla
 ARTICHOKES,Season: spring–early autumn
 ARTICHOKES,Weight: medium
 ARTICHOKES,Volume: moderate–loud
-ARTICHOKES,"Techniques: bake, boil, braise, broil, deep-fry, grill, raw, roast, saut�, steam, stew"
+ARTICHOKES,"Techniques: bake, boil, braise, broil, deep-fry, grill, raw, roast, sauté, steam, stew"
 ARTICHOKES,aioli
 ARTICHOKES,anchovies
 ARTICHOKES,arugula
@@ -963,7 +963,7 @@ ARTICHOKES,artichokes + olive oil + Parmesan cheese + white truffles
 "ARTICHOKES, JERUSALEM",Season: autumn–spring
 "ARTICHOKES, JERUSALEM",Weight: medium
 "ARTICHOKES, JERUSALEM",Volume: moderate
-"ARTICHOKES, JERUSALEM","Techniques: bake, blanche, cream, fry, roast, saut�"
+"ARTICHOKES, JERUSALEM","Techniques: bake, blanche, cream, fry, roast, sauté"
 "ARTICHOKES, JERUSALEM",anise
 "ARTICHOKES, JERUSALEM",bacon
 "ARTICHOKES, JERUSALEM",bay leaf
@@ -1010,7 +1010,7 @@ ARTICHOKES,artichokes + olive oil + Parmesan cheese + white truffles
 "ARUGULA (See also Lettuces, Bitter Greens and Chicories)",Taste: bitter
 "ARUGULA (See also Lettuces, Bitter Greens and Chicories)",Weight: light–medium
 "ARUGULA (See also Lettuces, Bitter Greens and Chicories)",Volume: moderate–loud
-"ARUGULA (See also Lettuces, Bitter Greens and Chicories)","Techniques: braise, raw, saut�, soups, wilt"
+"ARUGULA (See also Lettuces, Bitter Greens and Chicories)","Techniques: braise, raw, sauté, soups, wilt"
 "ARUGULA (See also Lettuces, Bitter Greens and Chicories)",almonds
 "ARUGULA (See also Lettuces, Bitter Greens and Chicories)",basil
 "ARUGULA (See also Lettuces, Bitter Greens and Chicories)","beans, white"
@@ -1168,7 +1168,7 @@ ASPARAGUS,asparagus + prosciutto + goat cheese + chervil
 "ASPARAGUS, WHITE",Season: spring
 "ASPARAGUS, WHITE",Weight: light
 "ASPARAGUS, WHITE",Volume: quiet–moderate
-"ASPARAGUS, WHITE","Techniques: blanch, boil, saut�, steam"
+"ASPARAGUS, WHITE","Techniques: blanch, boil, sauté, steam"
 "ASPARAGUS, WHITE","Tips: Covered to deprive it of sunlight while growing, white asparagus is lighter in flavor and"
 "ASPARAGUS, WHITE",texture than green asparagus.
 "ASPARAGUS, WHITE",butter
@@ -1432,7 +1432,7 @@ AVOCADOS,avocado + lemon + smoked trout
 BACON,Taste: salty
 BACON,Weight: medium
 BACON,Volume: moderate
-BACON,"Techniques: broil, roast, saut�"
+BACON,"Techniques: broil, roast, sauté"
 BACON,aioli
 BACON,avocados
 BACON,"beans (e.g., black, fava, green)"
@@ -1483,7 +1483,7 @@ BANANAS,"Taste: sweet, astringent"
 BANANAS,Function: cooling
 BANANAS,Weight: medium
 BANANAS,Volume: quiet
-BANANAS,"Techniques: bake, broil, caramelize, deep-fry, grill, poach, raw, saut�"
+BANANAS,"Techniques: bake, broil, caramelize, deep-fry, grill, poach, raw, sauté"
 BANANAS,Tips: Sugar enhances the flavor of bananas.
 BANANAS,allspice
 BANANAS,almonds
@@ -1724,7 +1724,7 @@ BARLEY,"vinegar, sherry"
 "BASIL, THAI",Thai basil + coconut milk + ginger
 "BASS (See also Bass, Sea, and Bass, Striped)",Weight: light
 "BASS (See also Bass, Sea, and Bass, Striped)",Volume: quiet
-"BASS (See also Bass, Sea, and Bass, Striped)","Techniques: bake, broil, deep-fry, poach, roast, saut�, steam"
+"BASS (See also Bass, Sea, and Bass, Striped)","Techniques: bake, broil, deep-fry, poach, roast, sauté, steam"
 "BASS (See also Bass, Sea, and Bass, Striped)",artichoke
 "BASS (See also Bass, Sea, and Bass, Striped)",bay leaf
 "BASS (See also Bass, Sea, and Bass, Striped)",carrots
@@ -1812,7 +1812,7 @@ BARLEY,"vinegar, sherry"
 "BASS, SEA",Season: winter–spring
 "BASS, SEA",Weight: medium
 "BASS, SEA",Volume: quiet
-"BASS, SEA","Techniques: bake, broil, ceviche, deep-fry, grill, pan roast, poach, roast, saut�, steam"
+"BASS, SEA","Techniques: bake, broil, ceviche, deep-fry, grill, pan roast, poach, roast, sauté, steam"
 "BASS, SEA",almonds
 "BASS, SEA",anchovies
 "BASS, SEA",artichokes
@@ -1897,7 +1897,7 @@ BARLEY,"vinegar, sherry"
 "BASS, SEA",sea bass + mushrooms + sesame seeds + shrimp
 "BASS, STRIPED",Weight: medium
 "BASS, STRIPED",Volume: quiet
-"BASS, STRIPED","Techniques: bake, braise, broil, deep-fry, grill, pan roast, poach, raw, roast, saut�, sear, steam"
+"BASS, STRIPED","Techniques: bake, braise, broil, deep-fry, grill, pan roast, poach, raw, roast, sauté, sear, steam"
 "BASS, STRIPED",artichokes
 "BASS, STRIPED",bacon
 "BASS, STRIPED",bay leaf
@@ -2286,7 +2286,7 @@ BEANS (See also specific beans below),vinegar
 "BEANS, GREEN",Season: summer–autumn
 "BEANS, GREEN",Weight: light–medium
 "BEANS, GREEN",Volume: moderate
-"BEANS, GREEN","Techniques: boil, grill, saut�, steam, stir-fry"
+"BEANS, GREEN","Techniques: boil, grill, sauté, steam, stir-fry"
 "BEANS, GREEN",almonds
 "BEANS, GREEN",anchovies
 "BEANS, GREEN",bacon
@@ -2810,7 +2810,7 @@ BEEF,beef + porcini mushrooms + red wine
 "BEEF, ROAST",soy sauce
 "BEEF, ROAST",thyme
 "BEEF, ROAST","wine, red"
-"BEEF, ROUND","Techniques: grill, saut�, stir-fry"
+"BEEF, ROUND","Techniques: grill, sauté, stir-fry"
 "BEEF, ROUND","bell peppers: red, green"
 "BEEF, ROUND",chili powder
 "BEEF, ROUND",cilantro
@@ -2899,7 +2899,7 @@ BEEF,beef + porcini mushrooms + red wine
 "BEEF, SHORT RIBS",short ribs + horseradish + lemon + parsley
 "BEEF, SHORT RIBS",short ribs + onions + potatoes + red wine
 "BEEF, SHORT RIBS",short ribs + potatoes + root vegetables
-"BEEF, STEAK","Techniques: broil, grill, saut�"
+"BEEF, STEAK","Techniques: broil, grill, sauté"
 "BEEF, STEAK",aligot (French garlic-cheesy pureed potatoes)
 "BEEF, STEAK",allspice
 "BEEF, STEAK",arugula
@@ -2966,7 +2966,7 @@ BEEF,beef + porcini mushrooms + red wine
 "BEEF, STEAK",steak + horseradish + mustard + potatoes
 "BEEF, STEAK",steak + shallots + red wine
 "BEEF, STEAK: FILET MIGNON",AKA:Beef Tenderloin
-"BEEF, STEAK: FILET MIGNON","Techniques: broil, grill, saut�"
+"BEEF, STEAK: FILET MIGNON","Techniques: broil, grill, sauté"
 "BEEF, STEAK: FILET MIGNON",bacon
 "BEEF, STEAK: FILET MIGNON","butter, unsalted"
 "BEEF, STEAK: FILET MIGNON",cognac
@@ -2989,7 +2989,7 @@ BEEF,beef + porcini mushrooms + red wine
 "BEEF, STEAK: FILET MIGNON",thyme
 "BEEF, STEAK: FILET MIGNON","vinegar, balsamic"
 "BEEF, STEAK: FILET MIGNON","wine: dry red, Madeira"
-"BEEF, STEAK: FLANK","Techniques: broil, grill, saut�, stir-fry"
+"BEEF, STEAK: FLANK","Techniques: broil, grill, sauté, stir-fry"
 "BEEF, STEAK: FLANK","chile peppers, esp. chipotle or jalapeño"
 "BEEF, STEAK: FLANK",cilantro
 "BEEF, STEAK: FLANK",cumin
@@ -3008,7 +3008,7 @@ BEEF,beef + porcini mushrooms + red wine
 "BEEF, STEAK: FLANK",sugar
 "BEEF, STEAK: FLANK",thyme
 "BEEF, STEAK: FLANK","vinegar, balsamic"
-"BEEF, STEAK: HANGER","Techniques: broil, grill, saut�"
+"BEEF, STEAK: HANGER","Techniques: broil, grill, sauté"
 "BEEF, STEAK: HANGER",bell peppers
 "BEEF, STEAK: HANGER",brandy
 "BEEF, STEAK: HANGER",celery root
@@ -3023,7 +3023,7 @@ BEEF,beef + porcini mushrooms + red wine
 "BEEF, STEAK: HANGER",soy sauce
 "BEEF, STEAK: HANGER",thyme
 "BEEF, STEAK: HANGER","wine, red"
-"BEEF, STEAK: RIB EYE","Techniques: broil, grill, saut�, stir-fry"
+"BEEF, STEAK: RIB EYE","Techniques: broil, grill, sauté, stir-fry"
 "BEEF, STEAK: RIB EYE",garlic
 "BEEF, STEAK: RIB EYE","mushrooms, porcini, dried"
 "BEEF, STEAK: RIB EYE",olive oil
@@ -3032,7 +3032,7 @@ BEEF,beef + porcini mushrooms + red wine
 "BEEF, STEAK: RIB EYE",red pepper flakes
 "BEEF, STEAK: RIB EYE",rosemary
 "BEEF, STEAK: RIB EYE","vinegar: balsamic, red wine"
-"BEEF, STEAK: SKIRT","Techniques: broil, grill, saut�"
+"BEEF, STEAK: SKIRT","Techniques: broil, grill, sauté"
 "BEEF, STEAK: SKIRT",allspice
 "BEEF, STEAK: SKIRT",anchovies
 "BEEF, STEAK: SKIRT",butter
@@ -3205,7 +3205,7 @@ BELL PEPPERS,Season: summer–autumn
 BELL PEPPERS,Taste: bitter–sweet (from unripe (green) to ripe (yellow to red))
 BELL PEPPERS,Weight: light–medium
 BELL PEPPERS,Volume: moderate–loud
-BELL PEPPERS,"Techniques: bake, broil, grill, roast, saut�, steam, stew, stir-fry, stuff"
+BELL PEPPERS,"Techniques: bake, broil, grill, roast, sauté, steam, stew, stir-fry, stuff"
 BELL PEPPERS,anchovies
 BELL PEPPERS,anise
 BELL PEPPERS,arugula
@@ -3535,7 +3535,7 @@ BLUEBERRIES,blueberries + mascarpone + peaches
 BLUEFISH,Season: spring–early autumn
 BLUEFISH,Weight: medium
 BLUEFISH,Volume: loud
-BLUEFISH,"Techniques: bake, blacken, braise, broil, grill, pan roast, poach, saut�"
+BLUEFISH,"Techniques: bake, blacken, braise, broil, grill, pan roast, poach, sauté"
 BLUEFISH,"chile peppers, chipotle"
 BLUEFISH,cilantro
 BLUEFISH,lemon
@@ -3731,7 +3731,7 @@ BROCCOLI,"Botanical relatives: Brussels sprouts, cabbage, cauliflower, collard g
 BROCCOLI,Function: cooling
 BROCCOLI,Weight: medium
 BROCCOLI,Volume: moderate
-BROCCOLI,"Techniques: boil, deep-fry, saut�, steam, stir-fry"
+BROCCOLI,"Techniques: boil, deep-fry, sauté, steam, stir-fry"
 BROCCOLI,almonds
 BROCCOLI,anchovies
 BROCCOLI,basil
@@ -3781,7 +3781,7 @@ BROCCOLI,broccoli + garlic + tarragon
 BROCCOLINI,Season: year-round
 BROCCOLINI,Weight: light–medium
 BROCCOLINI,Volume: quiet–moderate
-BROCCOLINI,"Techniques: blanch, raw, saut�, steam, stir-fry"
+BROCCOLINI,"Techniques: blanch, raw, sauté, steam, stir-fry"
 BROCCOLINI,almonds
 BROCCOLINI,basil
 BROCCOLINI,"cheese: feta, Parmesan"
@@ -3799,7 +3799,7 @@ BROCCOLI RABE,Season: late autumn–spring
 BROCCOLI RABE,Taste: bitter
 BROCCOLI RABE,Weight: medium–heavy
 BROCCOLI RABE,Volume: moderate–loud
-BROCCOLI RABE,"Techniques: boil, saut�, steam, stir-fry"
+BROCCOLI RABE,"Techniques: boil, sauté, steam, stir-fry"
 BROCCOLI RABE,almonds
 BROCCOLI RABE,anchovies
 BROCCOLI RABE,basil
@@ -3839,7 +3839,7 @@ BRUSSELS SPROUTS,Taste: bitter
 BRUSSELS SPROUTS,"Botanical relatives: broccoli, cabbage, cauliflower, collard greens, kale, kohlrabi"
 BRUSSELS SPROUTS,Weight: moderate–heavy
 BRUSSELS SPROUTS,Volume: moderate–loud
-BRUSSELS SPROUTS,"Techniques: boil, braise, saut�, simmer, steam, stew, stir-fry"
+BRUSSELS SPROUTS,"Techniques: boil, braise, sauté, simmer, steam, stew, stir-fry"
 BRUSSELS SPROUTS,almonds
 BRUSSELS SPROUTS,apple cider
 BRUSSELS SPROUTS,apples and apple juice or cider
@@ -3976,7 +3976,7 @@ CABBAGE,"Botanical relatives: broccoli, Brussels sprouts, cauliflower, collard g
 CABBAGE,Function: cooling
 CABBAGE,Weight: medium
 CABBAGE,Volume: moderate
-CABBAGE,"Techniques: boil, braise, raw, saut�, steam, stir-fry"
+CABBAGE,"Techniques: boil, braise, raw, sauté, steam, stir-fry"
 CABBAGE,apples and apple cider
 CABBAGE,BACON
 CABBAGE,bay leaf
@@ -4057,7 +4057,7 @@ CABBAGE,"wine, white (e.g., Riesling)"
 "CABBAGE, NAPA",Season: year-round
 "CABBAGE, NAPA",Weight: light
 "CABBAGE, NAPA",Volume: quiet
-"CABBAGE, NAPA","Techniques: bake, braise, grill, marinate (e.g., kimchee), raw, saut�, stew, stir-fry"
+"CABBAGE, NAPA","Techniques: bake, braise, grill, marinate (e.g., kimchee), raw, sauté, stew, stir-fry"
 "CABBAGE, NAPA",carrots
 "CABBAGE, NAPA",cashews
 "CABBAGE, NAPA",chicken
@@ -4463,7 +4463,7 @@ CARROTS,"Botanical relatives: celery, chervil, dill, fennel, parsley, parsnips"
 CARROTS,Function: cooling
 CARROTS,Weight: medium
 CARROTS,Volume: quiet–moderate
-CARROTS,"Techniques: boil, braise, grill, raw, roast, saut�, simmer, steam, stir-fry"
+CARROTS,"Techniques: boil, braise, grill, raw, roast, sauté, simmer, steam, stir-fry"
 CARROTS,allspice
 CARROTS,almonds
 CARROTS,anise hyssop
@@ -4601,7 +4601,7 @@ CASHEWS,vanilla
 CASHEWS,"vegetables, esp. Indian"
 CATFISH,Weight: medium
 CATFISH,Volume: quiet
-CATFISH,"Techniques: broil, deep-fry, grill, poach, saut�, steam, stir-fry"
+CATFISH,"Techniques: broil, deep-fry, grill, poach, sauté, steam, stir-fry"
 CATFISH,avocados
 CATFISH,bacon
 CATFISH,basil
@@ -4640,7 +4640,7 @@ CAULIFLOWER,"Botanical relatives: broccoli, Brussels sprouts, cabbage, collard g
 CAULIFLOWER,Function: cooling
 CAULIFLOWER,Weight: medium
 CAULIFLOWER,Volume: moderate
-CAULIFLOWER,"Techniques: boil, braise, deep-fry, gratin, puree, raw, roast, saut�, simmer, steam"
+CAULIFLOWER,"Techniques: boil, braise, deep-fry, gratin, puree, raw, roast, sauté, simmer, steam"
 CAULIFLOWER,anchovies
 CAULIFLOWER,apples
 CAULIFLOWER,bay leaf
@@ -4790,7 +4790,7 @@ CELERY,Botanical relatives: carrots
 CELERY,Function: cooling
 CELERY,Weight: light
 CELERY,Volume: moderate–loud
-CELERY,"Techniques: boil, braise, cream, gratiné, raw, saut�, steam, stir-fry"
+CELERY,"Techniques: boil, braise, cream, gratiné, raw, sauté, steam, stir-fry"
 CELERY,basil
 CELERY,bay leaf
 CELERY,beets
@@ -4984,7 +4984,7 @@ CHARD,Season: year-round
 CHARD,Taste: bitter
 CHARD,Weight: medium–heavy
 CHARD,Volume: moderate–loud
-CHARD,"Techniques: boil, braise, parboil, saut�, steam, stir-fry"
+CHARD,"Techniques: boil, braise, parboil, sauté, steam, stir-fry"
 CHARD,anchovies
 CHARD,bacon
 CHARD,basil
@@ -5838,7 +5838,7 @@ CHESTNUTS,chestnuts + orange + pear
 CHICKEN,Function: heating
 CHICKEN,Weight: medium
 CHICKEN,Volume: quiet
-CHICKEN,"Techniques: bake, braise, broil, deep-fry, grill, poach, roast, saut�, steam, stew, stir-fry"
+CHICKEN,"Techniques: bake, braise, broil, deep-fry, grill, poach, roast, sauté, steam, stew, stir-fry"
 CHICKEN,allspice
 CHICKEN,almonds
 CHICKEN,anise
@@ -6122,7 +6122,7 @@ CHILE PEPPERS,Season: summer
 CHILE PEPPERS,Taste: hot
 CHILE PEPPERS,Weight: light–medium (from fresh to dried)
 CHILE PEPPERS,Volume: moderate–very loud (from dried to fresh)
-CHILE PEPPERS,"Techniques: raw, roast, saut�"
+CHILE PEPPERS,"Techniques: raw, roast, sauté"
 CHILE PEPPERS,Tips: Add at the end of the cooking process. The spiciness of chile peppers suggests “false heat.”
 CHILE PEPPERS,Asian cuisine
 CHILE PEPPERS,avocado
@@ -6568,7 +6568,7 @@ chocolate and cocoa,chocolate + rum + vanilla
 CHORIZO (See also Sausages),"Taste: salty, spicy"
 CHORIZO (See also Sausages),Weight: medium–heavy
 CHORIZO (See also Sausages),Volume: moderate–loud
-CHORIZO (See also Sausages),"Techniques: saut�, stew"
+CHORIZO (See also Sausages),"Techniques: sauté, stew"
 CHORIZO (See also Sausages),apples
 CHORIZO (See also Sausages),bay leaf
 CHORIZO (See also Sausages),beans
@@ -6806,7 +6806,7 @@ CLAMS,Season: summer
 CLAMS,Taste: salty
 CLAMS,Weight: light
 CLAMS,Volume: quiet–moderate
-CLAMS,"Techniques: bake, broil, deep-fry, grill, roast, saut�, steam, stew"
+CLAMS,"Techniques: bake, broil, deep-fry, grill, roast, sauté, steam, stew"
 CLAMS,aioli
 CLAMS,allspice
 CLAMS,anchovy
@@ -7088,7 +7088,7 @@ COCONUT AND COCONUT MILK,coconut + orange + vanilla
 COCONUT AND COCONUT MILK,coconut milk + beef + ginger
 COD,Weight: medium
 COD,Volume: quiet
-COD,"Techniques: bake, boil, broil, cakes, deep-fry, fry, grill, poach, roast, saut�, steam"
+COD,"Techniques: bake, boil, broil, cakes, deep-fry, fry, grill, poach, roast, sauté, steam"
 COD,anchovies
 COD,bacon
 COD,basil
@@ -7422,7 +7422,7 @@ CORN,Taste: sweet
 CORN,Function: heating
 CORN,Weight: medium
 CORN,Volume: moderate
-CORN,"Techniques: boil, grill, roast, saut�, steam"
+CORN,"Techniques: boil, grill, roast, sauté, steam"
 CORN,bacon
 CORN,"BASIL: sweet, lemon"
 CORN,bay leaf
@@ -7699,7 +7699,7 @@ CRAB,crab + saffron + shallots
 "CRAB, SOFT-SHELL",Taste: sweet
 "CRAB, SOFT-SHELL",Weight: light–medium
 "CRAB, SOFT-SHELL",Volume: quiet–moderate
-"CRAB, SOFT-SHELL","Techniques: deep-fry, grill, pan roast, saut�, tempura"
+"CRAB, SOFT-SHELL","Techniques: deep-fry, grill, pan roast, sauté, tempura"
 "CRAB, SOFT-SHELL",almonds
 "CRAB, SOFT-SHELL",arrowroot
 "CRAB, SOFT-SHELL",arugula
@@ -7971,7 +7971,7 @@ CUCUMBERS,"Taste: sweet, astringent"
 CUCUMBERS,Function: cooling
 CUCUMBERS,Weight: light
 CUCUMBERS,Volume: quiet
-CUCUMBERS,"Techniques: pickle, raw, salads, saut�, soups"
+CUCUMBERS,"Techniques: pickle, raw, salads, sauté, soups"
 CUCUMBERS,allspice
 CUCUMBERS,"bell peppers, esp. green"
 CUCUMBERS,basil
@@ -8481,7 +8481,7 @@ DILL,dill + cucumber + salmon
 DUCK,Season: autumn
 DUCK,Weight: heavy
 DUCK,Volume: moderate–loud
-DUCK,"Techniques: braise (esp. legs), grill (esp. breast), roast, saut�, stir-fry"
+DUCK,"Techniques: braise (esp. legs), grill (esp. breast), roast, sauté, stir-fry"
 DUCK,allspice
 DUCK,"APPLES, esp. Granny Smith"
 DUCK,apricots (sauce)
@@ -8698,7 +8698,7 @@ EGGPLANT,Season: summer
 EGGPLANT,Taste: bitter
 EGGPLANT,Weight: medium–heavy
 EGGPLANT,Volume: moderate
-EGGPLANT,"Techniques: bake, boil, braise, broil, deep-fry, grill, roast, saut�, steam, stir-fry, stuff"
+EGGPLANT,"Techniques: bake, boil, braise, broil, deep-fry, grill, roast, sauté, steam, stir-fry, stuff"
 EGGPLANT,allspice
 EGGPLANT,anchovies
 EGGPLANT,artichokes
@@ -9073,7 +9073,7 @@ FENNEL,Season: year-round
 FENNEL,Taste: sweet
 FENNEL,Weight: light
 FENNEL,Volume: quiet
-FENNEL,"Techniques: boil, braise, fry, grill, raw, roast, saut�, steam"
+FENNEL,"Techniques: boil, braise, fry, grill, raw, roast, sauté, steam"
 FENNEL,almonds
 FENNEL,anise
 FENNEL,apples
@@ -9308,7 +9308,7 @@ FIDDLEHEAD FERNS,Taste: bitter
 FIDDLEHEAD FERNS,Weight: medium
 FIDDLEHEAD FERNS,Volume: moderate–loud
 FIDDLEHEAD FERNS,Tips: Always serve cooked
-FIDDLEHEAD FERNS,"Techniques: blanch, boil, saut�, steam"
+FIDDLEHEAD FERNS,"Techniques: blanch, boil, sauté, steam"
 FIDDLEHEAD FERNS,"American cuisine, esp. New England"
 FIDDLEHEAD FERNS,asparagus
 FIDDLEHEAD FERNS,bacon
@@ -9561,7 +9561,7 @@ FIVE-SPICE POWDER,cinnamon + cloves + fennel seeds + star anise + Szechuan peppe
 FLOUNDER,Season: summer
 FLOUNDER,Weight: light
 FLOUNDER,Volume: quiet
-FLOUNDER,"Techniques: bake, broil, deep-fry, fry, poach, saut�, steam, stir-fry"
+FLOUNDER,"Techniques: bake, broil, deep-fry, fry, poach, sauté, steam, stir-fry"
 FLOUNDER,almonds
 FLOUNDER,basil
 FLOUNDER,bread crumbs or cracker crumbs
@@ -9600,7 +9600,7 @@ FLOUNDER,flounder + konbu seaweed + shiso
 FOIE GRAS,Season: autumn
 FOIE GRAS,Weight: heavy
 FOIE GRAS,Volume: moderate
-FOIE GRAS,"Techniques: braise, saut�, terrine"
+FOIE GRAS,"Techniques: braise, sauté, terrine"
 FOIE GRAS,allspice
 FOIE GRAS,APPLES
 FOIE GRAS,apricots
@@ -9661,7 +9661,7 @@ FRENCH CUISINE,poultry
 FRENCH CUISINE,roasted meats
 FRENCH CUISINE,SAUCES
 FRENCH CUISINE,sausages
-FRENCH CUISINE,saut�ed dishes
+FRENCH CUISINE,sautéed dishes
 FRENCH CUISINE,seafood
 FRENCH CUISINE,shallots
 FRENCH CUISINE,spirits
@@ -9891,7 +9891,7 @@ GARLIC,"Botanical relatives: chives, leeks, onions, shallots"
 GARLIC,Function: heating
 GARLIC,Weight: light–medium
 GARLIC,Volume: moderate (esp. cooked)–loud (esp. raw)
-GARLIC,"Techniques: grill, raw, roast, saut�"
+GARLIC,"Techniques: grill, raw, roast, sauté"
 GARLIC,almonds
 GARLIC,anchovies
 GARLIC,bacon
@@ -10461,7 +10461,7 @@ GREENS (See also specific greens),Season: year-round
 GREENS (See also specific greens),Taste: bitter
 GREENS (See also specific greens),Weight: medium–heavy
 GREENS (See also specific greens),Volume: moderate–loud
-GREENS (See also specific greens),"Techniques: blanch, raw, saut�, steam"
+GREENS (See also specific greens),"Techniques: blanch, raw, sauté, steam"
 GREENS (See also specific greens),allspice
 GREENS (See also specific greens),arugula
 GREENS (See also specific greens),bacon
@@ -10542,7 +10542,7 @@ GREENS (See also specific greens),"VINEGAR: balsamic, red wine"
 "GREENS, DANDELION",Taste: bitter
 "GREENS, DANDELION",Weight: medium
 "GREENS, DANDELION",Volume: moderate
-"GREENS, DANDELION","Techniques: raw, saut�, steam"
+"GREENS, DANDELION","Techniques: raw, sauté, steam"
 "GREENS, DANDELION",anchovies
 "GREENS, DANDELION",bacon
 "GREENS, DANDELION",garlic
@@ -10635,7 +10635,7 @@ GRITS,Southern cuisine (American)
 GROUPER,Season: spring
 GROUPER,Weight: medium
 GROUPER,Volume: quiet
-GROUPER,"Techniques: bake, braise, broil, deep-fry, grill, poach, roast, saut�, steam, stir-fry"
+GROUPER,"Techniques: bake, braise, broil, deep-fry, grill, poach, roast, sauté, steam, stir-fry"
 GROUPER,almonds
 GROUPER,anchovies
 GROUPER,artichokes
@@ -10720,7 +10720,7 @@ GUAVAS,"vinegar, white"
 HALIBUT,Season: spring–summer
 HALIBUT,Weight: medium
 HALIBUT,Volume: quiet
-HALIBUT,"Techniques: bake, braise, broil, grill, pan roast, poach, roast, saut�, steam"
+HALIBUT,"Techniques: bake, braise, broil, grill, pan roast, poach, roast, sauté, steam"
 HALIBUT,aioli
 HALIBUT,almonds
 HALIBUT,anchovies
@@ -10827,7 +10827,7 @@ HALIBUT,halibut + scallions + white wine
 HAM,Taste: salty
 HAM,Weight: medium
 HAM,Volume: moderate–loud (depending on smokiness)
-HAM,"Techniques: bake, saut�"
+HAM,"Techniques: bake, sauté"
 HAM,allspice
 HAM,apples and applesauce
 HAM,arugula
@@ -11607,7 +11607,7 @@ KALE,"Taste: bitter, sweet"
 KALE,"Botanical relatives: broccoli, Brussels sprouts, cabbage, cauliflower, collard greens, kohlrabi"
 KALE,Weight: heavy
 KALE,Volume: moderate
-KALE,"Techniques: blanch, boil, braise, saut�, steam, stir-fry"
+KALE,"Techniques: blanch, boil, braise, sauté, steam, stir-fry"
 KALE,bay leaf
 KALE,"bell peppers, red"
 KALE,butter
@@ -11952,7 +11952,7 @@ LAMB,lamb + mint + parsley
 LAMB,lamb + mint + peas + risotto
 LAMB,lamb + mint + ricotta cheese
 LAMB,lamb + mint + tomatoes
-"LAMB, CHOPS","Techniques: broil, grill, saut�"
+"LAMB, CHOPS","Techniques: broil, grill, sauté"
 "LAMB, CHOPS",anchovies
 "LAMB, CHOPS","beans (e.g., fava)"
 "LAMB, CHOPS","bell peppers, red"
@@ -12839,7 +12839,7 @@ LIMES,lime + strawberries + tequila
 "LIVER, CALF'S",Taste: bitter
 "LIVER, CALF'S",Weight: medium–heavy
 "LIVER, CALF'S",Volume: moderate–loud
-"LIVER, CALF'S","Techniques: braise, broil, grill, saut�"
+"LIVER, CALF'S","Techniques: braise, broil, grill, sauté"
 "LIVER, CALF'S","Tips: Cook briefly, one minute per side."
 "LIVER, CALF'S",apples
 "LIVER, CALF'S",arugula
@@ -12893,7 +12893,7 @@ LIMES,lime + strawberries + tequila
 "LIVER, CALF'S",calf's liver + figs + onions + red wine vinegar
 "LIVER, CHICKEN",Weight: medium
 "LIVER, CHICKEN",Volume: moderate–loud
-"LIVER, CHICKEN","Techniques: grill, saut�"
+"LIVER, CHICKEN","Techniques: grill, sauté"
 "LIVER, CHICKEN",anchovies
 "LIVER, CHICKEN",apples
 "LIVER, CHICKEN",bacon
@@ -12934,7 +12934,7 @@ LOBSTER,Season: summer–autumn
 LOBSTER,Taste: sweet
 LOBSTER,Weight: light–medium
 LOBSTER,Volume: quiet–medium
-LOBSTER,"Techniques: bake, boil, broil, grill, pan roast, poach, roast, saut�, steam"
+LOBSTER,"Techniques: bake, boil, broil, grill, pan roast, poach, roast, sauté, steam"
 LOBSTER,anchovies
 LOBSTER,apples
 LOBSTER,artichokes
@@ -13367,7 +13367,7 @@ MACE,mâche + oranges + pistachios + pomegranates
 MACKEREL,Season: summer–autumn
 MACKEREL,Weight: light
 MACKEREL,Volume: loud
-MACKEREL,"Techniques: braise, broil, grill, marinate, poach, saut�, sear"
+MACKEREL,"Techniques: braise, broil, grill, marinate, poach, sauté, sear"
 MACKEREL,apples
 MACKEREL,artichokes
 MACKEREL,bay leaf
@@ -13436,7 +13436,7 @@ MACKEREL,mackerel + onions + thyme
 MAHI MAHI,Taste: sweet
 MAHI MAHI,Weight: medium–heavy
 MAHI MAHI,Volume: quiet
-MAHI MAHI,"Techniques: bake, broil, deep-fry, grill, poach, saut�, steam, stir-fry"
+MAHI MAHI,"Techniques: bake, broil, deep-fry, grill, poach, sauté, steam, stir-fry"
 MAHI MAHI,avocado
 MAHI MAHI,cabbage
 MAHI MAHI,cilantro
@@ -14261,7 +14261,7 @@ MOLASSES,walnuts
 MONKFISH (See also Fish),Season: autumn–winter
 MONKFISH (See also Fish),Weight: medium
 MONKFISH (See also Fish),Volume: quiet–moderate
-MONKFISH (See also Fish),"Techniques: braise, broil, grill, poach, roast, saut�, stew"
+MONKFISH (See also Fish),"Techniques: braise, broil, grill, poach, roast, sauté, stew"
 MONKFISH (See also Fish),aioli
 MONKFISH (See also Fish),apples
 MONKFISH (See also Fish),"apricots, dried"
@@ -14408,7 +14408,7 @@ MOROCCAN CUISINE,phyllo dough + honey + sesame seeds
 MUSHROOMS (See also specific mushrooms),Season: late spring–autumn
 MUSHROOMS (See also specific mushrooms),Weight: light–medium
 MUSHROOMS (See also specific mushrooms),Volume: quiet–moderate
-MUSHROOMS (See also specific mushrooms),"Techniques: bake, broil, deep-fry, grill, pan roast, raw (e.g., in salads), roast, saut�, soup, steam,"
+MUSHROOMS (See also specific mushrooms),"Techniques: bake, broil, deep-fry, grill, pan roast, raw (e.g., in salads), roast, sauté, soup, steam,"
 MUSHROOMS (See also specific mushrooms),stew
 MUSHROOMS (See also specific mushrooms),almonds
 MUSHROOMS (See also specific mushrooms),asparagus
@@ -14511,7 +14511,7 @@ MUSHROOMS (See also specific mushrooms),mushrooms + garlic + shallots
 "MUSHROOMS, CHANTERELLES",Season: spring–autumn
 "MUSHROOMS, CHANTERELLES",Weight: light–medium
 "MUSHROOMS, CHANTERELLES",Volume: quiet–moderate
-"MUSHROOMS, CHANTERELLES","Techniques: bake, saut�"
+"MUSHROOMS, CHANTERELLES","Techniques: bake, sauté"
 "MUSHROOMS, CHANTERELLES",bay leaf
 "MUSHROOMS, CHANTERELLES","butter, unsalted"
 "MUSHROOMS, CHANTERELLES",chard
@@ -14563,7 +14563,7 @@ MUSHROOMS (See also specific mushrooms),mushrooms + garlic + shallots
 "MUSHROOMS, MATSUTAKE",Season: autumn
 "MUSHROOMS, MATSUTAKE",Weight: medium
 "MUSHROOMS, MATSUTAKE",Volume: loud
-"MUSHROOMS, MATSUTAKE","Techniques: braise, fry, grill, saut�, simmer, steam, stir-fry"
+"MUSHROOMS, MATSUTAKE","Techniques: braise, fry, grill, sauté, simmer, steam, stir-fry"
 "MUSHROOMS, MATSUTAKE",butter
 "MUSHROOMS, MATSUTAKE","cabbage, savoy"
 "MUSHROOMS, MATSUTAKE",chicken
@@ -14653,7 +14653,7 @@ MUSHROOMS (See also specific mushrooms),mushrooms + garlic + shallots
 "MUSHROOMS, PORCINI",Season: late spring–early autumn
 "MUSHROOMS, PORCINI",Weight: light–medium
 "MUSHROOMS, PORCINI",Volume: quiet–moderate
-"MUSHROOMS, PORCINI","Techniques: grill, parboil, roast, saut�, stew"
+"MUSHROOMS, PORCINI","Techniques: grill, parboil, roast, sauté, stew"
 "MUSHROOMS, PORCINI",almonds
 "MUSHROOMS, PORCINI",arugula
 "MUSHROOMS, PORCINI",bacon
@@ -14721,7 +14721,7 @@ MUSHROOMS (See also specific mushrooms),mushrooms + garlic + shallots
 "MUSHROOMS, PORTOBELLO",Season: year-round
 "MUSHROOMS, PORTOBELLO",Weight: medium–heavy
 "MUSHROOMS, PORTOBELLO",Volume: moderate
-"MUSHROOMS, PORTOBELLO","Techniques: broil, grill, roast, saut�, stuff"
+"MUSHROOMS, PORTOBELLO","Techniques: broil, grill, roast, sauté, stuff"
 "MUSHROOMS, PORTOBELLO",Tips: Gets firmer with longer cooking.
 "MUSHROOMS, PORTOBELLO","cheese: manchego, Parmesan, ricotta"
 "MUSHROOMS, PORTOBELLO",crème fraîche
@@ -14739,7 +14739,7 @@ MUSHROOMS (See also specific mushrooms),mushrooms + garlic + shallots
 "MUSHROOMS, PORTOBELLO",portobello mushrooms + polenta + spinach
 "MUSHROOMS, SHIITAKE",Weight: medium
 "MUSHROOMS, SHIITAKE",Volume: moderate
-"MUSHROOMS, SHIITAKE","Techniques: grill, saut�, simmer, stir-fry"
+"MUSHROOMS, SHIITAKE","Techniques: grill, sauté, simmer, stir-fry"
 "MUSHROOMS, SHIITAKE",anchovies
 "MUSHROOMS, SHIITAKE",asparagus
 "MUSHROOMS, SHIITAKE",bacon
@@ -14981,7 +14981,7 @@ NECTARINES (See also Peaches),Season: late spring–early autumn
 NECTARINES (See also Peaches),Taste: sweet
 NECTARINES (See also Peaches),Weight: light–medium
 NECTARINES (See also Peaches),Volume: moderate
-NECTARINES (See also Peaches),"Techniques: bake, broil, grill, poach, raw, saut�"
+NECTARINES (See also Peaches),"Techniques: bake, broil, grill, poach, raw, sauté"
 NECTARINES (See also Peaches),allspice
 NECTARINES (See also Peaches),"almonds, esp. toasted"
 NECTARINES (See also Peaches),apricots
@@ -15316,7 +15316,7 @@ OCTOPUS,octopus + sake + sea salt
 "OIL, ALMOND","vinegar, champagne"
 "OIL, AVOCADO",Weight: light
 "OIL, AVOCADO",Volume: quiet
-"OIL, AVOCADO","Techniques: emulsify, fry, grill, raw, roast, salads, saut�, stir-fry"
+"OIL, AVOCADO","Techniques: emulsify, fry, grill, raw, roast, salads, sauté, stir-fry"
 "OIL, AVOCADO",arugula
 "OIL, AVOCADO",asparagus
 "OIL, AVOCADO",avocados
@@ -15353,16 +15353,16 @@ OCTOPUS,octopus + sake + sea salt
 "OIL, CANOLA",Taste: neutral
 "OIL, CANOLA",Weight: light
 "OIL, CANOLA",Volume: quiet
-"OIL, CANOLA","Techniques: bake, saut�"
+"OIL, CANOLA","Techniques: bake, sauté"
 "OIL, CANOLA",salads and salad dressings
 "OIL, GRAPESEED",Taste: neutral
 "OIL, GRAPESEED",Weight: light
 "OIL, GRAPESEED",Volume: quiet
-"OIL, GRAPESEED","Techniques: fry, raw, saut�"
+"OIL, GRAPESEED","Techniques: fry, raw, sauté"
 "OIL, GRAPESEED",coconut
 "OIL, GRAPESEED",marinades
 "OIL, GRAPESEED",salads and salad dressings
-"OIL, GRAPESEED",saut�ed dishes
+"OIL, GRAPESEED",sautéed dishes
 "OIL, GRAPESEED",vinegar
 "OIL, HAZELNUT",Weight: medium–heavy
 "OIL, HAZELNUT",Volume: moderate–loud
@@ -15545,7 +15545,7 @@ OKRA,Season: summer–autumn
 OKRA,Function: cooling
 OKRA,Weight: medium–heavy
 OKRA,Volume: moderate
-OKRA,"Techniques: boil, braise, deep-fry, fry, grill, saut�, steam, stew"
+OKRA,"Techniques: boil, braise, deep-fry, fry, grill, sauté, steam, stew"
 OKRA,"bell peppers, esp. red"
 OKRA,butter
 OKRA,cayenne
@@ -15671,7 +15671,7 @@ ONIONS,"Botanical relatives: chives, garlic, leeks, shallots"
 ONIONS,Function: heating
 ONIONS,Weight: light–medium
 ONIONS,Volume: moderate–loud
-ONIONS,"Techniques: bake, boil, braise, deep-fry, fry, grill, roast, saut�, stir-fry"
+ONIONS,"Techniques: bake, boil, braise, deep-fry, fry, grill, roast, sauté, stir-fry"
 ONIONS,"Tips: Onions increase appetite, and go with virtually all savory foods."
 ONIONS,anchovies
 ONIONS,apples
@@ -16088,7 +16088,7 @@ OYSTERS,Season: autumn–spring
 OYSTERS,Taste: salty
 OYSTERS,"Weight: light–heavy (e.g., light Kumamotos to heavy Gulf Coast oysters)"
 OYSTERS,Volume: quiet–moderate
-OYSTERS,"Techniques: bake, broil, deep-fry, grill, poach, raw, roast, saut�, steam"
+OYSTERS,"Techniques: bake, broil, deep-fry, grill, poach, raw, roast, sauté, steam"
 OYSTERS,aioli
 OYSTERS,apples
 OYSTERS,asparagus
@@ -16210,7 +16210,7 @@ PAPAYAS,Season: summer–autumn
 PAPAYAS,Taste: sweet
 PAPAYAS,Weight: medium
 PAPAYAS,Volume: moderate
-PAPAYAS,"Techniques: bake, grill, raw, saut�"
+PAPAYAS,"Techniques: bake, grill, raw, sauté"
 PAPAYAS,bananas
 PAPAYAS,"beverages (e.g., smoothies)"
 PAPAYAS,caramel
@@ -16729,7 +16729,7 @@ PEACHES,Taste: sweet
 PEACHES,Function: heating
 PEACHES,Weight: medium
 PEACHES,Volume: moderate
-PEACHES,"Techniques: bake, broil, grill, poach, raw, roast, saut�"
+PEACHES,"Techniques: bake, broil, grill, poach, raw, roast, sauté"
 PEACHES,allspice
 PEACHES,"ALMONDS, esp. toasted"
 PEACHES,anise hyssop
@@ -16897,7 +16897,7 @@ PEARS,Season: autumn–winter
 PEARS,Taste: sweet
 PEARS,Weight: medium
 PEARS,Volume: quiet–moderate
-PEARS,"Techniques: bake, deep-fry (e.g., as chips), grill, poach, raw, roast, saut�, stew"
+PEARS,"Techniques: bake, deep-fry (e.g., as chips), grill, poach, raw, roast, sauté, stew"
 PEARS,allspice
 PEARS,ALMONDS and almond paste
 PEARS,anise
@@ -17034,7 +17034,7 @@ PEAS (See also Snap Peas),Season: late spring–summer
 PEAS (See also Snap Peas),Taste: sweet
 PEAS (See also Snap Peas),Weight: light–medium
 PEAS (See also Snap Peas),Volume: quiet–moderate
-PEAS (See also Snap Peas),"Techniques: boil, braise, saut�, steam"
+PEAS (See also Snap Peas),"Techniques: boil, braise, sauté, steam"
 PEAS (See also Snap Peas),arugula
 PEAS (See also Snap Peas),asparagus
 PEAS (See also Snap Peas),bacon
@@ -17503,7 +17503,7 @@ PINEAPPLES,Season: winter–summer
 PINEAPPLES,Taste: sweet
 PINEAPPLES,Weight: medium
 PINEAPPLES,Volume: moderate
-PINEAPPLES,"Techniques: bake, broil, grill, poach, raw, roast, saut�"
+PINEAPPLES,"Techniques: bake, broil, grill, poach, raw, roast, sauté"
 PINEAPPLES,allspice
 PINEAPPLES,apricots
 PINEAPPLES,avocado
@@ -17719,7 +17719,7 @@ PISTACHIOS,yogurt
 "PLANTAINS, GREEN",Botanical relatives: bananas
 "PLANTAINS, GREEN",Weight: medium
 "PLANTAINS, GREEN",Volume: quiet–moderate
-"PLANTAINS, GREEN","Techniques: bake, boil, deep-fry, mash, saut�"
+"PLANTAINS, GREEN","Techniques: bake, boil, deep-fry, mash, sauté"
 "PLANTAINS, GREEN",Tips: Look for green plantains without any yellow.
 "PLANTAINS, GREEN",African cuisine
 "PLANTAINS, GREEN",bacon
@@ -17755,7 +17755,7 @@ PISTACHIOS,yogurt
 "PLANTAINS, SWEET",Botanical relatives: bananas
 "PLANTAINS, SWEET",Weight: medium
 "PLANTAINS, SWEET",Volume: moderate
-"PLANTAINS, SWEET","Techniques: bake, boil, deep-fry, saut�"
+"PLANTAINS, SWEET","Techniques: bake, boil, deep-fry, sauté"
 "PLANTAINS, SWEET",Tips: Look for yellow to black plantains that ripen to black.
 "PLANTAINS, SWEET",African cuisine
 "PLANTAINS, SWEET",allspice
@@ -17937,7 +17937,7 @@ Prunes,prunes + cognac + honey + Sauternes
 POLENTA,Weight: medium
 POLENTA,Volume: quiet
 POLENTA,Techniques: simmer
-POLENTA,Tips: Grill or saut� cooked polenta.
+POLENTA,Tips: Grill or sauté cooked polenta.
 POLENTA,bay leaf
 POLENTA,beef
 POLENTA,"bell peppers, esp. red"
@@ -18334,7 +18334,7 @@ pork BELLY,thyme
 pork BELLY,"vegetables, root"
 pork BELLY,"vinegar, champagne"
 pork BELLY,zucchini
-pork CHOPS,"Techniques: dry-heat cooking (e.g., broil, grill, roast, saut�)"
+pork CHOPS,"Techniques: dry-heat cooking (e.g., broil, grill, roast, sauté)"
 pork CHOPS,"APPLES: cider, fruit, sauce"
 pork CHOPS,arugula
 pork CHOPS,beans
@@ -18375,7 +18375,7 @@ pork CHOPS,pork chop + apples + ginger + sage
 pork CHOPS,pork chop + arugula + tomatoes
 pork CHOPS,pork chop + greens + sweet potatoes
 pork CHOPS,pork chop + peaches + balsamic vinegar
-pork LOIN,"Techniques: dry-heat cooking (e.g., bake, braise, grill, roast, saut�)"
+pork LOIN,"Techniques: dry-heat cooking (e.g., bake, braise, grill, roast, sauté)"
 pork LOIN,bay leaf
 pork LOIN,brandy
 pork LOIN,"cabbage, red"
@@ -18405,7 +18405,7 @@ pork LOIN,"wine, white"
 pork LOIN,Flavor Affinities
 pork LOIN,pork loin + figs + onions
 pork LOIN,pork loin + red cabbage + port wine
-pork RIBS,"Techniques: bake, barbecue, braise, broil, grill, roast, saut�"
+pork RIBS,"Techniques: bake, barbecue, braise, broil, grill, roast, sauté"
 pork RIBS,allspice
 pork RIBS,bay leaf
 pork RIBS,beer
@@ -18486,7 +18486,7 @@ pork SHOULDER,Flavor Affinities
 pork SHOULDER,pork shoulder + bay leaves + wild mushrooms
 pork SHOULDER,pork shoulder + chipotle peppers + cumin + tomatoes
 pork SHOULDER,pork shoulder + plantains + rice + rum
-pork TENDERLOIN,"Techniques: dry-heat cooking (e.g., broil, grill, roast, saut�)"
+pork TENDERLOIN,"Techniques: dry-heat cooking (e.g., broil, grill, roast, sauté)"
 pork TENDERLOIN,"artichokes, Jerusalem"
 pork TENDERLOIN,bacon
 pork TENDERLOIN,"beans, green"
@@ -18557,7 +18557,7 @@ POTATOES,Function: cooling
 POTATOES,Weight: medium–heavy
 POTATOES,Volume: quiet
 POTATOES,"Techniques: bake, boil, deep-fry, gratin, grill, mash, puree, roast,"
-POTATOES,"saut�, steam"
+POTATOES,"sauté, steam"
 POTATOES,arugula
 POTATOES,bacon
 POTATOES,basil
@@ -18829,7 +18829,7 @@ PURSLANE,Season: summer
 PURSLANE,Taste: sour
 PURSLANE,Weight: light
 PURSLANE,Volume: moderate
-PURSLANE,"Techniques: raw, saut�"
+PURSLANE,"Techniques: raw, sauté"
 PURSLANE,"beans, green"
 PURSLANE,cucumber
 PURSLANE,garlic
@@ -18842,7 +18842,7 @@ PURSLANE,yogurt
 QUAIL,Season: late spring–autumn
 QUAIL,Weight: light–medium
 QUAIL,Volume: quiet–moderate
-QUAIL,"Techniques: braise, broil, grill, pan roast, roast, saut�"
+QUAIL,"Techniques: braise, broil, grill, pan roast, roast, sauté"
 QUAIL,almonds
 QUAIL,anchovies
 QUAIL,anisette
@@ -19015,7 +19015,7 @@ RABBIT (See also Game),Taste: sweet–astringent
 RABBIT (See also Game),Function: heating
 RABBIT (See also Game),Weight: medium
 RABBIT (See also Game),Volume: quiet–moderate
-RABBIT (See also Game),"Techniques: barbecue, braise (esp. legs, thighs), broil, grill, roast, saut�, stew"
+RABBIT (See also Game),"Techniques: barbecue, braise (esp. legs, thighs), broil, grill, roast, sauté, stew"
 RABBIT (See also Game),almonds
 RABBIT (See also Game),apples
 RABBIT (See also Game),artichokes
@@ -19425,7 +19425,7 @@ RHUBARB,Season: late spring–summer
 RHUBARB,Taste: sour
 RHUBARB,Weight: medium
 RHUBARB,Volume: loud
-RHUBARB,"Techniques: bake, puree, saut�, stew"
+RHUBARB,"Techniques: bake, puree, sauté, stew"
 RHUBARB,almonds
 RHUBARB,ANGELICA
 RHUBARB,apples
@@ -19542,7 +19542,7 @@ RHUBARB,rhubarb + strawberry + vanilla
 "RICE, ARBORIO","AKA:risotto,risottos"
 "RICE, ARBORIO",Weight: medium–heavy
 "RICE, ARBORIO",Volume: quiet
-"RICE, ARBORIO",Techniques: saut� then simmer
+"RICE, ARBORIO",Techniques: sauté then simmer
 "RICE, ARBORIO",arugula
 "RICE, ARBORIO",asparagus
 "RICE, ARBORIO",bacon
@@ -19681,7 +19681,7 @@ RIESLING,"salmon, smoked"
 RIESLING,scallops
 RIESLING,seafood
 RIESLING,shellfish
-RIESLING,"trout, esp. saut�ed"
+RIESLING,"trout, esp. sautéed"
 ROASTED DISHES,"artichokes, Jerusalem"
 ROASTED DISHES,beef
 ROASTED DISHES,beets
@@ -20196,7 +20196,7 @@ SALMON (See also Fish),Season: spring–early autumn
 SALMON (See also Fish),Weight: medium
 SALMON (See also Fish),Volume: moderate
 SALMON (See also Fish),"Techniques: bake, braise, broil, grill, marinate, panfry, poach, raw (e.g., sashimi, tartare), roast,"
-SALMON (See also Fish),"saut�, sear, steam"
+SALMON (See also Fish),"sauté, sear, steam"
 SALMON (See also Fish),anchovies
 SALMON (See also Fish),"apples, esp. Golden Delicious or Granny Smith, and apple cider"
 SALMON (See also Fish),artichoke hearts
@@ -20620,7 +20620,7 @@ SARDINES,Season: spring–summer
 SARDINES,Taste: salty
 SARDINES,Weight: light
 SARDINES,Volume: loud
-SARDINES,"Techniques: braise, broil, fry, grill, marinate, poach, saut�"
+SARDINES,"Techniques: braise, broil, fry, grill, marinate, poach, sauté"
 SARDINES,anchovies
 SARDINES,basil
 SARDINES,bay leaf
@@ -20703,7 +20703,7 @@ SAUERKRAUT,"vinegar: champagne, white wine"
 SAUERKRAUT,"wine: dry to off-dry white (e.g., Alsatian, Riesling)"
 SAUSAGES (See also Chorizo),Weight: light–heavy
 SAUSAGES (See also Chorizo),Volume: quiet–loud
-SAUSAGES (See also Chorizo),"Techniques: bake, grill, poach, saut�, stew"
+SAUSAGES (See also Chorizo),"Techniques: bake, grill, poach, sauté, stew"
 SAUSAGES (See also Chorizo),apples
 SAUSAGES (See also Chorizo),basil
 SAUSAGES (See also Chorizo),bay leaf
@@ -20731,7 +20731,7 @@ SARDINES,Season: spring–summer
 SARDINES,Taste: salty
 SARDINES,Weight: light
 SARDINES,Volume: loud
-SARDINES,"Techniques: braise, broil, fry, grill, marinate, poach, saut�"
+SARDINES,"Techniques: braise, broil, fry, grill, marinate, poach, sauté"
 SARDINES,anchovies
 SARDINES,basil
 SARDINES,bay leaf
@@ -20814,7 +20814,7 @@ SAUERKRAUT,"vinegar: champagne, white wine"
 SAUERKRAUT,"wine: dry to off-dry white (e.g., Alsatian, Riesling)"
 SAUSAGES (See also Chorizo),Weight: light–heavy
 SAUSAGES (See also Chorizo),Volume: quiet–loud
-SAUSAGES (See also Chorizo),"Techniques: bake, grill, poach, saut�, stew"
+SAUSAGES (See also Chorizo),"Techniques: bake, grill, poach, sauté, stew"
 SAUSAGES (See also Chorizo),apples
 SAUSAGES (See also Chorizo),basil
 SAUSAGES (See also Chorizo),bay leaf
@@ -20942,7 +20942,7 @@ SAVORY,savory + garlic + tomatoes
 SCALLIONS,Season: summer
 SCALLIONS,Weight: light
 SCALLIONS,Volume: moderate
-SCALLIONS,"Techniques: braise, grill, raw, saut�, stir-fry"
+SCALLIONS,"Techniques: braise, grill, raw, sauté, stir-fry"
 SCALLIONS,anise
 SCALLIONS,basil
 SCALLIONS,bay leaf
@@ -20988,7 +20988,7 @@ SCALLOPS,Season: summer–autumn
 SCALLOPS,"Taste: sweet, esp. bay scallops"
 SCALLOPS,Weight: light–medium
 SCALLOPS,Volume: quiet
-SCALLOPS,"Techniques: broil, deep-fry, gratin, grill, marinate, pan sear, poach, raw, roast, saut�, sear,"
+SCALLOPS,"Techniques: broil, deep-fry, gratin, grill, marinate, pan sear, poach, raw, roast, sauté, sear,"
 SCALLOPS,"steam, stir-fry, tartare"
 SCALLOPS,almonds
 SCALLOPS,"apples, esp. Granny Smith"
@@ -21300,7 +21300,7 @@ SHALLOTS,Taste: sweet
 SHALLOTS,"Botanical relatives: chives, garlic, leeks, onions"
 SHALLOTS,Weight: light–medium
 SHALLOTS,Volume: moderate
-SHALLOTS,"Techniques: blanch, braise, deep-fry, fry, roast, saut�, stir-fry"
+SHALLOTS,"Techniques: blanch, braise, deep-fry, fry, roast, sauté, stir-fry"
 SHALLOTS,Tips: Shallots are milder than garlic or onions.
 SHALLOTS,beef
 SHALLOTS,butter
@@ -21423,7 +21423,7 @@ SHISO LEAF,shiso leaf + clams + onions
 SHRIMP (See also Shellfish),Season: year-round
 SHRIMP (See also Shellfish),Weight: light–medium (depending on size)
 SHRIMP (See also Shellfish),Volume: quiet
-SHRIMP (See also Shellfish),"Techniques: bake, barbecue, boil, broil, deep-fry, grill, poach, roast, saut�, steam, stir-fry"
+SHRIMP (See also Shellfish),"Techniques: bake, barbecue, boil, broil, deep-fry, grill, poach, roast, sauté, steam, stir-fry"
 SHRIMP (See also Shellfish),allspice
 SHRIMP (See also Shellfish),almonds
 SHRIMP (See also Shellfish),apples and apple cider
@@ -21600,7 +21600,7 @@ SHRIMP (See also Shellfish),shrimp + white beans + bell pepper + orange + sausag
 SKATE,Season: summer
 SKATE,Weight: medium–heavy
 SKATE,Volume: quiet–moderate
-SKATE,"Techniques: broil, grill, poach, roast, saut�, steam"
+SKATE,"Techniques: broil, grill, poach, roast, sauté, steam"
 SKATE,almonds
 SKATE,anchovies
 SKATE,arugula
@@ -21741,7 +21741,7 @@ SNAPPER,AKA:red snapper
 SNAPPER,Season: late spring–early autumn
 SNAPPER,Weight: medium
 SNAPPER,Volume: moderate
-SNAPPER,"Techniques: bake, braise, broil, deep-fry, grill, poach, roast, saut�, steam, stir-fry"
+SNAPPER,"Techniques: bake, braise, broil, deep-fry, grill, poach, roast, sauté, steam, stir-fry"
 SNAPPER,almonds
 SNAPPER,"apricots, esp. dried"
 SNAPPER,artichokes
@@ -21825,7 +21825,7 @@ SNAPPER,snapper + garlic + potatoes + rosemary
 SNAPPER,snapper + lemon + thyme + tomatoes
 SOLE,Weight: light
 SOLE,Volume: quiet
-SOLE,"Techniques: pan sear, poach, saut�, steam"
+SOLE,"Techniques: pan sear, poach, sauté, steam"
 SOLE,artichokes
 SOLE,asparagus
 SOLE,"basil: sweet, lemon"
@@ -22186,7 +22186,7 @@ SPINACH (See also Greens),Taste: bitter
 SPINACH (See also Greens),Function: cooling
 SPINACH (See also Greens),Weight: medium
 SPINACH (See also Greens),Volume: moderate
-SPINACH (See also Greens),"Techniques: boil, raw, saut�, steam, stir-fry, wilt"
+SPINACH (See also Greens),"Techniques: boil, raw, sauté, steam, stir-fry, wilt"
 SPINACH (See also Greens),almonds
 SPINACH (See also Greens),anchovies
 SPINACH (See also Greens),apples
@@ -22310,7 +22310,7 @@ SPROUTS,Season: year-round
 SPROUTS,Function: cooling
 SPROUTS,Weight: light
 SPROUTS,Volume: quiet
-SPROUTS,"Techniques: saut�, steam, stir-fry"
+SPROUTS,"Techniques: sauté, steam, stir-fry"
 SPROUTS,"Tips: Cook for less than 30 seconds, or they'll wilt."
 SPROUTS,cucumbers
 SPROUTS,egg salad
@@ -22319,7 +22319,7 @@ SPROUTS,sandwiches
 SPROUTS,"stir-fried dishes, esp. heartier sprouts"
 SQUAB,Weight: medium
 SQUAB,Volume: moderate
-SQUAB,"Techniques: braise, broil, grill, roast, saut�"
+SQUAB,"Techniques: braise, broil, grill, roast, sauté"
 SQUAB,bacon
 SQUAB,"beans, fava"
 SQUAB,beets
@@ -22483,7 +22483,7 @@ SQUAB,"wine, esp. red"
 "SQUASH, SPAGHETTI (See also Squash, Winter)",Season: early autumn–winter
 "SQUASH, SPAGHETTI (See also Squash, Winter)",Weight: medium
 "SQUASH, SPAGHETTI (See also Squash, Winter)",Volume: moderate
-"SQUASH, SPAGHETTI (See also Squash, Winter)","Techniques: bake, boil, steam, saut�"
+"SQUASH, SPAGHETTI (See also Squash, Winter)","Techniques: bake, boil, steam, sauté"
 "SQUASH, SPAGHETTI (See also Squash, Winter)",bacon
 "SQUASH, SPAGHETTI (See also Squash, Winter)",basil
 "SQUASH, SPAGHETTI (See also Squash, Winter)",bell peppers
@@ -22507,7 +22507,7 @@ SQUAB,"wine, esp. red"
 "SQUASH, SUMMER (See also Zucchini)",Season: summer
 "SQUASH, SUMMER (See also Zucchini)",Weight: light–medium
 "SQUASH, SUMMER (See also Zucchini)",Volume: quiet–moderate
-"SQUASH, SUMMER (See also Zucchini)","Techniques: bake, blanch, boil, braise, deep-fry, grill, saut�, steam, stir-fry"
+"SQUASH, SUMMER (See also Zucchini)","Techniques: bake, blanch, boil, braise, deep-fry, grill, sauté, steam, stir-fry"
 "SQUASH, SUMMER (See also Zucchini)",basil
 "SQUASH, SUMMER (See also Zucchini)",bell peppers
 "SQUASH, SUMMER (See also Zucchini)",butter
@@ -22546,7 +22546,7 @@ SQUAB,"wine, esp. red"
 "SQUASH, WINTER (See also Pumpkin; Squash, Acorn; and",Season: autumn–winter
 "SQUASH, WINTER (See also Pumpkin; Squash, Acorn; and",Weight: medium–heavy
 "SQUASH, WINTER (See also Pumpkin; Squash, Acorn; and",Volume: moderate
-"SQUASH, WINTER (See also Pumpkin; Squash, Acorn; and","Techniques: bake, braise, grill, mash, puree, roast, saut�, steam"
+"SQUASH, WINTER (See also Pumpkin; Squash, Acorn; and","Techniques: bake, braise, grill, mash, puree, roast, sauté, steam"
 "SQUASH, WINTER (See also Pumpkin; Squash, Acorn; and",allspice
 "SQUASH, WINTER (See also Pumpkin; Squash, Acorn; and","APPLES: cider, fruit, juice"
 "SQUASH, WINTER (See also Pumpkin; Squash, Acorn; and",bacon
@@ -22610,7 +22610,7 @@ SQUAB,"wine, esp. red"
 SQUID,AKA:calamari
 SQUID,Weight: light–medium
 SQUID,Volume: quiet
-SQUID,"Techniques: deep-fry, grill, marinate, roast, salad, saut�, stew"
+SQUID,"Techniques: deep-fry, grill, marinate, roast, salad, sauté, stew"
 SQUID,aioli
 SQUID,almonds
 SQUID,anchovies
@@ -22695,7 +22695,7 @@ STRAWBERRIES,Season: late spring–summer
 STRAWBERRIES,Taste: sweet–sour
 STRAWBERRIES,Weight: light
 STRAWBERRIES,Volume: moderate
-STRAWBERRIES,"Techniques: raw, saut�"
+STRAWBERRIES,"Techniques: raw, sauté"
 STRAWBERRIES,"Tips: Adding sugar enhances strawberry flavor, as does adding an acid such as citrus juice or"
 STRAWBERRIES,vinegar.
 STRAWBERRIES,almonds
@@ -22959,7 +22959,7 @@ SWEDISH CUISINE,red wine + allspice + cinnamon + cloves + raisins + sugar
 SWEDISH CUISINE,veal + allspice + onions
 SWEETBREADS,Weight: medium
 SWEETBREADS,Volume: moderate
-SWEETBREADS,"Techniques: braise, deep-fry, grill, pan roast, saut�"
+SWEETBREADS,"Techniques: braise, deep-fry, grill, pan roast, sauté"
 SWEETBREADS,"artichokes, Jerusalem"
 SWEETBREADS,asparagus
 SWEETBREADS,BACON
@@ -23110,7 +23110,7 @@ SWEET POTATOES,Season: autumn–winter
 SWEET POTATOES,Taste: sweet
 SWEET POTATOES,Weight: medium–heavy
 SWEET POTATOES,Volume: moderate–loud
-SWEET POTATOES,"Techniques: bake, boil, deep-fry, fry, grill, mash, roast, saut�, steam"
+SWEET POTATOES,"Techniques: bake, boil, deep-fry, fry, grill, mash, roast, sauté, steam"
 SWEET POTATOES,allspice
 SWEET POTATOES,anise
 SWEET POTATOES,apples and apple juice
@@ -23215,7 +23215,7 @@ SWEET POTATOES,sweet potatoes + maple syrup + pecans
 SWORDFISH,Season: early summer–early autumn
 SWORDFISH,Weight: heavy
 SWORDFISH,Volume: quiet–moderate
-SWORDFISH,"Techniques: braise, broil, grill, poach, saut�, sear, steam, stir-fry"
+SWORDFISH,"Techniques: braise, broil, grill, poach, sauté, sear, steam, stir-fry"
 SWORDFISH,"apples, esp. Granny Smith"
 SWORDFISH,bacon
 SWORDFISH,basil
@@ -23684,7 +23684,7 @@ THYME,thyme + goat cheese + olive oil
 THYME,thyme + savory
 TOFU,Weight: light
 TOFU,Volume: quiet
-TOFU,"Techniques: grill, saut�, stir-fry, tempura-fry"
+TOFU,"Techniques: grill, sauté, stir-fry, tempura-fry"
 TOFU,asparagus
 TOFU,"cabbage, esp. napa"
 TOFU,garlic
@@ -23732,7 +23732,7 @@ TOMATOES,"Taste: sour, sweet"
 TOMATOES,Function: heating
 TOMATOES,Weight: medium
 TOMATOES,Volume: moderate
-TOMATOES,"Techniques: bake, broil, confit, fry, grill, raw, roast, saut�, stew"
+TOMATOES,"Techniques: bake, broil, confit, fry, grill, raw, roast, sauté, stew"
 TOMATOES,aioli
 TOMATOES,allspice
 TOMATOES,almonds
@@ -23867,7 +23867,7 @@ TOMATOES,tomatoes + olive oil + balsamic vinegar
 TROUT,Season: midsummer
 TROUT,Weight: medium
 TROUT,Volume: moderate–loud
-TROUT,"Techniques: bake, broil, grill, panfry, pan roast, poach, roast, saut�, steam"
+TROUT,"Techniques: bake, broil, grill, panfry, pan roast, poach, roast, sauté, steam"
 TROUT,almonds
 TROUT,anchovies
 TROUT,"apples: cider, fruit"
@@ -24012,7 +24012,7 @@ TROUT,trout + capers + lemon
 TUNA,Season: summer–autumn
 TUNA,Weight: heavy
 TUNA,Volume: moderate
-TUNA,"Techniques: braise, broil, grill, poach, raw (e.g., sushi, tartare), saut�, sear, steam, stir-fry"
+TUNA,"Techniques: braise, broil, grill, poach, raw (e.g., sushi, tartare), sauté, sear, steam, stir-fry"
 TUNA,aioli
 TUNA,anchovies
 TUNA,arugula
@@ -24139,7 +24139,7 @@ TUNA,tuna + lemon + olive oil + tomatoes + watercress
 TUNA,tuna + sesame + wasabi
 TURBOT,Weight: medium
 TURBOT,Volume: quiet–moderate
-TURBOT,"Techniques: bake, broil, grill, poach, roast, saut�, steam"
+TURBOT,"Techniques: bake, broil, grill, poach, roast, sauté, steam"
 TURBOT,asparagus
 TURBOT,"butter, unsalted"
 TURBOT,Champagne
@@ -24177,7 +24177,7 @@ TURBOT,turbot + lemon + miso + mushrooms
 TURKEY,Season: summer–autumn
 TURKEY,Weight: medium
 TURKEY,Volume: quiet
-TURKEY,"Techniques: braise, grill, poach, roast, saut�, stir-fry"
+TURKEY,"Techniques: braise, grill, poach, roast, sauté, stir-fry"
 TURKEY,allspice
 TURKEY,apples
 TURKEY,bacon
@@ -24531,7 +24531,7 @@ VEAL,cider
 VEAL,coconut milk
 VEAL,cream
 VEAL,crème fraîche
-VEAL,"cucumbers, saut�ed"
+VEAL,"cucumbers, sautéed"
 VEAL,dill
 VEAL,"eggs, esp. hard-boiled"
 VEAL,French cuisine
@@ -24605,7 +24605,7 @@ VEAL,veal + prosciutto + sage
 "VEAL, BREAST","stock, chicken"
 "VEAL, BREAST",thyme
 "VEAL, BREAST","wine, white"
-"VEAL, CHOP","Techniques: braise, grill, pan roast, saut�, stuff"
+"VEAL, CHOP","Techniques: braise, grill, pan roast, sauté, stuff"
 "VEAL, CHOP",artichokes
 "VEAL, CHOP",basil
 "VEAL, CHOP","beans, esp. fava"
@@ -24658,7 +24658,7 @@ VEAL,veal + prosciutto + sage
 "VEAL, CHOP",veal chop + leeks + peas
 "VEAL, CHOP",veal chop + leeks + polenta
 "VEAL, CHOP",veal chop + mushrooms + watercress
-"VEAL, LOIN","Techniques: braise, grill, pan roast, roast, saut�"
+"VEAL, LOIN","Techniques: braise, grill, pan roast, roast, sauté"
 "VEAL, LOIN",arugula
 "VEAL, LOIN",basil
 "VEAL, LOIN","cheese, Fontina"
@@ -24716,7 +24716,7 @@ VEAL,veal + prosciutto + sage
 "VEAL, SHANKS",veal shanks + lemon + olives
 "VEAL, SHANKS",veal shanks + onions + tomatoes
 "VEAL, SHANKS",veal shanks + tomatoes + thyme
-"VEAL, TENDERLOIN","Techniques: braise, grill, saut�, sear"
+"VEAL, TENDERLOIN","Techniques: braise, grill, sauté, sear"
 "VEAL, TENDERLOIN",asparagus
 "VEAL, TENDERLOIN",bacon
 "VEAL, TENDERLOIN",basil
@@ -24748,7 +24748,7 @@ VEGETARIAN DISHES,soy sauce
 VENISON (See also Game),Season: autumn
 VENISON (See also Game),Weight: heavy
 VENISON (See also Game),Volume: moderate–loud
-VENISON (See also Game),"Techniques: braise, broil, grill, roast, saut�"
+VENISON (See also Game),"Techniques: braise, broil, grill, roast, sauté"
 VENISON (See also Game),American cuisine
 VENISON (See also Game),apples
 VENISON (See also Game),"artichoke, Jerusalem"
@@ -25745,7 +25745,7 @@ ZUCCHINI (See also Summer Squash),"Taste: sweet, astringent"
 ZUCCHINI (See also Summer Squash),Function: cooling
 ZUCCHINI (See also Summer Squash),Weight: light–medium
 ZUCCHINI (See also Summer Squash),Volume: quiet–moderate
-ZUCCHINI (See also Summer Squash),"Techniques: fry, grill, pan roast, roast, saut�"
+ZUCCHINI (See also Summer Squash),"Techniques: fry, grill, pan roast, roast, sauté"
 ZUCCHINI (See also Summer Squash),BASIL
 ZUCCHINI (See also Summer Squash),"bell peppers: green, red, yellow"
 ZUCCHINI (See also Summer Squash),bread crumbs
