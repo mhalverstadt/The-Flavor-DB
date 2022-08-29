@@ -1,0 +1,39 @@
+APPLES,bacon
+APPLES,bay leaf
+APPLES,beef
+APPLES,apples + caramel + cinnamon
+APPLES,blackberries
+BACON,celery
+BACON,salt
+BACON,scallops
+BACON,shallots
+BANANAS,puddings
+BANANAS,raisins
+BANANAS,"raspberries: red, black"
+"BEANS, BLACK",crème fraîche
+"BEANS, BLACK",CUMIN
+"BEANS, BLACK",duck
+
+{
+    "ingredient": "APPLE", 
+    "pairings": ["bacon", "bay leaf", "beef", "blackberries"],
+    "flavor_affinities": "apples + caramel + cinnamon"
+}
+
+{
+    "ingredient": "BACON", 
+    "pairings": ["celery", "salt", "scallops", "shallots"],
+    "flavor_affinities": 
+}
+
+{
+    "ingredient": "BANANAS", 
+    "pairings": ["puddings", "raisins", "raspberries: red, black"],
+    "flavor_affinities": 
+}
+
+{
+    "ingredient": "BEANS, BLACK", 
+    "pairings": ["crème fraîche", "CUMIN", "duck"],
+    "flavor_affinities": 
+}
