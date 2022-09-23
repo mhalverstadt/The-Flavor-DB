@@ -6,11 +6,11 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const methodOverride = require("method-override");
 const flash = require("express-flash");
-const logger = require("morgan");
+const logger = require("morgan"); 
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
-const commentRoutes = require("./routes/comments");
+const commentRoutes = require("./routes/comments");//not in use yet
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
