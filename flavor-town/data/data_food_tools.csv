@@ -1,3 +1,4 @@
+ingredient,pairing
 achiote seeds,beef
 achiote seeds,chicken
 achiote seeds,chiles
@@ -2179,7 +2180,6 @@ beans,vinegar
 "beans, white","vinegar, cider"
 "beans, white","vinegar, red wine"
 "beans, white","wine, dry white"
-beef,techniques
 beef,allspice
 beef,bacon
 beef,basil
