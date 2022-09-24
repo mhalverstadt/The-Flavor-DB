@@ -2,7 +2,7 @@ const cloudinary = require("../middleware/cloudinary");//for images
 const Pairing = require("../models/Pairing");
 const Comment = require("../models/Comment");
 const Flavor = require("../models/Flavor");
-
+const { MongoClient } = require('mongodb')
 
 module.exports = {
   //render profile page of user passing pairings as an array to the ejs along with the user info//
@@ -15,27 +15,34 @@ module.exports = {
     }
   },
   //renders search results page passing in pairings to ejs
-  getResults: async (req, res) => {
+  getBuilder: async (req, res) => {
     try {
-      let result = await Flavor.aggregate([
-          {
-              "$search" : {
-                  "autocomplete" : {
-                      "query" : `${req.query.query}`,
-                      "path" : "title",
-                      "fuzzy" : {
-                          "maxEdits" : 2,
-                          "prefixLength" : 1
-                      }
-                  }
-              }
-          }
-      ])
-      res.send(result)
-      // const pairings = await Flavor.find().sort().lean(); 
-      // res.render("search-results.ejs", { pairings: pairings });
+      const pairings = await Flavor.find().sort().lean(); 
+      res.render("builder.ejs", { pairings: pairings });
     } catch (err) {
       console.log(err);
+    }
+  },
+
+  getResults: async(req, res) => {
+    try {
+        let result = await Flavor.aggregate([
+            {
+                "$search": {
+                    "autocomplete": {
+                        "query": `${req.query.query}`,
+                        "path": "name",
+                        "fuzzy": {
+                            "maxEdits": 2,
+                            "prefixLength": 3
+                        }
+                    }
+                }
+            }
+        ]).toArray();
+        res.send(result);
+    }catch(e){
+        res.status(500).send({ message: e.message });
     }
   },
 
@@ -54,7 +61,6 @@ module.exports = {
     try {
       // Upload image to cloudinary
       // const result = await cloudinary.uploader.upload(req.file.path); // cloudinary images 
-
       await Pairing.create({
         title: req.body.title,
         // pairings: , //need to add this somehow

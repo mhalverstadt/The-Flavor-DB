@@ -5,7 +5,7 @@ const User = require("../models/User");
 //renders profile or the login page depending on if user is already logged in
 exports.getLogin = (req, res) => {
   if (req.user) {
-    return res.redirect("/search");
+    return res.redirect("/builder");
   }
   res.render("login", {
     title: "Login",

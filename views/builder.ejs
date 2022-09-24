@@ -1,9 +1,13 @@
 <%- include('partials/header') -%>
+
+<!-- search -->
 <section class ="container">
-  <form action="/search" method="POST">
-    <input type="text" name="search" placeholder="Search..">
+  <form action="/search" method="GET">
+    <input type="text" name="search" id="ingredient" placeholder="Enter an Ingredient">
   </form>
 </section>
+
+<!-- display pairings -->
   <div class="container">
     <div class="row justify-content-center mt-5">
       <ul class="row list-unstyled">
