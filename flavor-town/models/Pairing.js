@@ -1,17 +1,21 @@
 const mongoose = require("mongoose");
 
-const PostSchema = new mongoose.Schema({
+const PairingSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
   },
+  keyIngredient: {
+    type: String,
+  },
+  pairings: {
+    type: Array,
+  },
   image: {
     type: String,
-    require: true,
   },
   cloudinaryId: {
     type: String,
-    require: true,
   },
   caption: {
     type: String,
@@ -31,4 +35,4 @@ const PostSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Post", PostSchema);
+module.exports = mongoose.model("Pairing", PairingSchema);

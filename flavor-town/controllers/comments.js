@@ -1,3 +1,5 @@
+//Not in use yet
+
 const Comment = require("../models/Comment");
 
 module.exports = {

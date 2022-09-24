@@ -1,7 +1,7 @@
 {
-  "name": "binary-upload-boom",
+  "name": "the-flavor-db",
   "version": "1.0.0",
-  "description": "100Devs Social Network",
+  "description": "A flavor pairing app",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",

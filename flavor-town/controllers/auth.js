@@ -2,6 +2,7 @@ const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
 
+//renders profile or the login page depending on if user is already logged in
 exports.getLogin = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
@@ -11,6 +12,7 @@ exports.getLogin = (req, res) => {
   });
 };
 
+//validates email and password inputs and directs to profile is succeded
 exports.postLogin = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
@@ -44,6 +46,7 @@ exports.postLogin = (req, res, next) => {
   })(req, res, next);
 };
 
+//assigns req.user to null and redirects to homepage after logging out
 exports.logout = (req, res) => {
   req.logout(() => {
     console.log('User has logged out.')
@@ -56,6 +59,7 @@ exports.logout = (req, res) => {
   });
 };
 
+//renders the signup page if user doesn't have a current session
 exports.getSignup = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
@@ -65,6 +69,7 @@ exports.getSignup = (req, res) => {
   });
 };
 
+//creates new user, validating email, password and checking DB to see if user exists already. Then redirects to profile page. 
 exports.postSignup = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
@@ -83,7 +88,8 @@ exports.postSignup = (req, res, next) => {
   req.body.email = validator.normalizeEmail(req.body.email, {
     gmail_remove_dots: false,
   });
-
+  
+  //this is passed to the model//
   const user = new User({
     userName: req.body.userName,
     email: req.body.email,
