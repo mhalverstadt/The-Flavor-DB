@@ -13,17 +13,15 @@ module.exports = {
       console.log(err);
     }
   },
-
-  //this needs to change to a search results page
-  // getFeed: async (req, res) => {
-  //   try {
-  //     const posts = await Post.find().sort({ createdAt: "desc" }).lean();
-  //     res.render("feed.ejs", { posts: posts });
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // },
-
+  //renders search results page passing in pairings to ejs
+  getResults: async (req, res) => {
+    try {
+      // const posts = await Pairings.find().sort({ createdAt: "desc" }).lean(); this will be our call to the ingredients DB
+      res.render("search-results.ejs", { pairings: pairings });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   //renders pairing.ejs with pairing, user, and comments 
   getPairing: async (req, res) => {
     try {

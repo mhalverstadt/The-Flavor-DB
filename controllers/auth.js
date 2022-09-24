@@ -116,6 +116,7 @@ exports.postSignup = (req, res, next) => {
           if (err) {
             return next(err);
           }
+          console.log("new user created")
           res.redirect("/profile");
         });
       });
