@@ -11,4 +11,4 @@ const FlavorSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("flavor", FlavorSchema);
+module.exports = mongoose.model("Flavor", FlavorSchema);

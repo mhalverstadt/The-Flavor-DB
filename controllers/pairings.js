@@ -17,13 +17,28 @@ module.exports = {
   //renders search results page passing in pairings to ejs
   getResults: async (req, res) => {
     try {
-      //this will be our call to the flavors DB
-      const pairings = await Flavor.find().sort().lean(); 
-      res.render("search-results.ejs", { pairings: pairings });
+      let result = await Flavor.aggregate([
+          {
+              "$search" : {
+                  "autocomplete" : {
+                      "query" : `${req.query.query}`,
+                      "path" : "title",
+                      "fuzzy" : {
+                          "maxEdits" : 2,
+                          "prefixLength" : 1
+                      }
+                  }
+              }
+          }
+      ])
+      res.send(result)
+      // const pairings = await Flavor.find().sort().lean(); 
+      // res.render("search-results.ejs", { pairings: pairings });
     } catch (err) {
       console.log(err);
     }
   },
+
   //renders pairing.ejs with pairing, user, and comments 
   getPairing: async (req, res) => {
     try {
