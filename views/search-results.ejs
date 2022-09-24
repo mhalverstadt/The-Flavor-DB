@@ -1,11 +1,15 @@
 <%- include('partials/header') -%>
+<section class ="container">
+  <form action="/search" method="POST">
+    <input type="text" name="search" placeholder="Search..">
+  </form>
+</section>
   <div class="container">
     <div class="row justify-content-center mt-5">
       <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
+        <% for(var i=0; i<pairings.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
+            <a href="/post/<%=pairings[i]._id%>">
             </a>
           </li>
         <% } %>
