@@ -2,19 +2,29 @@
   
 
 <!-- search -->
-<section class ="container">
+<section class ="container mt-5 justify-content-center">
+  <% if (keyIngredient) { %>
+    <h4 class="container">New Search</h4>
+  <% } %>
   <form action="/search" method="GET">
     <input type="text" name="search" id="ingredient" placeholder="Enter an Ingredient">
   </form>
 </section>
 
-
+<% if (keyIngredient) { %>
+  <h4 class= "container justify-content-center mt-2">Key Ingredient: <%= keyIngredient %></h4>
+      <form action="/pairings/createPairing" enctype="multipart/form-data" method="POST">
+        <div class="text-center"><button type="submit" class="btn btn-primary btn-sm mt-1" value="Upload">Save</button></div>
+<% } %>
 
 <div class="container">
     <div class="row justify-content-center mt-5">
+      <% if (pairings) { %>
+        <h6>Add a pairing:</h6>
+      <% } %>
       <ul class="row list-unstyled">
         <% for(var i=0; i<pairings.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
+          <li class="col-6 justify-content-between mt-1">
             <a href="<%=pairings[i]._id%>">
               <%=pairings[i]%>
             </a>
@@ -22,5 +32,6 @@
         <% } %>
         </ul>
     </div>
-  </div>  
+  </div>
+
 <%- include('partials/footer') -%>

@@ -9,7 +9,7 @@ module.exports = {
   getProfile: async (req, res) => {
     try {
       const pairings = await Pairing.find({ user: req.user.id });
-      res.render("profile.ejs", { pairings: pairings, user: req.user });
+      res.render("profile.ejs", { pairings: pairings || false, user: req.user });
     } catch (err) {
       console.log(err);
     }
@@ -18,8 +18,7 @@ module.exports = {
   //renders search results page passing in pairings to ejs
   getBuilder: async (req, res) => {
     try {
-      const pairings = await Pairing.find().sort({ createdAt: "desc" }).lean(); 
-      res.render("builder.ejs", { pairings: pairings });
+      res.render("builder.ejs", {keyIngredient: false, pairings: false });
     } catch (err) {
       console.log(err);
     }
@@ -48,7 +47,7 @@ module.exports = {
     }
   },
 
-  //renders array of pairings of key ingredient
+  //renders array of pairings of key ingredient from "/search/:id" route
   getPairings: async (req, res) =>{
     try {
       const keyIngredient = await Flavor.findById(req.params.id)
