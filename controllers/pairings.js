@@ -14,16 +14,18 @@ module.exports = {
       console.log(err);
     }
   },
+
   //renders search results page passing in pairings to ejs
   getBuilder: async (req, res) => {
     try {
-      const pairings = await Pairing.find().sort({ createdAt: "desc" }).lean(); //this will be our call to the ingredients DB
+      const pairings = await Pairing.find().sort({ createdAt: "desc" }).lean(); 
       res.render("builder.ejs", { pairings: pairings });
     } catch (err) {
       console.log(err);
     }
   },
 
+  //autocomplete Mongo Pipeline
   getResults: async (req, res) => {
     try{
       let result = await Flavor.aggregate([
@@ -46,16 +48,28 @@ module.exports = {
     }
   },
 
-  //renders pairing.ejs with pairing, user, and comments 
+  getPairings: async (req, res) =>{
+    try {
+      console.log(req)
+        let result = await Flavor.findById({ _id: req.params.id })
+        console.log(result)
+        res.send(result)
+    }catch (error){
+        res.status(500).send({message: error.message})
+    }
+  },
+
+  //renders pairing.ejs with pairing, user, and comments. lean provides pure JS Object. 
   getPairing: async (req, res) => {
     try {
       const pairing = await Pairing.findById(req.params.id);
-      const comments = await Comment.find({post: req.params.id}).sort({ createdAt: "desc" }).lean(); //Comments for certain pairing, lean returns a pure js object instead of the mongoose document. 
+      const comments = await Comment.find({post: req.params.id}).sort({ createdAt: "desc" }).lean();
       res.render("pairing.ejs", { pairing: pairing, user: req.user, comments: comments });
     } catch (err) {
       console.log(err);
     }
   },
+
   //create a pairing and reder it to the profile
   createPairing: async (req, res) => {
     try {
@@ -76,6 +90,7 @@ module.exports = {
       console.log(err);
     }
   },
+
   //like a pairing
   likePairing: async (req, res) => {
     try {
@@ -91,6 +106,7 @@ module.exports = {
       console.log(err);
     }
   },
+
   //delete a pairing
   deletePairing: async (req, res) => {
     try {
