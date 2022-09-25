@@ -1,6 +1,7 @@
 const cloudinary = require("../middleware/cloudinary");//for images
 const Pairing = require("../models/Pairing");
 const Comment = require("../models/Comment");
+const Flavor = require("../models/Flavor");
 
 
 module.exports = {
@@ -24,8 +25,37 @@ module.exports = {
   },
 
   getResults: async (req, res) => {
-    console.log(req)
-    console.log(res)
+    try{
+      const { ingredient } = req.query
+      const agg = [
+        {
+          $search: {
+            autocomplete: {
+              query: ingredient,
+              path: 'ingredient',
+              fuzzy: {
+                maxEdits: 1
+              }
+            }
+          }
+        }, 
+        {
+          $limit: 15
+        },
+        {
+          $project: {
+            _id: 1,
+            ingredient: 1,
+            pairings: 1,
+          }
+        },
+      ]
+      const response = await Flavor.aggregate(agg)
+      return res.json(response)
+      console.log(response)
+    }catch (err){
+      console.log(err)
+    }
   },
 
   //renders pairing.ejs with pairing, user, and comments 
