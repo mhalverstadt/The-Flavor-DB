@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $('#ingredient').autocomplete({
         source: async function(request,response) {
@@ -17,9 +18,8 @@ $(document).ready(function () {
         select: function(event, ui) {
             console.log(ui.item.id)
             fetch(`http://localhost:2121/search/${ui.item.id}`)
-                .then(result => result.json())
                 .then(result => {
-                    console.log(result)
+                    window.location.assign(result.url)
             })
         }
     })

@@ -48,12 +48,11 @@ module.exports = {
     }
   },
 
+  //renders array of pairings of key ingredient
   getPairings: async (req, res) =>{
     try {
-      console.log(req)
-        let result = await Flavor.findById({ _id: req.params.id })
-        console.log(result)
-        res.send(result)
+      const keyIngredient = await Flavor.findById(req.params.id)
+      res.render("builder.ejs", {keyIngredient: keyIngredient.ingredient, pairings: keyIngredient.pairings})
     }catch (error){
         res.status(500).send({message: error.message})
     }
