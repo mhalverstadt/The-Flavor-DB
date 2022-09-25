@@ -14,14 +14,20 @@ module.exports = {
     }
   },
   //renders search results page passing in pairings to ejs
-  getResults: async (req, res) => {
+  getBuilder: async (req, res) => {
     try {
-      // const posts = await Pairings.find().sort({ createdAt: "desc" }).lean(); this will be our call to the ingredients DB
-      res.render("search-results.ejs", { pairings: pairings });
+      const pairings = await Pairing.find().sort({ createdAt: "desc" }).lean(); //this will be our call to the ingredients DB
+      res.render("builder.ejs", { pairings: pairings });
     } catch (err) {
       console.log(err);
     }
   },
+
+  getResults: async (req, res) => {
+    console.log(req)
+    console.log(res)
+  },
+
   //renders pairing.ejs with pairing, user, and comments 
   getPairing: async (req, res) => {
     try {
@@ -37,7 +43,6 @@ module.exports = {
     try {
       // Upload image to cloudinary
       // const result = await cloudinary.uploader.upload(req.file.path); // cloudinary images 
-
       await Pairing.create({
         title: req.body.title,
         // pairings: , //need to add this somehow

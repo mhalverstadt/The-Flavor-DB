@@ -9,7 +9,7 @@ router.get("/:id", ensureAuth, pairingsController.getPairing);
 
 router.post("/createPairing", upload.single("file"), pairingsController.createPairing);
 
-// router.put("/likePairing/:id", pairingsController.likePairing);
+router.put("/likePairing/:id", pairingsController.likePairing);
 
 router.delete("/deletePairing/:id", pairingsController.deletePairing);
 
