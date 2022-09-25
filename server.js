@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
@@ -12,6 +13,7 @@ const mainRoutes = require("./routes/main");
 const pairingRoutes = require("./routes/pairings");
 const commentRoutes = require("./routes/comments");//not in use yet
 
+app.use(cors())
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
 

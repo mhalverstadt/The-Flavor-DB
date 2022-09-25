@@ -26,33 +26,21 @@ module.exports = {
 
   getResults: async (req, res) => {
     try{
-      const { ingredient } = req.query
-      const agg = [
+      let result = await Flavor.aggregate([
         {
-          $search: {
-            autocomplete: {
-              query: ingredient,
-              path: 'ingredient',
-              fuzzy: {
-                maxEdits: 1
-              }
+            "$search" : {
+                "autocomplete" : {
+                    "query" : `${req.query.query}`,
+                    "path" : "ingredient",
+                    "fuzzy" : {
+                        "maxEdits" : 1,
+                        "prefixLength" : 2,
+                    }
+                }
             }
-          }
-        }, 
-        {
-          $limit: 15
-        },
-        {
-          $project: {
-            _id: 1,
-            ingredient: 1,
-            pairings: 1,
-          }
-        },
-      ]
-      const response = await Flavor.aggregate(agg)
-      return res.json(response)
-      console.log(response)
+        }
+    ])
+    res.send(result)
     }catch (err){
       console.log(err)
     }
