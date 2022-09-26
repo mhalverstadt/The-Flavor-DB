@@ -11,6 +11,7 @@ router.get("/profile", ensureAuth, pairingsController.getProfile);
 router.get("/builder", pairingsController.getBuilder); 
 router.get("/search", pairingsController.getResults);
 router.get("/search/:id", pairingsController.getPairings);
+// router.get("/addPairing",pairingsController.addPairing);
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);

@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
-    $('#ingredient').autocomplete({
+    $('#search').autocomplete({
+        autoFocus: true,
         source: async function(request,response) {
             let data= await fetch(`http://localhost:2121/search?query=${request.term}`)
                     .then(results => results.json())
@@ -24,3 +25,15 @@ $(document).ready(function () {
         }
     })
 })
+
+//Trying to fix the 'enter' search problem
+
+// document.getElementById("search").addEventListener("keypress", async function (event) {
+//     if (event.key === "Enter") {
+//        const value = event.target.value
+//        console.log(value)
+//        let data= await fetch(`http://localhost:2121/search?query=${value}`)
+//         .then(results => results.json())
+//         console.log(results)
+//     }
+// })
