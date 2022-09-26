@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
 const PairingSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true,
-  },
   keyIngredient: {
     type: String,
   },
@@ -17,9 +13,8 @@ const PairingSchema = new mongoose.Schema({
   cloudinaryId: {
     type: String,
   },
-  caption: {
+  notes: {
     type: String,
-    required: true,
   },
   likes: {
     type: Number,

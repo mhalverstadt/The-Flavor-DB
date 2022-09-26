@@ -11,25 +11,25 @@
   </form>
 </section>
 
+<!-- Key ingredient plus pairings builder -->
 <% if (keyIngredient) { %>
   <h4 class= "container justify-content-center mt-5">Key Ingredient: <span id="keyIngredient"><%= keyIngredient %></span></h4>
-    <h6><% if (pair) { %> + <%= pair %></h6><% } %>
-      <!-- <form action="/pairings/createPairing" enctype="multipart/form-data" method="POST"> -->
+    <h6 id="selectedPairs"></h6>
         <div class="text-center">
-          <button type="button" class="btn btn-primary btn-sm mt-1" value="Upload">Save</button></div>
+          <button id="saveBtn" type="button" class="btn btn-primary btn-sm mt-1">Save</button></div>
       </form>
 <% } %>
 
+<!-- List of Pairings -->
 <div class="container">
     <div class="row justify-content-center mt-5">
       <% if (pairings) { %>
         <h6>Add a pairing:</h6>
       <% } %>
-      <ul class="row list-unstyled">
+      <ul class="row list-unstyled" id="pairingsList">
           <% for(var i=0; i<pairings.length; i++) {%>
-            <form action="/addPairing" enctype="multipart/form-data" method="GET">
-              <li class="col-4 justify-content-between mt-1">
-                <input type="submit" value="<%=pairings[i]%>" class="btn btn-light">
+              <li class="col-4 justify-content-between mt-1 pairing">
+                <button type="button" value="<%=pairings[i]%>" class="btn btn-light" id><%=pairings[i]%></button>
               </li>
             </form>
           <% } %>
