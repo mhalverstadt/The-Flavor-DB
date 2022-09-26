@@ -7,9 +7,10 @@ const Flavor = require("../models/Flavor");
 module.exports = {
   //render profile page of user passing pairings as an array to the ejs along with the user info//
   getProfile: async (req, res) => {
+    console.log('getting profile')
     try {
       const pairings = await Pairing.find({ user: req.user.id });
-      res.render("profile.ejs", { pairings: pairings || false, user: req.user });
+      res.render("profile.ejs", { pairings: pairings, user: req.user });
     } catch (err) {
       console.log(err);
     }
@@ -48,7 +49,7 @@ module.exports = {
   },
 
   //renders array of pairings of key ingredient from "/search/:id" route
-  getPairings: async (req, res) =>{
+  getPairingsList: async (req, res) =>{
     try {
       const keyIngredient = await Flavor.findById(req.params.id)
       res.render("builder.ejs", {keyIngredient: keyIngredient.ingredient, pairings: keyIngredient.pairings, pair: false})
@@ -82,14 +83,13 @@ module.exports = {
   //create a pairing and reder it to the profile
   createPairing: async (req, res) => {
     try {
-      // Upload image to cloudinary
-      // const result = await cloudinary.uploader.upload(req.file.path); // cloudinary images 
+      console.log(req.body)
       await Pairing.create({
-        title: req.body.title,
-        // pairings: , //need to add this somehow
-        image: result.secure_url,
-        cloudinaryId: result.public_id,
-        caption: req.body.caption,
+        keyIngredient: req.body.keyIngredient,
+        pairings: req.body.pairings,
+        // image: result.secure_url || null,
+        // cloudinaryId: result.public_id || null,
+        // notes: req.body.note || null,
         likes: 0,
         user: req.user.id,
       });
