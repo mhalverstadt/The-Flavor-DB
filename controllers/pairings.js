@@ -58,16 +58,6 @@ module.exports = {
     }
   },
 
-  //adding pairing 
-  // addPairing: async (req, res) => {
-  //   try{
-  //     const keyIngredient = Document.getElementById('keyIngredient').innerText
-  //     const pair = 
-  //     res.render("builder.ejs", {keyIngredient: keyIngredient, pairings: keyIngredient.pairings, pair: pair})
-  //   } catch(err){
-  //     console.log(err) 
-  //   }
-  // },
 
   //renders pairing.ejs with pairing, user, and comments. lean provides pure JS Object. 
   getPairing: async (req, res) => {

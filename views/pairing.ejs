@@ -45,10 +45,10 @@
     </div>
     <div class="mt-5">
       <h2>Add a note</h2>
-      <!-- <form action="/comment/createComment/<%=pairing._id%>" method="POST"> -->
+      <form action="/createNote/<%=pairing._id%>?_method=PUT"method="POST">
         <div class="mb-3">
             <label for="comment" class="form-label">Note</label>
-            <input type="text" class="form-control" id="comment" name="comment">
+            <input type="textarea" class="form-control" id="comment" name="comment">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
