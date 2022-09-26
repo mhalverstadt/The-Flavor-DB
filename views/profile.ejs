@@ -8,25 +8,9 @@
               <a href="/logout" class="col-3 btn btn-primary">Logout</a>
           </div>
 
-          <!-- <div class="mt-5">
-            <h2>Add a post</h2>
-            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
-              </div>
-              <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
-              </div>
-              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-            </form>
-          </div>
-      </div> -->
+          <div class="row justify-content-center mt-5">
+            <a class="btn btn-primary" href="/builder">New Search</a>
+          </div> 
 
   <section>
     <h2>Your Pairings</h2>
@@ -34,15 +18,17 @@
         <ul class="row list-unstyled">
           <% if (pairings) { %>
             <% for(var i=0; i<pairings.length; i++) {%>
-              <li class="col-6 justify-content-between mt-5">
-                <h4><%=pairings[i].keyIngredient%></h4><h6><%=pairings[i].pairings.join(' ')%></h6>
+              <li class="col-2 justify-content-between mt-5 card" style ='width: 25rem'>
+                <div class="card-body">
+                  <h4 class="card-title"><%=pairings[i].keyIngredient%></h4>
+                  <h6 class ="card-text"><%=pairings[i].pairings.join(' + ')%></h6>
+                  <a href="/pairing/<%=pairings[i]._id%>" class="btn btn-primary">Edit</a>
+                </div>
               </li>
             <% } %>
           <% } %>
         </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
-        </div>  
+ 
       </div>  
     </section>
 
