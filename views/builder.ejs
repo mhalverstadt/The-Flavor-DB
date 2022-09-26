@@ -7,14 +7,17 @@
     <h4 class="container">New Search</h4>
   <% } %>
   <form action="/search" method="GET">
-    <input type="text" name="search" id="ingredient" placeholder="Enter an Ingredient">
+    <input type="search" name="search" id="search" placeholder="Enter an Ingredient">
   </form>
 </section>
 
 <% if (keyIngredient) { %>
-  <h4 class= "container justify-content-center mt-2">Key Ingredient: <%= keyIngredient %></h4>
-      <form action="/pairings/createPairing" enctype="multipart/form-data" method="POST">
-        <div class="text-center"><button type="submit" class="btn btn-primary btn-sm mt-1" value="Upload">Save</button></div>
+  <h4 class= "container justify-content-center mt-5">Key Ingredient: <span id="keyIngredient"><%= keyIngredient %></span></h4>
+    <h6><% if (pair) { %> + <%= pair %></h6><% } %>
+      <!-- <form action="/pairings/createPairing" enctype="multipart/form-data" method="POST"> -->
+        <div class="text-center">
+          <button type="button" class="btn btn-primary btn-sm mt-1" value="Upload">Save</button></div>
+      </form>
 <% } %>
 
 <div class="container">
@@ -23,15 +26,15 @@
         <h6>Add a pairing:</h6>
       <% } %>
       <ul class="row list-unstyled">
-        <% for(var i=0; i<pairings.length; i++) {%>
-          <li class="col-6 justify-content-between mt-1">
-            <a href="<%=pairings[i]._id%>">
-              <%=pairings[i]%>
-            </a>
-          </li>
-        <% } %>
-        </ul>
+          <% for(var i=0; i<pairings.length; i++) {%>
+            <form action="/addPairing" enctype="multipart/form-data" method="GET">
+              <li class="col-4 justify-content-between mt-1">
+                <input type="submit" value="<%=pairings[i]%>" class="btn btn-light">
+              </li>
+            </form>
+          <% } %>
+          </ul>
+      </div>
     </div>
-  </div>
 
 <%- include('partials/footer') -%>

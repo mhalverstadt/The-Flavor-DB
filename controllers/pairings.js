@@ -18,7 +18,7 @@ module.exports = {
   //renders search results page passing in pairings to ejs
   getBuilder: async (req, res) => {
     try {
-      res.render("builder.ejs", {keyIngredient: false, pairings: false });
+      res.render("builder.ejs", {keyIngredient: false, pairings: false, pair: false});
     } catch (err) {
       console.log(err);
     }
@@ -51,11 +51,22 @@ module.exports = {
   getPairings: async (req, res) =>{
     try {
       const keyIngredient = await Flavor.findById(req.params.id)
-      res.render("builder.ejs", {keyIngredient: keyIngredient.ingredient, pairings: keyIngredient.pairings})
+      res.render("builder.ejs", {keyIngredient: keyIngredient.ingredient, pairings: keyIngredient.pairings, pair: false})
     }catch (error){
         res.status(500).send({message: error.message})
     }
   },
+
+  //adding pairing 
+  // addPairing: async (req, res) => {
+  //   try{
+  //     const keyIngredient = Document.getElementById('keyIngredient').innerText
+  //     const pair = 
+  //     res.render("builder.ejs", {keyIngredient: keyIngredient, pairings: keyIngredient.pairings, pair: pair})
+  //   } catch(err){
+  //     console.log(err) 
+  //   }
+  // },
 
   //renders pairing.ejs with pairing, user, and comments. lean provides pure JS Object. 
   getPairing: async (req, res) => {
