@@ -119,10 +119,11 @@ module.exports = {
   //delete a pairing
   deletePairing: async (req, res) => {
     try {
-      // Find post by id
-      let post = await Pairing.findById({ _id: req.params.id });
+      let pairing = await Pairing.findById({ _id: req.params.id });
       // Delete image from cloudinary
-      await cloudinary.uploader.destroy(pairing.cloudinaryId);
+      if (pairing.image){
+        await cloudinary.uploader.destroy(pairing.cloudinaryId);
+      }
       // Delete post from db
       await Pairing.remove({ _id: req.params.id });
       console.log("Deleted Pairing");
