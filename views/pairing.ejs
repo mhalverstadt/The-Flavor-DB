@@ -1,6 +1,7 @@
 <%- include('partials/header') -%>
 <div class="container">
   <div class="row justify-content-center mt-5">
+
     <div class="col-6">
 
       <div class="card">
@@ -36,30 +37,45 @@
           <button class="btn btn-primary fa fa-trash" type="submit"></button>
         </form>
         <%}%>
-    
-    <!-- add note to pairing -->
       </div>
     </div>
-    <div class="col-3 mt-5">
-      <p><%= pairing.notes %></p>
-    </div>
-    <div class="mt-5">
-      <h2>Add a note</h2>
-      <form 
-        action="/pairing/createNote/<%=pairing._id%>?_method=PUT"
-        method="POST"
-      >
-        <div class="mb-3">
-            <label for="comment" class="form-label">Note</label>
-            <input type="textarea" class="form-control" id="note" name="note">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
+    <!-- add note to pairing -->
+    <%if(pairing.user == user.id){ %>
+      <div class="col-3 mt-5">
+        <p><%= pairing.notes %></p>
+      </div>
+      <div class="mt-5">
+        <h2>Add A Note</h2>
+        <form 
+          action="/pairing/createNote/<%=pairing._id%>?_method=PUT"
+          method="POST"
+        >
+          <div class="mb-3">
+              <label for="comment" class="form-label">Note</label>
+              <input type="textarea" class="form-control" id="note" name="note">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    <% } %>
 
-    
+    <!-- add comments to another user's pairing -->
+    <%if(pairing.user != user.id){ %>
+      <div class="mt-5">
+        <h2>Add A Comment To This Pairing</h2>
+        <form 
+          action="/pairing/createComment/<%=pairing._id%>"
+          method="POST"
+        >
+          <div class="mb-3">
+              <label for="comment" class="form-label">Comment</label>
+              <input type="textarea" class="form-control" id="comment" name="comment">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    <% } %>
     <!-- see comments from other users -->
-    <!-- comments -->
     <ul>
       <% for(var i=0; i<comments.length; i++) {%>
         <li class="col-6 justify-content-between mt-5">

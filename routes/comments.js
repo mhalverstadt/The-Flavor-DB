@@ -10,8 +10,5 @@ const pairingsController = require("../controllers/pairings");
 
 router.post("/createComment/:id",  commentsController.createComment);
 
-router.put("/likePairing/:id", pairingsController.likePairing);
-
-router.delete("/deletePairing/:id", pairingsController.deletePairing);
 
 module.exports = router;

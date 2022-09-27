@@ -77,8 +77,8 @@ module.exports = {
       await Pairing.create({
         keyIngredient: req.body.keyIngredient,
         pairings: req.body.pairings,
-        image: result.secure_url || null,
-        cloudinaryId: result.public_id || null,
+        // image: result.secure_url || null,
+        // cloudinaryId: result.public_id || null,
         notes: req.body.note || null,
         likes: 0,
         user: req.user.id,
