@@ -70,16 +70,16 @@ module.exports = {
     }
   },
 
-  //create a pairing and reder it to the profile
+  //create a pairing and render it to the profile
   createPairing: async (req, res) => {
     try {
       console.log(req.body)
       await Pairing.create({
         keyIngredient: req.body.keyIngredient,
         pairings: req.body.pairings,
-        // image: result.secure_url || null,
-        // cloudinaryId: result.public_id || null,
-        // notes: req.body.note || null,
+        image: result.secure_url || null,
+        cloudinaryId: result.public_id || null,
+        notes: req.body.note || null,
         likes: 0,
         user: req.user.id,
       });
@@ -90,12 +90,27 @@ module.exports = {
     }
   },
 
+  //creates a note to add to pairing 
+  createNote: async (req, res) => {
+    try{
+      console.log(req.body)
+      await Pairing.findOneAndUpdate(
+        { _id: req.params.id },
+        {notes: req.body.note},
+        );
+        console.log('added note')
+        res.redirect(`/pairing/${req.params.id}`);
+    }catch(err){
+      console.log(err)
+    }
+  },
+
   //like a pairing
   likePairing: async (req, res) => {
     try {
       await Pairing.findOneAndUpdate(
         { _id: req.params.id },
-        {
+        {  
           $inc: { likes: 1 },
         }
       );
@@ -115,7 +130,7 @@ module.exports = {
         await cloudinary.uploader.destroy(pairing.cloudinaryId);
       }
       // Delete post from db
-      await Pairing.remove({ _id: req.params.id });
+      await Pairing.deleteOne({ _id: req.params.id });
       console.log("Deleted Pairing");
       res.redirect("/profile");
     } catch (err) {
