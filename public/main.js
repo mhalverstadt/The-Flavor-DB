@@ -28,7 +28,7 @@ $(document).ready(function () {
 
 //Event listener (event delegation) to handle button clicks on list of pairings in builder//
 const paringsList = document.getElementById('paringsList');
-const selectedPairs = document.getElementById('selectedPairs');
+// const selectedPairs = document.getElementById('selectedPairs');
 
 pairingsList.onclick = function(event){
     let target = event.target;
@@ -38,6 +38,7 @@ pairingsList.onclick = function(event){
     }
 }
 
+//maybe use for highlighting buttons for comparing arrays later
 // selectedPairs.onclick = function(event){
 //     let target = event.target;
 //     if(target.matches('input.btn.btn-light')){
