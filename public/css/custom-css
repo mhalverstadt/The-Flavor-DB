@@ -1,0 +1,9 @@
+#login-box {
+  border: solid gray 1px;
+  border-radius: 5px;
+}
+
+#login-bg {
+    background-image: url("\imgs\login\chilies.jpg");
+    background-color: #cccccc;
+   }
