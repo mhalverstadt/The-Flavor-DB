@@ -1,94 +1,88 @@
 <%- include('partials/header') -%>
-<div class="container">
-  <div class="row justify-content-center mt-5">
+<main class ="min-h-full flex flex-col min-w-full">
 
-    <div class="col-6">
-
-      <div class="card">
-        <% if (pairing.image) { %>
-          <img class="img-fluid card-img-top" src="<%=pairing.image%>" />
-        <% } %>
-        <div class="card-body" style ='width: 25rem'>
-          <h2 class="card-title"><%= pairing.keyIngredient %></h2>
-          <h6 class ="card-text"><%=pairing.pairings.join(' + ')%></h6>
-        </div>
+  <div class="p-10">  
+    <!--pairing-->
+    <div class="max-w-2xl rounded overflow-hidden shadow-lg">
+      <% if (pairing.image) { %>
+        <img class="img-fluid card-img-top" src="<%=pairing.image%>" />
+      <% } %>
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2"><%= pairing.keyIngredient %></div>
+        <p class="text-gray-700 text-base">
+          <%=pairing.pairings.join(' + ')%>
+        </p>
       </div>
-
-
-      <div class="row justify-content-between">
-
-        <!-- like a pairing -->
-        <form
-          class="col-1"
-          action="/pairing/likePairing/<%= pairing.id %>?_method=PUT"
-          method="POST"
-        >
-          <button class="btn btn-primary fa fa-heart" type="submit"></button>
-        </form>
-        <h3 class="col-3">Likes: <%= pairing.likes %></h3>
-
-        <!-- delete your own pairing -->
-        <%if(pairing.user == user.id){ %>
-        <form
-          action="/pairing/deletePairing/<%= pairing.id %>?_method=DELETE"
-          method="POST"
-          class="col-3"
-        >
-          <button class="btn btn-primary fa fa-trash" type="submit"></button>
-        </form>
-        <%}%>
+      <div class="flex px-6 pt-4 pb-2 ">
+          <!-- like a pairing -->
+          <h3 class="col-3">Likes: <%= pairing.likes %></h3>
+          <form class="col-1 inline-block" action="/pairing/likePairing/<%= pairing.id %>?_method=PUT" method="POST">
+              <button class="btn btn-primary fa fa-heart" type="submit"></button>
+          </form>
+          <!-- delete a pairing -->
+          <%if(pairing.user == user.id){ %>
+            <form action="/pairing/deletePairing/<%= pairing.id %>?_method=DELETE" method="POST" class="col-3">
+              <button class="btn btn-primary fa fa-trash" type="submit"></button>
+            </form>
+            <%}%>
       </div>
     </div>
-    <!-- add note to pairing -->
+  </div>
+  <!-- end pairing -->
+
+  <!-- add note to your own pairing -->
+  <section class="border m-5 max-w-3xl">
     <%if(pairing.user == user.id){ %>
-      <div class="col-3 mt-5">
+      <div class="col-3 m-5">
         <p><%= pairing.notes %></p>
       </div>
-      <div class="mt-5">
+      <div class="m-5">
         <h2>Add A Note</h2>
         <form 
-          action="/pairing/createNote/<%=pairing._id%>?_method=PUT"
-          method="POST"
-        >
+          action="/pairing/createNote/<%=pairing._id%>_method=PUT" method="POST">
           <div class="mb-3">
               <label for="comment" class="form-label">Note</label>
-              <input type="textarea" class="form-control" id="note" name="note">
+              <input type="textarea" placeholder="add a note" class="form-control input-border" id="note" name="note">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
     <% } %>
+  </section>
 
-    <!-- add comments to another user's pairing -->
-    <%if(pairing.user != user.id){ %>
-      <div class="mt-5">
-        <h2>Add A Comment To This Pairing</h2>
-        <form 
-          action="/pairing/createComment/<%=pairing._id%>"
-          method="POST"
-        >
-          <div class="mb-3">
-              <label for="comment" class="form-label">Comment</label>
-              <input type="textarea" class="form-control" id="comment" name="comment">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    <% } %>
-    <!-- see comments from other users -->
-    <ul>
+
+  <!-- add comments to another user's pairing -->
+  <%if(pairing.user != user.id){ %>
+    <div class="mt-5">
+      <h2>Add A Comment To This Pairing</h2>
+      <form 
+        action="/pairing/createComment/<%=pairing._id%>"
+        method="POST"
+      >
+        <div class="mb-3">
+            <label for="comment" class="form-label">Comment</label>
+            <input type="textarea" class="form-control" id="comment" name="comment">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  <% } %>
+  <!-- see comments from other users -->
+  <%if(pairing.comments){ %>
+    <ul class="border">
       <% for(var i=0; i<comments.length; i++) {%>
         <li class="col-6 justify-content-between mt-5">
           <%= comments[i].comment%> 
         </li>
-      <% } %>
+        <% } %>
     </ul>
+  <% } %>
 
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/builder">Search</a>
-    </div>
+  <div class="col-6 m-5">
+    <a class="btn btn-primary" href="/profile">Return to Profile</a>
+    <a class="btn btn-primary" href="/builder">Search</a>
   </div>
-</div>
+
+</main>
 
 <%- include('partials/footer') -%>

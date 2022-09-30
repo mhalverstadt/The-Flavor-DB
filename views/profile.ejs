@@ -1,38 +1,44 @@
 <%- include('partials/header') -%>
-<div class="container">
-  <div class="row mt-5">
-      <div class="col-6">
-          <div>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
-          </div>
 
-          <div class="row justify-content-center mt-5">
-            <a class="btn btn-primary" href="/builder">New Search</a>
-          </div> 
+<main class ="min-h-full flex flex-col min-w-full">
 
-  <section>
-    <h2>Your Pairings</h2>
-      <div class="col-6">
-        <ul class="row list-unstyled">
-          <% if (pairings) { %>
-            <% for(var i=0; i<pairings.length; i++) {%>
-              <li class="col-2 justify-content-between mt-5 card" style ='width: 25rem'>
-                <div class="card-body">
-                  <h4 class="card-title"><%=pairings[i].keyIngredient%></h4>
-                  <h6 class ="card-text"><%=pairings[i].pairings.join(' + ')%></h6>
-                  <a href="/pairing/<%=pairings[i]._id%>" class="btn btn-primary">Edit</a>
+<section class="mt-5 mx-10">
+  <div class="flex bg-white drop-shadow-md rounded-lg p-1.5">
+    <img class="w-28 h-28 rounded-full border-4 border-slate-50 object-cover"
+        src="/imgs/profile/puppy-face.jpg" />
+    <div class="flex flex-col px-5 py-1">
+        <h4 class="font-bold text-lg text-pink-600"><%= user.userName %></h4>
+        <p><strong>Email</strong>: <%= user.email %></p>
+        <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+    </div>
+</div>
+</section>
+
+<section>
+  <h2 class=" mx-10 mt-10 text-2xl font-bold">Your Pairings</h2>
+    <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+        <% if (pairings) { %>
+          <% for(var i=0; i<pairings.length; i++) {%>
+              <!--Card item-->
+              <div class="rounded overflow-hidden shadow-lg">
+                <% if (pairings[i].image) { %>
+                  <img class="w-full" src="<%=pairings[i].image%>" alt="picture of food made with pairings">
+                  <% } %>
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2"><%=pairings[i].keyIngredient%></div>
+                  <p><%=pairings[i].pairings.join(' + ')%></p>
                 </div>
-              </li>
-            <% } %>
+                <div class="px-6 pt-4 pb-2">
+                  <div class="card-actions justify-end">
+                    <a href="/pairing/<%=pairings[i]._id%>" class="btn btn-primary btn-sm">View</a>
+                  </div>
+                </div>
+              </div>
           <% } %>
-        </ul>
- 
-      </div>  
+        <% } %>
     </section>
 
-    </div>
-  </div>
-</div>
+</main>
+
+
 <%- include('partials/footer') -%>

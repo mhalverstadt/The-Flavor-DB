@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./config/input.css -o ./public/css/style.css",
+    "watch": "tailwindcss -i ./config/input.css -o ./public/css/style.css --watch",
     "dev": "nodemon -L server.js"
   },
   "author": "",
@@ -15,6 +16,7 @@
     "cloudinary": "^1.25.1",
     "connect-mongo": "^3.2.0",
     "cors": "^2.8.5",
+    "daisyui": "^2.31.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
@@ -29,5 +31,8 @@
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
   }
 }

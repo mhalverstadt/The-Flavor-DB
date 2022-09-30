@@ -1,40 +1,53 @@
 <%- include('partials/header') -%>
+<main class ="min-h-full flex flex-col min-w-full">
   
 
-<!-- search -->
-<section class ="container mt-5 justify-content-center">
-  <% if (keyIngredient) { %>
-    <h4 class="container">New Search</h4>
-  <% } %>
-  <form action="/search" method="GET">
-    <input type="search" name="search" id="search" placeholder="Enter an Ingredient">
-  </form>
-</section>
-
-<!-- Key ingredient plus pairings builder -->
-<% if (keyIngredient) { %>
-  <h4 class= "container justify-content-center mt-5">Key Ingredient: <span id="keyIngredient"><%= keyIngredient %></span></h4>
-    <h6 id="selectedPairs"></h6>
-        <div class="text-center">
-          <button id="saveBtn" type="button" class="btn btn-primary btn-sm mt-1">Save</button></div>
-      </form>
-<% } %>
-
-<!-- List of Pairings -->
-<div class="container">
-    <div class="row justify-content-center mt-5">
-      <% if (pairings) { %>
-        <h6>Add a pairing:</h6>
+  <!-- search -->
+  <section class ="container mt-5 mx-auto">
+      <% if (keyIngredient) { %>
+        <h4 class="text-2xl">New Search:</h4>
+      <% }else { %>
+          <h4 class="text-2xl mb-1">Search:</h4>
       <% } %>
-      <ul class="row list-unstyled" id="pairingsList">
-          <% for(var i=0; i<pairings.length; i++) {%>
-              <li class="col-4 justify-content-between mt-1 pairing">
-                <button type="button" value="<%=pairings[i]%>" class="btn btn-light" id><%=pairings[i]%></button>
-              </li>
-            </form>
+      <form action="/search" method="GET">
+        <input class ="input-border text-2xl" type="search" name="search" id="search" placeholder="Enter an Ingredient">
+      </form>
+  </section>
+
+  <!-- Key ingredient plus pairings builder -->
+  
+  <% if (keyIngredient) { %>
+    <section class="m-5 border">
+      <p class= "font-bold text-2xl m-2">Key Ingredient: <span class="" id="keyIngredient"><%= keyIngredient[0].toUpperCase() + keyIngredient.slice(1)%></span></p>
+        <h6 id="selectedPairs" class="m-2">Pairings: </h6>
+            <div class="text-right m-3">
+              <button id="saveBtn" type="button" class="btn btn-primary btn-sm m-1">Save Pairing</button></div>
+          </form>
+    </section>
+  <% } %>
+  
+
+
+  <!-- List of Pairings -->
+  <% if (!pairings) { %>
+    <img src="/imgs/builder/vanilla.jpg">
+  <% } %>
+  <% if (pairings) { %>
+    <section class="bg-base-200">
+      <div class="container m-5 ">
+          <div class="row justify-content-center mt-5">
+            <h6>Add a pairing:</h6>
           <% } %>
-          </ul>
-      </div>
-    </div>
+          <ul class="row list-unstyled columns-2 lg:columns-6 md:columns-5 xl:columns-8 " id="pairingsList">
+              <% for(var i=0; i<pairings.length; i++) {%>
+                  <li class="col-4 justify-content-between mt-1 pairing">
+                    <button type="button" value="<%=pairings[i]%>" class="btn btn-light ml-1" id><%=pairings[i]%></button>
+                  </li>
+                </form>
+              <% } %>
+              </ul>
+          </div>
+        </div>
+  </section>
 
 <%- include('partials/footer') -%>
