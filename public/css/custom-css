@@ -1,9 +1,30 @@
-#login-box {
+/* #login-box {
   border: solid gray 1px;
   border-radius: 5px;
+} */
+
+#login-container {
+  background-image: url("/imgs/login/chilies.jpg") !important;
+  background-position: right 80% bottom 60%;
 }
 
-#login-bg {
-    background-image: url("\imgs\login\chilies.jpg");
-    background-color: #cccccc;
-   }
+#signup-container {
+  background-image: url("/imgs/signup/berries1.jpg") !important;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: rgb(0, 98, 209) !important;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+.input-border{
+  border: solid black 1px !important;
+  border-radius: 5px;
+}
