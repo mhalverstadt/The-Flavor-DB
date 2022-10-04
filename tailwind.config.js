@@ -9,13 +9,14 @@ module.exports = {
         md: '768px',
         lg: '976px',
         xl: '1440px'
-      }
-    },
-    extend:{
+      },
       backgroundImage:{
         'chilies': "url('../public/imgs/login/chilies.jpg')"
-      }
-    } 
+      },
+      colors:{
+        'off-white': 'rgb(239, 239, 241)'
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {

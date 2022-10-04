@@ -1140,15 +1140,6 @@ html {
   line-height: 1.25rem;
 }
 
-.card-title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-}
-
 @keyframes checkmark {
   0% {
     background-position-y: 5px;
@@ -1344,18 +1335,10 @@ html {
   line-height: 1.25rem;
 }
 
-.card-compact .card-title {
-  margin-bottom: 0.25rem;
-}
-
 .card-normal .card-body {
   padding: var(--padding-card, 2rem);
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.card-normal .card-title {
-  margin-bottom: 0.75rem;
 }
 
 .m-5 {
@@ -1391,6 +1374,10 @@ html {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mt-1 {
@@ -1486,9 +1473,9 @@ html {
   flex-shrink: 0;
 }
 
-.columns-3 {
-  -moz-columns: 3;
-       columns: 3;
+.columns-2 {
+  -moz-columns: 2;
+       columns: 2;
 }
 
 .grid-cols-1 {
@@ -1558,6 +1545,10 @@ html {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .p-10 {
