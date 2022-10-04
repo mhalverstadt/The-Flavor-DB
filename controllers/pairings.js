@@ -84,7 +84,7 @@ module.exports = {
         user: req.user.id,
       });
       console.log("Pairing has been created!");
-      res.redirect("/profile");
+      console.log(res.body)
     } catch (err) {
       console.log(err);
     }
