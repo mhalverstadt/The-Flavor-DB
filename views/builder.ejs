@@ -2,7 +2,7 @@
 <main class ="min-h-full flex flex-col min-w-full">
   
 
-  <!-- search -->
+  <!-- Search -->
   <section class ="mx-auto mt-5 px-5 bg-off-white pb-3">
       <% if (keyIngredient) { %>
         <h4 class="text-2xl">New Search:</h4>
@@ -10,26 +10,24 @@
           <h4 class="text-2xl mb-1">Search:</h4>
       <% } %>
       <form action="/search" method="GET">
-        <input class ="input-border text-2xl" type="search" name="search" id="search" placeholder="Enter an Ingredient">
+        <input class ="input-bordered text-2xl" type="search" name="search" id="search" placeholder="Enter an Ingredient">
       </form>
   </section>
 
   <!-- Key ingredient plus pairings builder -->
   
   <% if (keyIngredient) { %>
-    <section class="m-5 border">
+    <section class="m-5 border max-w-xlg">
       <p class= "font-bold text-2xl m-2">Key Ingredient: <span class="" id="keyIngredient"><%= keyIngredient[0].toUpperCase() + keyIngredient.slice(1)%></span></p>
         <h6 id="selectedPairs" class="m-2">Pairings: </h6>
             <div class="text-right m-3">
               <button id="saveBtn" type="button" class="btn btn-primary btn-sm m-1">Save Pairing</button></div>
     </section>
   <% } %>
-  
-
 
   <!-- List of Pairings -->
   <% if (!pairings) { %>
-    <img src="/imgs/builder/vanilla.jpg">
+    <img src="/imgs/builder/macarons.png">
   <% } %>
   <% if (pairings) { %>
     <section class="bg-base-200">
@@ -44,9 +42,37 @@
                   </li>
                 </form>
               <% } %>
-              </ul>
+            </ul>
           </div>
         </div>
   </section>
+
+  <!-- Pairings Created by other Users -->
+  <section>
+    <% if (communityPairings != false) { %>
+    <h2 class=" mx-10 mt-10 text-2xl font-bold">Pairings from other Users with this Key Ingredient:</h2>
+      <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+          <% for(var i=0; i<communityPairings.length; i++) {%>
+              <!--Card item-->
+              <div class="rounded overflow-hidden shadow-lg">
+                <% if (communityPairings[i].image) { %>
+                  <img class="w-full" src="<%=communityPairings[i].image%>" alt="picture of food made with pairings">
+                <% } %>
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2"><%=communityPairings[i].keyIngredient[0].toUpperCase() + communityPairings[i].keyIngredient.slice(1)%></div>
+                  <p class="font-bold"><%=communityPairings[i].pairings.join(' + ')%></p>
+                </div>
+                <div class="px-2 pt-4 pb-2">
+                  <div class="card-actions justify-between">
+                    <div class="ml-5">
+                      <p>Pairing made by: <%=communityPairings[i].user === user ? 'You' : communityPairings[i].userName%></p>
+                    </div>
+                    <a href="/pairing/<%=communityPairings[i]._id%>" class="btn btn-primary btn-sm">View</a>
+                  </div>
+                </div>
+              </div>
+            <% } %>
+          <% } %>
+      </section>
 
 <%- include('partials/footer') -%>

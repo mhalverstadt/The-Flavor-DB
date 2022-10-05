@@ -5,6 +5,7 @@ const Flavor = require("../models/Flavor");
 
 
 module.exports = {
+
   //render profile page of user passing pairings as an array to the ejs along with the user info//
   getProfile: async (req, res) => {
     console.log('getting profile')
@@ -19,7 +20,13 @@ module.exports = {
   //renders search results page passing in pairings to ejs
   getBuilder: async (req, res) => {
     try {
-      res.render("builder.ejs", {keyIngredient: false, pairings: false, pair: false});
+      res.render("builder.ejs", {
+        keyIngredient: false,
+        pairings: false,
+        communityPairings: false,
+        user: req.user.id,
+        pair: false
+      });
     } catch (err) {
       console.log(err);
     }
@@ -52,7 +59,15 @@ module.exports = {
   getPairingsList: async (req, res) =>{
     try {
       const keyIngredient = await Flavor.findById(req.params.id)
-      res.render("builder.ejs", {keyIngredient: keyIngredient.ingredient, pairings: keyIngredient.pairings, pair: false})
+      console.log(keyIngredient.ingredient)
+      const communityPairings = await Pairing.find({keyIngredient: keyIngredient.ingredient})
+      console.log(communityPairings)
+      res.render("builder.ejs", {
+        keyIngredient: keyIngredient.ingredient,
+        pairings: keyIngredient.pairings,
+        communityPairings: communityPairings,
+        user: req.user.id,
+        pair: false})
     }catch (error){
         res.status(500).send({message: error.message})
     }
@@ -73,18 +88,19 @@ module.exports = {
   //create a pairing and render it to the profile
   createPairing: async (req, res) => {
     try {
-      console.log(req.body)
+      // console.log(req.body)
       await Pairing.create({
-        keyIngredient: req.body.keyIngredient,
+        keyIngredient: req.body.keyIngredient.toLowerCase(),
         pairings: req.body.pairings,
         // image: result.secure_url || null,
         // cloudinaryId: result.public_id || null,
         notes: req.body.note || null,
         likes: 0,
         user: req.user.id,
+        userName: req.user.userName,
       });
-      console.log("Pairing has been created!");
-      console.log(res.body)
+      console.log('new pairing created!');
+      res.redirect('/profile')
     } catch (err) {
       console.log(err);
     }

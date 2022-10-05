@@ -56,6 +56,5 @@ saveBtn.onclick = async function(event){
         pairings.push(pairingArray[i].value)
     }
     let data = await fetch(`/createPairing`, {method: 'POST', headers: new Headers({ "Content-Type": "application/json" }), body: JSON.stringify({ keyIngredient, pairings, })})
-        console.log(body)
-        window.location.assign(`pairings/${_id}`)
+        window.location.assign('/profile')
 }

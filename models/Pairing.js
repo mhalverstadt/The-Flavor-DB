@@ -24,6 +24,9 @@ const PairingSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  userName: {
+    type: String,
+  },
   createdAt: {
     type: Date,
     default: Date.now,

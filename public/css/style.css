@@ -1737,7 +1737,8 @@ button,
   /* 2 */
 }
 
-.input-border{
+.input-bordered{
   border: solid black 1px !important;
   border-radius: 5px;
+  --tw-border-opacity: 0.2;
 }
