@@ -3,7 +3,7 @@ Work in Progress
 
 Full stack application that helps cooks and chefs spark their creativity and imaginations by pairing flavors together. Users can save their generated flavor combinations into Pairings on their profile with pictures and notes. Other users may comment on or like community generated Pairings. The data for this project is from the book 'The Flavor Bible' by Andrew Dornenburg and Karen Page. 
 
-![alt tag](![falvor-db-screen-shot](https://user-images.githubusercontent.com/102763323/194123464-00462c11-8591-40f7-aa60-7bad64af88a8.jpg)
+![screenshot of the flavor DB homepage]([falvor-db-screen-shot](https://user-images.githubusercontent.com/102763323/194123464-00462c11-8591-40f7-aa60-7bad64af88a8.jpg)
 )
 
 ## How It's Made:
