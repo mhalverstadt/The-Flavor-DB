@@ -29,7 +29,6 @@ $(document).ready(function () {
 //Event listener (event delegation) to handle button clicks on list of pairings in builder//
 const paringsList = document.getElementById('paringsList');
 // const selectedPairs = document.getElementById('selectedPairs');
-
 pairingsList.onclick = function(event){
     let target = event.target;
     if(target.matches('button')){
@@ -53,8 +52,17 @@ saveBtn.onclick = async function(event){
     let pairings = []
     let pairingArray = document.getElementById('selectedPairs').childNodes
     for(let i = 0; i < pairingArray.length; i++){
-        pairings.push(pairingArray[i].value)
+        pairings.push(pairingArray[i].innerHTML)
     }
     let data = await fetch(`/createPairing`, {method: 'POST', headers: new Headers({ "Content-Type": "application/json" }), body: JSON.stringify({ keyIngredient, pairings, })})
-        window.location.assign('/profile')
+        window.location.assign(`/profile`)  
+}
+// Event listener for users to add their own pairing
+const userMadePairingBtn = document.getElementById('userMadePairingBtn')
+userMadePairingBtn.onclick = function(){
+    let txtValue = document.getElementById('userMadePairing').value
+    let newBtn = document.createElement('button')
+    newBtn.innerText = `${txtValue}`
+    newBtn.classList.add('btn', 'btn-light', 'ml-1')
+    selectedPairs.appendChild(newBtn);
 }

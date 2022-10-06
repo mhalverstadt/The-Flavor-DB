@@ -3,14 +3,14 @@
   
 
   <!-- Search -->
-  <section class ="mx-auto mt-5 px-5 bg-off-white pb-3">
+  <section class ="mx-auto mt-5 px-5 pb-3 max-w-2xl">
       <% if (keyIngredient) { %>
         <h4 class="text-2xl">New Search:</h4>
       <% }else { %>
           <h4 class="text-2xl mb-1">Search:</h4>
       <% } %>
       <form action="/search" method="GET">
-        <input class ="input-bordered text-2xl" type="search" name="search" id="search" placeholder="Enter an Ingredient">
+        <input class ="input-bordered text-2xl p-2" type="search" name="search" id="search" placeholder="Enter an Ingredient">
       </form>
   </section>
 
@@ -21,8 +21,18 @@
       <p class= "font-bold text-2xl m-2">Key Ingredient: <span class="" id="keyIngredient"><%= keyIngredient[0].toUpperCase() + keyIngredient.slice(1)%></span></p>
         <h6 id="selectedPairs" class="m-2">Pairings: </h6>
             <div class="text-right m-3">
-              <button id="saveBtn" type="button" class="btn btn-primary btn-sm m-1">Save Pairing</button></div>
+              <button id="saveBtn" type="button" class="btn btn-primary btn-sm m-1">Save Pairing To Your Profile</button>
+            </div>
     </section>
+
+  <!-- add your own pairing -->
+  <div class="mx-5 mb-3 border rounded">
+    <div class="p-3">
+      <label for="userMadePairing">Add your own Pairing: </label><br>
+        <input class="input-bordered" id="userMadePairing" type="text">
+        <button id="userMadePairingBtn" class="btn btn-primary btn-sm m-1">Add</button>
+    </div> 
+  </div>
   <% } %>
 
   <!-- List of Pairings -->
@@ -32,8 +42,8 @@
   <% if (pairings) { %>
     <section class="bg-base-200">
       <div class="container m-5 ">
-          <div class="row justify-content-center mt-5">
-            <h6>Add a pairing:</h6>
+          <div class="row justify-content-center mt-6">
+            <h6>Suggested Pairings:</h6>
           <% } %>
           <ul class="row list-unstyled columns-2 lg:columns-6 md:columns-5 xl:columns-8 " id="pairingsList">
               <% for(var i=0; i<pairings.length; i++) {%>
@@ -55,13 +65,24 @@
           <% for(var i=0; i<communityPairings.length; i++) {%>
               <!--Card item-->
               <div class="rounded overflow-hidden shadow-lg">
+                <!-- image if one -->
                 <% if (communityPairings[i].image) { %>
                   <img class="w-full" src="<%=communityPairings[i].image%>" alt="picture of food made with pairings">
                 <% } %>
+
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2"><%=communityPairings[i].keyIngredient[0].toUpperCase() + communityPairings[i].keyIngredient.slice(1)%></div>
                   <p class="font-bold"><%=communityPairings[i].pairings.join(' + ')%></p>
                 </div>
+
+                <!-- note if one -->
+                <%if(communityPairings[i].notes){ %>
+                  <div class="m-4 border">
+                    <h5>Notes:</h5>
+                    <p><%= communityPairings[i].notes %></p>
+                  </div>
+                <%}%>
+
                 <div class="px-2 pt-4 pb-2">
                   <div class="card-actions justify-between">
                     <div class="ml-5">

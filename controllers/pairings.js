@@ -24,7 +24,7 @@ module.exports = {
         keyIngredient: false,
         pairings: false,
         communityPairings: false,
-        user: req.user.id,
+        user: req.user || false,
         pair: false
       });
     } catch (err) {
@@ -61,7 +61,6 @@ module.exports = {
       const keyIngredient = await Flavor.findById(req.params.id)
       console.log(keyIngredient.ingredient)
       const communityPairings = await Pairing.find({keyIngredient: keyIngredient.ingredient})
-      console.log(communityPairings)
       res.render("builder.ejs", {
         keyIngredient: keyIngredient.ingredient,
         pairings: keyIngredient.pairings,
@@ -89,7 +88,7 @@ module.exports = {
   createPairing: async (req, res) => {
     try {
       // console.log(req.body)
-      await Pairing.create({
+      const postID = await Pairing.create({
         keyIngredient: req.body.keyIngredient.toLowerCase(),
         pairings: req.body.pairings,
         // image: result.secure_url || null,
@@ -99,8 +98,7 @@ module.exports = {
         user: req.user.id,
         userName: req.user.userName,
       });
-      console.log('new pairing created!');
-      res.redirect('/profile')
+      res.redirect(`/profile`)
     } catch (err) {
       console.log(err);
     }
