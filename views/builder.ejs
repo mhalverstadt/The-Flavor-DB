@@ -25,14 +25,14 @@
             </div>
     </section>
 
-  <!-- add your own pairing -->
-  <div class="mx-5 mb-3 border rounded">
-    <div class="p-3">
-      <label for="userMadePairing">Add your own Pairing: </label><br>
-        <input class="input-bordered" id="userMadePairing" type="text">
-        <button id="userMadePairingBtn" class="btn btn-primary btn-sm m-1">Add</button>
-    </div> 
-  </div>
+    <!-- add your own pairing -->
+    <div class="mx-5 mb-3 border rounded">
+      <div class="p-3">
+        <label for="userMadePairing">Add your own Pairing: </label><br>
+          <input class="input-bordered" id="userMadePairing" type="text">
+          <button id="userMadePairingBtn" class="btn btn-primary btn-sm m-1">Add</button>
+      </div> 
+    </div>
   <% } %>
 
   <!-- List of Pairings -->
@@ -72,7 +72,7 @@
 
                 <div class="px-6 py-4">
                   <div class="font-bold text-xl mb-2"><%=communityPairings[i].keyIngredient[0].toUpperCase() + communityPairings[i].keyIngredient.slice(1)%></div>
-                  <p class="font-bold"><%=communityPairings[i].pairings.join(' + ')%></p>
+                  <p class="font-bold"><%=communityPairings[i].pairings.join(' + ').toLowerCase()%></p>
                 </div>
 
                 <!-- note if one -->

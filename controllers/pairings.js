@@ -77,7 +77,7 @@ module.exports = {
   getPairing: async (req, res) => {
     try {
       const pairing = await Pairing.findById(req.params.id);
-      const comments = await Comment.find({post: req.params.id}).sort({ createdAt: "desc" }).lean();
+      const comments = await Comment.find({pairing: req.params.id}).sort({ createdAt: "desc" }).lean();
       res.render("pairing.ejs", { pairing: pairing, user: req.user, comments: comments });
     } catch (err) {
       console.log(err);
@@ -95,7 +95,7 @@ module.exports = {
         // cloudinaryId: result.public_id || null,
         notes: req.body.note || null,
         likes: 0,
-        user: req.user.id,
+        user: req.user.id || null,
         userName: req.user.userName,
       });
       res.redirect(`/profile`)

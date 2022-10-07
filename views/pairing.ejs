@@ -12,12 +12,11 @@
       <div class="px-6 py-4">
         <div class="font-bold text-3xl mb-2"><%= pairing.keyIngredient %></div>
         <p class="text-gray-700 text-2xl">
-          <%=pairing.pairings.join(' + ')%>
+          <%=pairing.pairings.join(' + ').toLowerCase()%>
         </p>
       </div>
 
       <!-- pairing notes -->
-
       <%if(pairing.notes){ %>
         <div class="m-4 border">
           <h5>Notes:</h5>
@@ -49,8 +48,8 @@
     </div>
   </div>
   <!-- end pairing -->
-
-  <section>
+  
+  <section class="max-h-fit">
     <!-- add note to your own pairing -->
     <%if(pairing.user == user.id){ %>
       <div class="p-2 mx-auto">  
@@ -64,7 +63,7 @@
             <form action="/pairing/createNote/<%=pairing._id%>?_method=PUT" method="POST">
             <div class="mb-3">
                 <label for="note" class="form-label">Ideas for techniques or a dish you would like to make with this pairing.</label>
-                  <textarea type="textarea" placeholder="add a note" class="form-control input-bordered min-w-full" id="note" name="note"></textarea>
+                  <textarea type="textarea" placeholder="add a note" class="form-control input-bordered min-w-full py-1 px-3" id="note" name="note"></textarea>
             </div>
             <button type="submit" class="justify-item-end btn btn-primary">Submit</button>
           </form>
@@ -74,38 +73,43 @@
     </div>
   <% } %>
 
-    <!-- add comments to another user's pairing -->
-    <%if(pairing.user != user.id){ %>
-      <div class="mt-5">
-        <h2>Add A Comment To This Pairing</h2>
-        <form 
-          action="/pairing/createComment/<%=pairing._id%>"
-          method="POST">
-          <div class="mb-3">
-              <label for="comment" class="form-label">Comment</label>
-              <input type="textarea" class="form-control" id="comment" name="comment">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+  <!-- add comments to another user's pairing -->
+  <%if(pairing.user != user.id){ %>
+    <div class="p-2 mx-auto">
+      <div class="max-w-2xl rounded overflow-hidden">
+        <div class="px-6 py-4">
+          <h2 class="font-bold text-2xl mb-2">
+            Add A Comment To This Pairing
+          </h2>
+            <form 
+              action="/pairing/createComment/<%=pairing._id%>" method="POST">
+              <div class="mb-3">
+                  <label for="comment" class="form-label">Tell this user what you think of their pairing!</label>
+                  <textarea class="input-bordered min-w-full px-3 py-1" id="comment" name="comment" placeholder="Add a comment!"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
       </div>
-    <% } %>
+    </div>
+  <% } %>
 
-    <!-- see comments from other users -->
-    <%if(pairing.comments){ %>
-      <ul class="border">
-        <% for(var i=0; i<comments.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <%= comments[i].comment%> 
-          </li>
-          <% } %>
-      </ul>
-    <% } %>
   </section>
 
-    <div class="col-6 m-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/builder">Search</a>
-    </div>
+  <section class="mx-10">
+    <!-- see comments from other users -->
+    <%if(comments){ %>
+      <h3>Comments:</h3>
+        <ul class="border rounded">
+          <% for(var i=0; i<comments.length; i++) {%>
+            <li class="col-6 justify-content-between m-4">
+              <strong><%=comments[i].userName%></strong> says: <%= comments[i].comment%><br> 
+              <small class="text-slate-500 px-2"><%=comments[i].createdAt.toLocaleString()%></small>
+            </li>
+          <% } %>
+        </ul>
+    <% } %>
+  </section>
 
 </main>
 

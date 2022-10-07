@@ -10,6 +10,7 @@ module.exports = {
         likes: 0,
         user: req.user.id,
         pairing: req.params.id,
+        userName: req.user.userName,
       });
       console.log("Comment has been added!");
       res.redirect("/pairing/"+req.params.id);
