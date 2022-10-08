@@ -2,6 +2,7 @@ const cloudinary = require("../middleware/cloudinary");//for images
 const Pairing = require("../models/Pairing");
 const Comment = require("../models/Comment");
 const Flavor = require("../models/Flavor");
+const User = require("../models/User");
 
 
 module.exports = {
@@ -11,11 +12,34 @@ module.exports = {
     console.log('getting profile')
     try {
       const pairings = await Pairing.find({ user: req.user.id });
-      res.render("profile.ejs", { pairings: pairings, user: req.user });
+      res.render("profile.ejs", { pairings: pairings, user: req.user, userName: req.user.userName });
     } catch (err) {
       console.log(err);
     }
   },
+
+  //reder another user's profile
+  getCommunityProfile: async (req, res) => {
+    console.log('getting community profile')
+    try {
+      const pairings = await Pairing.find({ user: req.params.id });
+      const profileInfo = await User.find({ _id: req.params.id });
+      res.render("profile.ejs", { pairings: pairings, user: req.params.id, userName: profileInfo[0].userName, });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+  //renders the feed page
+  getFeed: async (req, res) => {
+    try {
+      const pairings = await Pairing.find().sort({ createdAt: "desc" })
+      res.render("feed.ejs", { pairings: pairings, user: req.user.id,})
+    }catch (err){
+      console.log(err)
+    }
+  },
+
 
   //renders search results page passing in pairings to ejs
   getBuilder: async (req, res) => {
@@ -32,12 +56,13 @@ module.exports = {
     }
   },
 
-  //autocomplete Mongo Pipeline
+  // autocomplete Mongo Pipeline
   getResults: async (req, res) => {
     try{
       let result = await Flavor.aggregate([
         {
             "$search" : {
+                "index": "autocomplete",
                 "autocomplete" : {
                     "query" : `${req.query.query}`,
                     "path" : "ingredient",
@@ -54,12 +79,45 @@ module.exports = {
       console.log(err)
     }
   },
+  
+//TEST SEARCH PIPELINE NOT IN USE////////////////////
+  // getResults: async (req, res) => {
+  //   try {
+  //     let results;
+  //     if (req.query.name) {
+  //       results = await Flavor.aggregate([
+  //         {
+  //           $search: {
+  //             index: "default",
+  //             compound: {
+  //               must: [
+  //                 {
+  //                   text: {
+  //                     query: `${req.query.query}`,
+  //                     path: "ingredient",
+  //                     fuzzy: {
+  //                       maxEdits: 1,
+  //                     },
+  //                   },
+  //                 },
+  //               ],
+  //             },
+  //           },
+  //         },
+  //       ]);
+  //       res.send(results);
+  //     }
+  //     res.send([]);
+  //   } catch (error) {
+  //     console.log(error);
+  //     res.send([]);
+  //   }
+  // },
 
   //renders array of pairings of key ingredient from "/search/:id" route
   getPairingsList: async (req, res) =>{
     try {
       const keyIngredient = await Flavor.findById(req.params.id)
-      console.log(keyIngredient.ingredient)
       const communityPairings = await Pairing.find({keyIngredient: keyIngredient.ingredient})
       res.render("builder.ejs", {
         keyIngredient: keyIngredient.ingredient,
@@ -71,7 +129,6 @@ module.exports = {
         res.status(500).send({message: error.message})
     }
   },
-
 
   //renders pairing.ejs with pairing, user, and comments. lean provides pure JS Object. 
   getPairing: async (req, res) => {
@@ -130,6 +187,23 @@ module.exports = {
       );
       console.log("Likes +1");
       res.redirect(`/pairing/${req.params.id}`);
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+  //like feed pairing
+  likeFeedPairing: async (req, res) => {
+    console.log(req.params.id)
+    try {
+      await Pairing.findOneAndUpdate(
+        { _id: req.params.id },
+        {  
+          $inc: { likes: 1 },
+        }
+      );
+      console.log("Likes +1");
+      res.redirect("/feed");
     } catch (err) {
       console.log(err);
     }

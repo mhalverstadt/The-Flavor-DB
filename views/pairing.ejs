@@ -26,9 +26,9 @@
 
         <div class="mt-5 grid justify-items-end">
           <h3 class="col-3 mr-6">Likes: <%= pairing.likes %></h3>
-          <a href="#" class="mr-6">
-            <p>Pairing made by: <%= pairing.user == user.id ? 'You' : pairing.userName%></p>
-          </a>
+          <div href="#" class="mr-6">
+            <p>Pairing made by: <a class="text-blue-700	" href="/profile/<%=pairing.user%>"><%= pairing.user == user.id ? 'You' : pairing.userName%></a></p>
+          </div>
 
           <div class="flex px-6 pt-4 pb-2 gap-1">
             <!-- like a pairing -->

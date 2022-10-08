@@ -7,7 +7,7 @@
     <img class="w-28 h-28 rounded-full border-4 border-slate-50 object-cover"
         src="/imgs/profile/puppy-face.jpg" />
     <div class="flex flex-col px-5 py-1">
-        <h4 class="font-bold text-lg text-pink-600"><%= user.userName %></h4>
+        <h4 class="font-bold text-lg text-pink-600"><%= userName %></h4>
         <p><strong>Email</strong>: <%= user.email %></p>
         <a href="/logout" class="col-3 btn btn-primary">Logout</a>
     </div>
@@ -36,7 +36,8 @@
               </div>
           <% } %>
         <% } %>
-    </section>
+    </div>
+  </section>
 
 </main>
 

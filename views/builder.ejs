@@ -86,7 +86,7 @@
                 <div class="px-2 pt-4 pb-2">
                   <div class="card-actions justify-between">
                     <div class="ml-5">
-                      <p>Pairing made by: <%=communityPairings[i].user === user ? 'You' : communityPairings[i].userName%></p>
+                      <p>Pairing made by: <a class="text-blue-700" href="/profile/<%=communityPairings[i].user%>"><%= communityPairings[i].user == user.id ? 'You' : communityPairings[i].userName%></a></p>
                     </div>
                     <a href="/pairing/<%=communityPairings[i]._id%>" class="btn btn-primary btn-sm">View</a>
                   </div>
