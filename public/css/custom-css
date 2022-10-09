@@ -25,3 +25,7 @@ button,
   border-radius: 5px;
   --tw-border-opacity: 0.2;
 }
+
+.changeColor{
+  background-color: rgb(71, 50, 109) !important;
+}

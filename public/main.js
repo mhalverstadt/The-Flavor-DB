@@ -28,22 +28,21 @@ $(document).ready(function () {
 
 //Event listener (event delegation) to handle button clicks on list of pairings in builder//
 const paringsList = document.getElementById('paringsList');
-// const selectedPairs = document.getElementById('selectedPairs');
 pairingsList.onclick = function(event){
     let target = event.target;
     if(target.matches('button')){
         selectedPairs.appendChild(event.target.cloneNode(true));
-        // event.target.remove()
+        event.target.remove()
     }
 }
 
-//maybe use for highlighting buttons for comparing arrays later
-// selectedPairs.onclick = function(event){
-//     let target = event.target;
-//     if(target.matches('input.btn.btn-light')){
-//         event.target.remove()
-//     }
-// }
+// maybe use for highlighting buttons for comparing arrays later
+selectedPairs.onclick = function(event){
+    let target = event.target;
+    if(target.matches('button')){
+        target.classList.contains('changeColor') ? target.classList.remove('changeColor') : target.classList.add('changeColor')
+    }
+}
 
 //Event listener to save a pairing
 const saveBtn = document.getElementById('saveBtn')
@@ -54,7 +53,7 @@ saveBtn.onclick = async function(event){
     for(let i = 0; i < pairingArray.length; i++){
         pairings.push(pairingArray[i].innerHTML)
     }
-    pairings = pairings.filter(Boolean)
+    pairings = pairings
     console.log(pairings)
     let data = await fetch(`/createPairing`, {method: 'POST', headers: new Headers({ "Content-Type": "application/json" }), body: JSON.stringify({ keyIngredient, pairings, })})
         window.location.assign(`/profile`)  

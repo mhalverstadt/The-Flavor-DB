@@ -11,7 +11,7 @@ module.exports = {
   getProfile: async (req, res) => {
     console.log('getting profile')
     try {
-      const pairings = await Pairing.find({ user: req.user.id });
+      const pairings = await Pairing.find({ user: req.user.id }).sort({ createdAt: "desc" });
       res.render("profile.ejs", { pairings: pairings, user: req.user, userName: req.user.userName });
     } catch (err) {
       console.log(err);
@@ -33,7 +33,7 @@ module.exports = {
   //renders the feed page
   getFeed: async (req, res) => {
     try {
-      const pairings = await Pairing.find().sort({ createdAt: "desc" })
+      const pairings = await Pairing.find().sort({ createdAt: "desc" }).limit(40);
       res.render("feed.ejs", { pairings: pairings, user: req.user.id,})
     }catch (err){
       console.log(err)
