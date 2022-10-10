@@ -150,30 +150,33 @@ module.exports = {
   //Compare selected pairings with key ingredient pairings, render duplicate pairings in builder.ejs
   getComparedPairingsList: async (req, res) =>{
     try {
-      console.log(req.query) //this returns strings, need to find out how to return arrays. 
-      const keyIngredient = await Flavor.findOne( {ingredient: req.query.compareKeyIngredient.toLowerCase()} )
-      const communityPairings = await Pairing.findOne({keyIngredient: req.query.compareKeyIngredient.toLowerCase()})
+      console.log(req.query)
+      //this returns strings, need to find out how to return arrays. 
+      const keyIngredient = await Flavor.findOne( {ingredient: decodeURIComponent(req.query.compareKeyIngredient).toLowerCase()} )
+      const communityPairings = await Pairing.find({keyIngredient: decodeURIComponent(req.query.compareKeyIngredient).toLowerCase()})
       //all pairings added under key ingredient
-      const pairings = req.query.compareSelectedPairings
-      //this is all selected pairing ingredients that user wants to compare (class = changeColor)
-      let arrForCompared = req.query.comparedPairings.trim()
+      const pairings = JSON.parse(decodeURIComponent(req.query.compareSelectedPairings))
+      //this is all selected pairing ingredients that user wants to compare (class = changeColor)n
+      const arrForCompared = JSON.parse(decodeURIComponent(req.query.comparedPairings))
         //this finds the array of pairings from only the selected pairings (purple color) and returns their pairings
-        let comparedSelections = await Flavor.findOne({ingredient: arrForCompared.toLowerCase()}).select('pairings -_id')
+        let comparedSelections = await Flavor.findOne({ingredient: (arrForCompared[0])}).select('pairings -_id')
         //this compares the selected pairings flavor array to the key ingredient flavor array and only returns duplicates
         let comparedDuplicates = (keyIngredient.pairings).filter(flavor => (comparedSelections.pairings).includes(flavor))
-        comparedDuplicates = comparedDuplicates.filter(flavor => !pairings.includes(flavor))
+        console.log(typeof comparedDuplicates)
 
       // Trying to compare multiple Arrays////////////////////////////////////////////////////////////////////////
       // let comparedPairingArr = await Promise.all (arrForCompared.map(element =>  
-      //   Flavor.find({ingredient: element.toLowerCase().trim()}).select('pairings -_id')))
+      //   Flavor.find({ingredient: element.toLowerCase()}).select('pairings -_id')))
+      //   console.log(comparedPairingArr)
 
       res.render("builder.ejs", {
         keyIngredient: keyIngredient.ingredient,
-        pairings: pairings,
         communityPairings: communityPairings,
+        selectedPairings: pairings,
         user: req.user.id,
+        pairings: false,
         comparedDuplicates: comparedDuplicates,
-        selectedPairings: arrForCompared,})
+        selectedPairingsPurple: arrForCompared,})
         console.log('work damnit!')
     }catch (error){
         res.status(500).send({message: error.message})

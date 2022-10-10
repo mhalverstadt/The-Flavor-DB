@@ -29,7 +29,6 @@ $(document).ready(function () {
 //Event listener (event delegation) to handle button clicks on list of pairings in builder//
 pairingsList.onclick = function(event){
     let target = event.target;
-    console.log(target)
     if(target.matches('button')){
         selectedPairs.appendChild(event.target.cloneNode(true));
         event.target.remove()
@@ -45,15 +44,17 @@ selectedPairs.onclick = async function(event){
     let keyIngredientCompare = document.getElementById('keyIngredient').innerText
     //selected pairings
     let pairingArray = Array.from(document.getElementById('selectedPairs').children)
-
     //all selected pairings
-    let selectedPairings = pairingArray.map(txt => txt.value)
+    let selectedPairings = pairingArray.map(txt => txt.value.trim())
+    let encodeSelectedPairings = encodeURIComponent(JSON.stringify(selectedPairings))
+    
     //only pairings with changeColor class
-    let comparedPairing = pairingArray.filter(el => el.classList.contains('changeColor')).map(selected => selected.value)
+    let comparedPairing = pairingArray.filter(el => el.classList.contains('changeColor')).map(selected => selected.value.trim())
+    let encodeComparedPairing = encodeURIComponent(JSON.stringify(comparedPairing))
 
     //queryString and fetch
-    let queryString = `?compareKeyIngredient=${keyIngredientCompare}&compareSelectedPairings=${selectedPairings}&comparedPairings=${comparedPairing}`
-    let data = await fetch(`/searchCompare/data${queryString}`, {method: 'GET'})
+    let queryString = `?compareKeyIngredient=${keyIngredientCompare}&compareSelectedPairings=${encodeSelectedPairings}&comparedPairings=${encodeComparedPairing}`
+    window.location = `/searchCompare/data${queryString}`;
     }
 }
 
