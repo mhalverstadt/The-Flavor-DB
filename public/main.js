@@ -1,4 +1,4 @@
-
+// Search //
 $(document).ready(function () {
     $('#search').autocomplete({
         autoFocus: true,
@@ -27,20 +27,33 @@ $(document).ready(function () {
 })
 
 //Event listener (event delegation) to handle button clicks on list of pairings in builder//
-const paringsList = document.getElementById('paringsList');
 pairingsList.onclick = function(event){
     let target = event.target;
+    console.log(target)
     if(target.matches('button')){
         selectedPairs.appendChild(event.target.cloneNode(true));
         event.target.remove()
     }
 }
 
-// maybe use for highlighting buttons for comparing arrays later
-selectedPairs.onclick = function(event){
+// Highlight buttons and compare
+selectedPairs.onclick = async function(event){
     let target = event.target;
     if(target.matches('button')){
         target.classList.contains('changeColor') ? target.classList.remove('changeColor') : target.classList.add('changeColor')
+    //keyIngredient
+    let keyIngredientCompare = document.getElementById('keyIngredient').innerText
+    //selected pairings
+    let pairingArray = Array.from(document.getElementById('selectedPairs').children)
+
+    //all selected pairings
+    let selectedPairings = pairingArray.map(txt => txt.value)
+    //only pairings with changeColor class
+    let comparedPairing = pairingArray.filter(el => el.classList.contains('changeColor')).map(selected => selected.value)
+
+    //queryString and fetch
+    let queryString = `?compareKeyIngredient=${keyIngredientCompare}&compareSelectedPairings=${selectedPairings}&comparedPairings=${comparedPairing}`
+    let data = await fetch(`/searchCompare/data${queryString}`, {method: 'GET'})
     }
 }
 
@@ -53,8 +66,6 @@ saveBtn.onclick = async function(event){
     for(let i = 0; i < pairingArray.length; i++){
         pairings.push(pairingArray[i].innerHTML)
     }
-    pairings = pairings
-    console.log(pairings)
     let data = await fetch(`/createPairing`, {method: 'POST', headers: new Headers({ "Content-Type": "application/json" }), body: JSON.stringify({ keyIngredient, pairings, })})
         window.location.assign(`/profile`)  
 }
