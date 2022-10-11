@@ -21,13 +21,9 @@
       <p class= "font-bold text-2xl m-2">Key Ingredient: <span class="" id="keyIngredient"><%= keyIngredient[0].toUpperCase() + keyIngredient.slice(1)%></span></p>
         <p id="selectedPairs" class="m-2">Pairings: 
         <% if (selectedPairings) { %>
-          <ul class="row list-unstyled columns-2 lg:columns-6 md:columns-5 xl:columns-8 " id="pairingsList">
             <% for(var i=0; i<selectedPairings.length; i++) {%>
-              <li class="col-4 justify-content-between mt-1 pairing">
                 <button type="button" value="<%=selectedPairings[i]%>" class="btn btn-light ml-1" id><%=selectedPairings[i]%></button>
-              </li>
             <% } %>
-          </ul>
         </p>
         <% } %>
           
@@ -53,7 +49,9 @@
   <% } %>
 
 <!-- ////////////////////////////////////// -->
-<!--  -->
+<% if (comparedDuplicates.length == 0) { %>
+  <h2>no shared pairings</h2>
+<% } %>
 <!-- ////////////////////////////////////// -->
 
   <% if (pairings || comparedDuplicates) { %>
@@ -72,12 +70,7 @@
             <% } else {%>
               <% for(var i=0; i<comparedDuplicates.length; i++) {%>
                 <li class="col-4 justify-content-between mt-1 pairing">
-                  <button onclick= "let target = event.target;
-                  if(target.matches('button')){
-                      selectedPairs.appendChild(event.target.cloneNode(true));
-                      event.target.remove()
-                  }
-                  "type="button" value="<%=comparedDuplicates[i]%>" class="btn btn-light ml-1" id><%=comparedDuplicates[i]%></button>
+                  <button type="button" value="<%=comparedDuplicates[i]%>" class="btn btn-light ml-1" id><%=comparedDuplicates[i]%></button>
                 </li>
               <% } %>
             <% } %>

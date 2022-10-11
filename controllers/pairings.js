@@ -51,6 +51,7 @@ module.exports = {
         user: req.user || false,
         selectedPairings: false,
         comparedDuplicates: false,
+        selectedPairingsPurple:false,
       });
     } catch (err) {
       console.log(err);
@@ -141,7 +142,8 @@ module.exports = {
         communityPairings: communityPairings,
         user: req.user.id,
         selectedPairings: false,
-        comparedDuplicates: false,})
+        comparedDuplicates: false,
+        selectedPairingsPurple:false,})
     }catch (error){
         res.status(500).send({message: error.message})
     }
