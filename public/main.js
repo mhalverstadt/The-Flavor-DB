@@ -1,4 +1,4 @@
-
+// Search //
 $(document).ready(function () {
     $('#search').autocomplete({
         autoFocus: true,
@@ -27,7 +27,6 @@ $(document).ready(function () {
 })
 
 //Event listener (event delegation) to handle button clicks on list of pairings in builder//
-const paringsList = document.getElementById('paringsList');
 pairingsList.onclick = function(event){
     let target = event.target;
     if(target.matches('button')){
@@ -36,11 +35,26 @@ pairingsList.onclick = function(event){
     }
 }
 
-// maybe use for highlighting buttons for comparing arrays later
-selectedPairs.onclick = function(event){
+// Highlight buttons and compare
+selectedPairs.onclick = async function(event){
     let target = event.target;
     if(target.matches('button')){
         target.classList.contains('changeColor') ? target.classList.remove('changeColor') : target.classList.add('changeColor')
+    //keyIngredient
+    let keyIngredientCompare = document.getElementById('keyIngredient').innerText
+    //selected pairings
+    let pairingArray = Array.from(document.getElementById('selectedPairs').children)
+    //all selected pairings
+    let selectedPairings = pairingArray.map(txt => txt.value.trim())
+    let encodeSelectedPairings = encodeURIComponent(JSON.stringify(selectedPairings))
+    
+    //only pairings with changeColor class
+    let comparedPairing = pairingArray.filter(el => el.classList.contains('changeColor')).map(selected => selected.value.trim())
+    let encodeComparedPairing = encodeURIComponent(JSON.stringify(comparedPairing))
+
+    //queryString and fetch
+    let queryString = `?compareKeyIngredient=${keyIngredientCompare}&compareSelectedPairings=${encodeSelectedPairings}&comparedPairings=${encodeComparedPairing}`
+    window.location = `/searchCompare/data${queryString}`;
     }
 }
 
@@ -53,8 +67,7 @@ saveBtn.onclick = async function(event){
     for(let i = 0; i < pairingArray.length; i++){
         pairings.push(pairingArray[i].innerHTML)
     }
-    pairings = pairings
-    console.log(pairings)
+    pairings = pairings.filter(Boolean)
     let data = await fetch(`/createPairing`, {method: 'POST', headers: new Headers({ "Content-Type": "application/json" }), body: JSON.stringify({ keyIngredient, pairings, })})
         window.location.assign(`/profile`)  
 }

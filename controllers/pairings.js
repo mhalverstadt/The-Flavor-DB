@@ -3,6 +3,7 @@ const Pairing = require("../models/Pairing");
 const Comment = require("../models/Comment");
 const Flavor = require("../models/Flavor");
 const User = require("../models/User");
+const { compare } = require("bcrypt");
 
 
 module.exports = {
@@ -49,12 +50,29 @@ module.exports = {
         pairings: false,
         communityPairings: false,
         user: req.user || false,
-        pair: false
+        selectedPairings: false,
+        comparedDuplicates: false,
+        selectedPairingsPurple:false,
       });
     } catch (err) {
       console.log(err);
     }
   },
+
+  //redner builder that compares two or more ingredient pairing arrays
+  // getBuilderCompare: async (req, res) => {
+  //   try {
+  //     console.log(req)
+  //     res.render("builder-compare.ejs", {
+  //       keyIngredient: false,
+  //       pairings: false,
+  //       communityPairings: false,
+  //       user: req.user || false,
+  //       pair: false})
+  //   } catch (err){
+  //     console.log(err)
+  //   }
+  // },
 
   // autocomplete Mongo Pipeline
   getResults: async (req, res) => {
@@ -124,7 +142,87 @@ module.exports = {
         pairings: keyIngredient.pairings,
         communityPairings: communityPairings,
         user: req.user.id,
-        pair: false})
+        selectedPairings: false,
+        comparedDuplicates: false,
+        selectedPairingsPurple:false,})
+    }catch (error){
+        res.status(500).send({message: error.message})
+    }
+  },
+
+  //Compare selected pairings with key ingredient pairings, render duplicate pairings in builder.ejs
+  getComparedPairingsList: async (req, res) =>{
+    try {
+      console.log(req.query)
+      const noneFound = 'none found'
+      //this returns strings, need to find out how to return arrays. 
+      const keyIngredient = await Flavor.findOne( {ingredient: decodeURIComponent(req.query.compareKeyIngredient).toLowerCase()} )
+      const communityPairings = await Pairing.find({keyIngredient: decodeURIComponent(req.query.compareKeyIngredient).toLowerCase()})
+      //all pairings added under key ingredient
+      const pairings = JSON.parse(decodeURIComponent(req.query.compareSelectedPairings))
+      //this is all selected pairing ingredients that user wants to compare (class = changeColor)
+      const arrForCompared = JSON.parse(decodeURIComponent(req.query.comparedPairings))
+      if (arrForCompared.length > 0){
+        //this finds the array of pairings from only the selected pairings (purple color) and returns their pairings 
+        let comparedSelections = await Flavor.findOne({ingredient: (arrForCompared[0])}).select('pairings -_id')
+        //if there are pairings to compare and there are duplicated pairings:
+          if(comparedSelections){
+            let comparedDuplicates = (keyIngredient.pairings).filter(flavor => (comparedSelections.pairings).includes(flavor))
+            console.log(comparedDuplicates)
+            if(comparedDuplicates.length > 0){
+              res.render("builder.ejs", {
+                keyIngredient: keyIngredient.ingredient,
+                communityPairings: communityPairings,
+                selectedPairings: pairings,
+                user: req.user.id,
+                pairings: false,
+                comparedDuplicates: comparedDuplicates,
+                selectedPairingsPurple: arrForCompared,
+              })
+              console.log('item 1 (duplicates found)')
+          //There are no Duplicates
+            }else if (comparedDuplicates.length < 1){
+              res.render("builder.ejs", {
+                keyIngredient: keyIngredient.ingredient,
+                communityPairings: communityPairings,
+                selectedPairings: pairings,
+                user: req.user.id,
+                pairings: noneFound,
+                comparedDuplicates: false,
+                selectedPairingsPurple: arrForCompared,
+            })
+            console.log('item 2 (no duplicates)')
+          }
+    //threre are selections to compare but no pairings associacted with them
+      }else if(comparedSelections == null){
+        res.render("builder.ejs", {
+          keyIngredient: keyIngredient.ingredient,
+          communityPairings: communityPairings,
+          selectedPairings: pairings,
+          user: req.user.id,
+          pairings: noneFound,
+          comparedDuplicates: false,
+          selectedPairingsPurple: arrForCompared,
+        })
+        console.log('item 3 (no pairings found)')
+      }
+    //there are no selections to compare:
+    }else{
+      res.render("builder.ejs", {
+        keyIngredient: keyIngredient.ingredient,
+        communityPairings: communityPairings,
+        selectedPairings: pairings,
+        user: req.user.id,
+        pairings: false,
+        comparedDuplicates: keyIngredient.pairings,
+        selectedPairingsPurple: arrForCompared,
+      })
+      // Trying to compare multiple Arrays////////////////////////////////////////////////////////////////////////
+      // let comparedPairingArr = await Promise.all (arrForCompared.map(element =>  
+      //   Flavor.find({ingredient: element.toLowerCase()}).select('pairings -_id')))
+      //   console.log(comparedPairingArr)
+        console.log('item 4 (no compares)')
+      }
     }catch (error){
         res.status(500).send({message: error.message})
     }

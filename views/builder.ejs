@@ -19,7 +19,14 @@
   <% if (keyIngredient) { %>
     <section class="m-5 border max-w-xlg">
       <p class= "font-bold text-2xl m-2">Key Ingredient: <span class="" id="keyIngredient"><%= keyIngredient[0].toUpperCase() + keyIngredient.slice(1)%></span></p>
-        <h6 id="selectedPairs" class="m-2">Pairings: </h6>
+        <p id="selectedPairs" class="m-2">Pairings: 
+        <% if (selectedPairings) { %>
+            <% for(var i=0; i<selectedPairings.length; i++) {%>
+                <button type="button" value="<%=selectedPairings[i]%>" class="btn btn-light ml-1 <%= selectedPairingsPurple.includes(selectedPairings[i]) ? 'changeColor' : 'same' %>" id><%=selectedPairings[i]%></button>
+            <% } %>
+        </p>
+        <% } %>
+          
             <div class="text-right m-3">
               <button id="saveBtn" type="button" class="btn btn-primary btn-sm m-1">Save Pairing To Your Profile</button>
             </div>
@@ -36,22 +43,37 @@
   <% } %>
 
   <!-- List of Pairings -->
-  <% if (!pairings) { %>
+  <% if (!pairings && !comparedDuplicates) { %>
     <img src="/imgs/builder/macarons.png">
   <% } %>
-  <% if (pairings) { %>
+
+<!-- ////////////////////////////////////// -->
+
+<!-- ////////////////////////////////////// -->
+
+  <% if (comparedDuplicates || pairings) { %>
     <section class="bg-base-200">
       <div class="container m-5 ">
           <div class="row justify-content-center mt-6">
             <h6>Suggested Pairings:</h6>
           <% } %>
           <ul class="row list-unstyled columns-2 lg:columns-6 md:columns-5 xl:columns-8 " id="pairingsList">
+            <% if (pairings == 'none found') { %>
+              <h1 class="m-5 font-bold">No matching pairings</h1>
+            <% } else if (pairings) {%>
               <% for(var i=0; i<pairings.length; i++) {%>
-                  <li class="col-4 justify-content-between mt-1 pairing">
-                    <button type="button" value="<%=pairings[i]%>" class="btn btn-light ml-1" id><%=pairings[i]%></button>
-                  </li>
-                </form>
+                <li class="col-4 justify-content-between mt-1 pairing">
+                  <button type="button" value="<%=pairings[i]%>" class="btn btn-light ml-1" id><%=pairings[i]%></button>
+                </li>
               <% } %>
+            <% } else {%>
+              <% for(var i=0; i<comparedDuplicates.length; i++) {%>
+                <li class="col-4 justify-content-between mt-1 pairing">
+                  <button type="button" value="<%=comparedDuplicates[i]%>" class="btn btn-light ml-1" id><%=comparedDuplicates[i]%></button>
+                </li>
+              <% } %>
+            <% } %>
+
             </ul>
           </div>
         </div>

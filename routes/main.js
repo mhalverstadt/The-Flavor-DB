@@ -20,6 +20,7 @@ router.put("/likeFeedPairing/:id", pairingsController.likeFeedPairing);
 router.get("/builder", ensureAuth, pairingsController.getBuilder);
 router.get("/search", pairingsController.getResults);
 router.get("/search/:id", pairingsController.getPairingsList);
+router.get("/searchCompare/:data", pairingsController.getComparedPairingsList);
 router.post("/search/createPairing",pairingsController.createPairing);
 router.post("/createPairing",pairingsController.createPairing);
 
@@ -31,6 +32,20 @@ router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
 router.put("/createNote/:id", pairingsController.createNote);
+
+
+////////////////////////////////////////////////
+// router.get("/searchCompare/:data", async (req, res) =>{
+//     try {
+//       console.log(req.query.comparedPairings)
+//       res.send(req.query.query)
+//     }catch (error){
+//         res.status(500).send({message: error.message})
+//     }
+//   }),
+
+
+
 
 
 module.exports = router;
