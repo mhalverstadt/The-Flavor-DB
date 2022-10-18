@@ -59,21 +59,6 @@ module.exports = {
     }
   },
 
-  //redner builder that compares two or more ingredient pairing arrays
-  // getBuilderCompare: async (req, res) => {
-  //   try {
-  //     console.log(req)
-  //     res.render("builder-compare.ejs", {
-  //       keyIngredient: false,
-  //       pairings: false,
-  //       communityPairings: false,
-  //       user: req.user || false,
-  //       pair: false})
-  //   } catch (err){
-  //     console.log(err)
-  //   }
-  // },
-
   // autocomplete Mongo Pipeline
   getResults: async (req, res) => {
     try{
@@ -250,6 +235,7 @@ module.exports = {
         // cloudinaryId: result.public_id || null,
         notes: req.body.note || null,
         likes: 0,
+        likedBy: [],
         user: req.user.id || null,
         userName: req.user.userName,
       });
@@ -276,12 +262,11 @@ module.exports = {
 
   //like a pairing
   likePairing: async (req, res) => {
+    console.log(req.user._id)
     try {
       await Pairing.findOneAndUpdate(
         { _id: req.params.id },
-        {  
-          $inc: { likes: 1 },
-        }
+        { $push: { likedBy: req.user._id } },
       );
       console.log("Likes +1");
       res.redirect(`/pairing/${req.params.id}`);
@@ -292,16 +277,47 @@ module.exports = {
 
   //like feed pairing
   likeFeedPairing: async (req, res) => {
-    console.log(req.params.id)
     try {
       await Pairing.findOneAndUpdate(
         { _id: req.params.id },
-        {  
-          $inc: { likes: 1 },
-        }
+        { $push: { likedBy: req.user._id } },
       );
       console.log("Likes +1");
       res.redirect("/feed");
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+  //dislike feed pairing
+  dislikeFeedPairing: async (req, res) => {
+    try {
+      await Pairing.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          $pull: { likedBy: req.user._id },
+        },
+        {safe: true}
+      );
+      console.log("Likes -1");
+      res.redirect(`/feed/#${req.params.id}`);
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
+  //dislike pairing
+  dislikePairing: async (req, res) => {
+    try {
+      await Pairing.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          $pull: { likedBy: req.user._id },
+        },
+        {safe: true}
+      );
+      console.log("Likes -1");
+      res.redirect(`/pairing/${req.params.id}`);
     } catch (err) {
       console.log(err);
     }

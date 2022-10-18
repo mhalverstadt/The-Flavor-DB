@@ -1,8 +1,8 @@
 <%- include('partials/header') -%>
 
-<main class ="min-h-full flex flex-col min-w-full">
+<main class ="min-h-full flex flex-col min-w-full" id="profile-page">
 
-<section class="mt-5 mx-10">
+<section class="mt-5 mx-10" id="profile-card">
   <div class="flex bg-white drop-shadow-md rounded-lg p-1.5">
     <img class="w-28 h-28 rounded-full border-4 border-slate-50 object-cover"
         src="/imgs/profile/puppy-face.jpg" />
@@ -11,7 +11,7 @@
         <p><strong>Email</strong>: <%= user.email %></p>
         <a href="/logout" class="mt-1 col-3 btn btn-primary btn-sm">Logout</a>
     </div>
-</div>
+  </div>
 </section>
 
 <section>
@@ -20,7 +20,7 @@
         <% if (pairings) { %>
           <% for(var i=0; i<pairings.length; i++) {%>
               <!--Card item-->
-              <div class="rounded overflow-hidden shadow-lg">
+              <div class="rounded overflow-hidden shadow-lg bg-base-100">
                 <% if (pairings[i].image) { %>
                   <img class="w-full" src="<%=pairings[i].image%>" alt="picture of food made with pairings">
                   <% } %>
@@ -29,7 +29,8 @@
                   <p><%=pairings[i].pairings.join(' + ').toLowerCase()%></p>
                 </div>
                 <div class="px-6 pt-4 pb-2">
-                  <div class="card-actions justify-end">
+                  <div class="card-actions justify-between">
+                    <small class="text-slate-500 px-2"><%=pairings[i].createdAt.toLocaleString()%></small>
                     <a href="/pairing/<%=pairings[i]._id%>" class="btn btn-primary btn-sm">View</a>
                   </div>
                 </div>

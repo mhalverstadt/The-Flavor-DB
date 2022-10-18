@@ -25,21 +25,30 @@
       <%}%>
 
         <div class="mt-5 grid justify-items-end">
-          <h3 class="col-3 mr-6">Likes: <%= pairing.likes %></h3>
+          <h3 class="col-3 mr-6">Likes: <%= pairing.likedBy.length %></h3>
           <div href="#" class="mr-6">
             <p>Pairing made by: <a class="text-blue-700	" href="/profile/<%=pairing.user%>"><%= pairing.user == user.id ? 'You' : pairing.userName%></a></p>
+            <small class="text-slate-500 px-0"><%=pairing.createdAt.toLocaleString()%></small>
           </div>
 
           <div class="flex px-6 pt-4 pb-2 gap-1">
+
             <!-- like a pairing -->
-            <form class="col-1 inline-block" action="/pairing/likePairing/<%= pairing.id %>?_method=PUT" method="POST">
-                <button class="btn btn-primary fa fa-heart" type="submit"></button>
-            </form>
+           <% if (pairing.likedBy.includes(user._id)) { %>
+              <form class="col-1 inline-block" action="/pairing/dislikePairing/<%= pairing.id %>?_method=PUT" method="POST">
+                <button class="btn btn-primary fa fa-heart btn-sm" type="submit"></button>
+              </form>
+              
+            <% } else { %>
+              <form class="col-1 inline-block" action="/pairing/likePairing/<%= pairing.id %>?_method=PUT" method="POST">
+                <button class="btn btn-primary fa fa-heart btn-sm" type="submit"></button>
+              </form>
+            <% } %>
 
             <!-- delete a pairing -->
             <%if(pairing.user == user.id){ %>
               <form action="/pairing/deletePairing/<%= pairing.id %>?_method=DELETE" method="POST" class="col-3">
-                <button class="btn btn-primary fa fa-trash" type="submit"></button>
+                <button class="btn btn-primary fa fa-trash btn-sm" type="submit"></button>
               </form>
             <%}%>
 
