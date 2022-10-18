@@ -26,20 +26,28 @@
                 <!-- number of likes -->
               <section class="">
                 <div class="mt-5 grid justify-items-end">
-                  <h3 class="col-3 mr-6">Likes: <%= pairings[i].likes %></h3>
+                  <h3 class="col-3 mr-6">Likes: <%= pairings[i].likedBy.length %></h3>
                   <!-- made by -->
                   <div class="mr-6">
                     <p>Pairing made by: <a class="text-blue-700	" href="/profile/<%=pairings[i].user%>"><%=pairings[i].userName%></a></p>
                   </div>
+                  <small class="text-slate-500 px-6"><%=pairings[i].createdAt.toLocaleString()%></small>
                 </div>
 
                 <div class="px-6 pt-4 pb-2">
                   <div class="card-actions justify-end">
                     <div>
-                      <!-- like a pairing -->
+                      <!-- like or unlike a pairing -->
+                      <% if (pairings[i].likedBy.includes(user)) { %>
+                        <form class="col-1 inline-block" action="/dislikeFeedPairing/<%= pairings[i].id %>?_method=PUT" method="POST">
+                          <button class="btn btn-primary fa fa-heart btn-sm" type="submit"></button>
+                      </form>
+                      
+                      <% } else { %>
                       <form class="col-1 inline-block" action="/likeFeedPairing/<%= pairings[i].id %>?_method=PUT" method="POST">
-                        <button class="btn btn-primary fa fa-heart btn-sm" type="submit"></button>
-                    </form>
+                          <button class="btn btn-primary fa fa-heart btn-sm" type="submit"></button>
+                      </form>
+                    <% } %>
                     </div>
                     <a href="/pairing/<%=pairings[i]._id%>" class="btn btn-primary btn-sm">View</a>
                   </div>

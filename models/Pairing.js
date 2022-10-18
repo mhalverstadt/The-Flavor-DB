@@ -16,8 +16,12 @@ const PairingSchema = new mongoose.Schema({
   notes: {
     type: String,
   },
-  likes: {
-    type: Number,
+  // likes: {
+  //   type: Number,
+  //   required: true,
+  // },
+  likedBy:{
+    type: Array,
     required: true,
   },
   user: {

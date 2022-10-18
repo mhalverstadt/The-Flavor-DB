@@ -1,0 +1,31 @@
+//autocomplete
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "ingredient": [
+        {
+          "foldDiacritics": false,
+          "maxGrams": 7,
+          "minGrams": 3,
+          "tokenization": "edgeGram",
+          "type": "autocomplete"
+        }
+      ]
+    }
+  }
+}
+
+//default
+{
+    "mappings": {
+      "dynamic": false,
+      "fields": {
+        "ingredient": {
+          "analyzer": "lucene.standard",
+          "searchAnalyzer": "lucene.standard",
+          "type": "string"
+        }
+      }
+    }
+  }

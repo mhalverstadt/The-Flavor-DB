@@ -2,7 +2,7 @@ const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
 
-//renders profile or the login page depending on if user is already logged in
+//renders builder or the login page depending on if user is already logged in
 exports.getLogin = (req, res) => {
   if (req.user) {
     return res.redirect("/builder");

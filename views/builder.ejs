@@ -9,7 +9,7 @@
       <% }else { %>
           <h4 class="text-2xl mb-1">Search:</h4>
       <% } %>
-      <form action="/search" method="GET">
+      <form action="/search" method="GET" onkeydown="return event.key != 'Enter';">
         <input class ="input-bordered text-2xl p-2" type="search" name="search" id="search" placeholder="Enter an Ingredient">
       </form>
   </section>
