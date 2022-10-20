@@ -8,8 +8,12 @@
         src="/imgs/profile/puppy-face.jpg" />
     <div class="flex flex-col px-5 py-1">
         <h4 class="font-bold text-lg text-pink-600"><%= userName %></h4>
-        <p><strong>Email</strong>: <%= user.email %></p>
-        <a href="/logout" class="mt-1 col-3 btn btn-primary btn-sm">Logout</a>
+        <!-- display email and logout button if it is your profile-->
+        <%if(user._id === profileUser || user.id === profileUser){ %>
+          <p><strong>Email</strong>: <%= user.email %></p>
+          <a href="/logout" class="mt-1 col-3 btn btn-primary btn-sm">Logout</a>
+        <% } %>
+
     </div>
   </div>
 </section>

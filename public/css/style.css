@@ -1197,6 +1197,12 @@ html {
   --tw-placeholder-opacity: 0.2;
 }
 
+.mockup-phone .display {
+  overflow: hidden;
+  border-radius: 40px;
+  margin-top: -25px;
+}
+
 @keyframes progress-loading {
   50% {
     left: 107%;
@@ -1385,6 +1391,14 @@ html {
   margin-right: 2.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.ml-20 {
+  margin-left: 5rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -1425,14 +1439,6 @@ html {
   margin-right: 1.5rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.ml-20 {
-  margin-left: 5rem;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -1443,6 +1449,10 @@ html {
 
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-28 {
@@ -1634,6 +1644,11 @@ html {
   padding-right: 0.5rem;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1708,14 +1723,14 @@ html {
   color: rgb(29 78 216 / var(--tw-text-opacity));
 }
 
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
 .text-slate-500 {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .text-pink-600 {
@@ -1723,8 +1738,8 @@ html {
   color: rgb(219 39 119 / var(--tw-text-opacity));
 }
 
-.underline-offset-auto {
-  text-underline-offset: auto;
+.underline {
+  text-decoration-line: underline;
 }
 
 .shadow-2xl {
@@ -1742,6 +1757,12 @@ html {
 .drop-shadow-md {
   --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 @media (min-width: 480px) {
@@ -1795,7 +1816,6 @@ html {
   }
 }
 
-
 #login-container {
   background-image: url("/imgs/login/citrus.jpg") !important;
   /* background-position: right 80% bottom 60%; */
@@ -1807,8 +1827,9 @@ html {
 
 #profile-page {
   background-image: url("/imgs/pngs/honey.png") !important;
-  background-size: cover;
+  background-size: 60%;
   background-repeat: no-repeat;
+  background-position: right 20% bottom 30%;
 }
 
 button,

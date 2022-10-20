@@ -1,11 +1,17 @@
-
 #login-container {
-  background-image: url("/imgs/login/chilies.jpg") !important;
-  background-position: right 80% bottom 60%;
+  background-image: url("/imgs/login/citrus.jpg") !important;
+  /* background-position: right 80% bottom 60%; */
 }
 
 #signup-container {
   background-image: url("/imgs/signup/berries1.jpg") !important;
+}
+
+#profile-page {
+  background-image: url("/imgs/pngs/honey.png") !important;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: right 20% bottom 30%;
 }
 
 button,

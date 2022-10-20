@@ -13,19 +13,19 @@ module.exports = {
     console.log('getting profile')
     try {
       const pairings = await Pairing.find({ user: req.user.id }).sort({ createdAt: "desc" });
-      res.render("profile.ejs", { pairings: pairings, user: req.user, userName: req.user.userName });
+      res.render("profile.ejs", { pairings: pairings, user: req.user, userName: req.user.userName, profileUser: req.user._id});
     } catch (err) {
       console.log(err);
     }
   },
 
-  //reder another user's profile
+  //render another user's profile
   getCommunityProfile: async (req, res) => {
-    console.log('getting community profile')
     try {
+      console.log(req.params)
       const pairings = await Pairing.find({ user: req.params.id });
       const profileInfo = await User.find({ _id: req.params.id });
-      res.render("profile.ejs", { pairings: pairings, user: req.params.id, userName: profileInfo[0].userName, });
+      res.render("profile.ejs", { pairings: pairings, user: req.params.id, userName: profileInfo[0].userName, profileUser: req.user._id});
     } catch (err) {
       console.log(err);
     }
@@ -323,6 +323,25 @@ module.exports = {
     }
   },
 
+  //add image
+  addImg: async(req, res) => {
+    try {
+      const result = await cloudinary.uploader.upload(req.file.path);
+      const comments = await Comment.find({pairing: req.params.id}).sort({ createdAt: "desc" }).lean();
+      let pairingUpdate = await Pairing.findOneAndUpdate(
+        {_id: req.params.id},
+        {cloudinaryId: result.public_id,
+          image: result.secure_url
+        }
+        )
+      let pairing = await Pairing.findById(req.params.id)
+      console.log(pairing)
+      res.render("pairing.ejs", { pairing: pairing, user: req.user, comments: comments,});
+    } catch (err) {
+      console.log(err)
+    }
+  },
+
   //delete a pairing
   deletePairing: async (req, res) => {
     try {
@@ -331,6 +350,7 @@ module.exports = {
       if (pairing.image){
         await cloudinary.uploader.destroy(pairing.cloudinaryId);
       }
+      let comments = await Comment.deleteMany({pairing: req.params.id})
       // Delete post from db
       await Pairing.deleteOne({ _id: req.params.id });
       console.log("Deleted Pairing");

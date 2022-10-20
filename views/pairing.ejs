@@ -48,7 +48,7 @@
             <!-- delete a pairing -->
             <%if(pairing.user == user.id){ %>
               <form action="/pairing/deletePairing/<%= pairing.id %>?_method=DELETE" method="POST" class="col-3">
-                <button class="btn btn-primary fa fa-trash btn-sm" type="submit"></button>
+                <button class="btn btn-primary fa fa-trash btn-sm" onclick="return confirm('Are you sure you want to delete this Pairing?')" type="submit"></button>
               </form>
             <%}%>
 
@@ -58,7 +58,22 @@
   </div>
   <!-- end pairing -->
   
-  <section class="max-h-fit">
+  <section class="">
+    <!-- upload image -->
+    <%if(pairing.user == user.id){ %>
+      <div class="mx-10">
+        <div class="font-bold text-1xl mb-2">
+          Add an image to you pairing
+        </div>
+        <div>
+          <form action="addImg/<%=pairing._id%>?_method=PUT" enctype="multipart/form-data" method="POST">
+            <input type="file" class="form-control" id="imageUpload" name="file">
+            <button type="submit" class="btn btn-primary fa fa-picture-o btn-sm" value="Upload"></button>
+          </form>
+        </div>
+      </div>
+    <% } %>
+    
     <!-- add note to your own pairing -->
     <%if(pairing.user == user.id){ %>
       <div class="p-2 mx-auto">  

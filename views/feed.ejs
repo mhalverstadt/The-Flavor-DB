@@ -44,16 +44,17 @@
                       </form>
                       
                       <% } else { %>
-                      <form class="col-1 inline-block" action="/likeFeedPairing/<%= pairings[i].id %>?_method=PUT" method="POST">
-                          <button class="btn btn-primary fa fa-heart btn-sm" type="submit"></button>
-                      </form>
-                    <% } %>
+                        <form class="col-1 inline-block" action="/likeFeedPairing/<%= pairings[i].id %>?_method=PUT" method="POST">
+                            <button class="btn btn-primary fa fa-heart btn-sm" type="submit"></button>
+                        </form>
+                      <% } %>
+
                     </div>
                     <a href="/pairing/<%=pairings[i]._id%>" class="btn btn-primary btn-sm">View</a>
                   </div>
                 </div>
               </section>
-              </div>
+            </div>
           <% } %>
         <% } %>
     </div>
