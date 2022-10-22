@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('#search').autocomplete({
         autoFocus: true,
         source: async function(request,response) {
-            let data= await fetch(`http://localhost:2121/search?query=${request.term}`)
+            let data= await fetch(`https://the-flavor-db.cyclic.app/search?query=${request.term}`)
                     .then(results => results.json())
                     .then(results => results.map(result => {
                         return {
@@ -18,7 +18,7 @@ $(document).ready(function () {
         minLength: 1,
         select: function(event, ui) {
             console.log(ui.item.id)
-            fetch(`http://localhost:2121/search/${ui.item.id}`)
+            fetch(`https://the-flavor-db.cyclic.app/search/${ui.item.id}`)
                 .then(result => {
                     window.location.assign(result.url)
             })
