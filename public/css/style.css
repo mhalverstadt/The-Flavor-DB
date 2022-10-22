@@ -1805,48 +1805,54 @@ html {
   }
 }
 
-#login-container {
-  background-image: url("/imgs/login/citrus.jpg") !important;
-  /* background-position: right 80% bottom 60%; */
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-#signup-container {
-  background-image: url("/imgs/signup/berries1.jpg") !important;
-}
+@layer components {
+  #login-container {
+    background-image: url("/imgs/login/citrus.jpg") !important;
+    /* background-position: right 80% bottom 60%; */
+  }
 
-#profile-page {
-  background-image: url("/imgs/pngs/honey.png") !important;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: right 20% bottom 30%;
-}
+  #signup-container {
+    background-image: url("/imgs/signup/berries1.jpg") !important;
+  }
 
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
-  /* 1 */
-  background-color: rgb(0, 98, 209) !important;
-  /* 2 */
-  background-image: none;
-  /* 2 */
-}
+  #profile-page {
+    background-image: url("/imgs/pngs/honey.png") !important;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: right 20% bottom 30%;
+  }
 
-.input-bordered{
-  border: solid black 1px !important;
-  border-radius: 5px;
-  --tw-border-opacity: 0.2;
-}
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+    -webkit-appearance: button;
+    /* 1 */
+    background-color: rgb(0, 98, 209) !important;
+    /* 2 */
+    background-image: none;
+    /* 2 */
+  }
 
-.changeColor{
-  background-color: rgb(71, 50, 109) !important;
-}
+  .input-bordered{
+    border: solid black 1px !important;
+    border-radius: 5px;
+    --tw-border-opacity: 0.2;
+  }
 
-#demoSubmit{
-  background: none !important;
-  border: none !important;
-  color: #1a0dab !important;
-  text-decoration: underline;
-  cursor: pointer !important;
+  .changeColor{
+    background-color: rgb(71, 50, 109) !important;
+  }
+
+  #demoSubmit{
+    background: none !important;
+    border: none !important;
+    color: #1a0dab !important;
+    text-decoration: underline;
+    cursor: pointer !important;
+  }
 }
