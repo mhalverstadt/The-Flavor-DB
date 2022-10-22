@@ -1853,3 +1853,11 @@ button,
 .changeColor{
   background-color: rgb(71, 50, 109) !important;
 }
+
+#demoSubmit{
+  background: none !important;
+  border: none !important;
+  color: #1a0dab !important;
+  text-decoration: underline;
+  cursor: pointer !important;
+}
