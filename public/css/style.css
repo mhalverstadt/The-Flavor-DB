@@ -2184,6 +2184,52 @@ html {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+#login-container {
+  background-image: url("/imgs/login/citrus.jpg") !important;
+  /* background-position: right 80% bottom 60%; */
+}
+
+#signup-container {
+  background-image: url("/imgs/signup/berries1.jpg") !important;
+}
+
+#profile-page {
+  background-image: url("/imgs/pngs/honey.png") !important;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: right 20% bottom 30%;
+}
+
+button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: rgb(0, 98, 209) !important;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+.input-bordered{
+  border: solid black 1px !important;
+  border-radius: 5px;
+  --tw-border-opacity: 0.2;
+}
+
+.changeColor{
+  background-color: rgb(71, 50, 109) !important;
+}
+
+#demoSubmit{
+  background: none !important;
+  border: none !important;
+  color: #1a0dab !important;
+  text-decoration: underline;
+  cursor: pointer !important;
+}
+
 @media (min-width: 480px) {
   .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -2233,50 +2279,4 @@ html {
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-}
-
-#login-container {
-  background-image: url("/imgs/login/citrus.jpg") !important;
-  /* background-position: right 80% bottom 60%; */
-}
-
-#signup-container {
-  background-image: url("/imgs/signup/berries1.jpg") !important;
-}
-
-#profile-page {
-  background-image: url("/imgs/pngs/honey.png") !important;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: right 20% bottom 30%;
-}
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
-  /* 1 */
-  background-color: rgb(0, 98, 209) !important;
-  /* 2 */
-  background-image: none;
-  /* 2 */
-}
-
-.input-bordered{
-  border: solid black 1px !important;
-  border-radius: 5px;
-  --tw-border-opacity: 0.2;
-}
-
-.changeColor{
-  background-color: rgb(71, 50, 109) !important;
-}
-
-#demoSubmit{
-  background: none !important;
-  border: none !important;
-  color: #1a0dab !important;
-  text-decoration: underline;
-  cursor: pointer !important;
 }
