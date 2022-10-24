@@ -17,7 +17,7 @@
   <!-- Key ingredient plus pairings builder -->
   
   <% if (keyIngredient) { %>
-    <section class="m-5 border max-w-xlg">
+    <section class="m-5 border max-w-xlg ">
       <p class= "font-bold text-2xl m-2">Key Ingredient: <span class="" id="keyIngredient"><%= keyIngredient[0].toUpperCase() + keyIngredient.slice(1)%></span></p>
         <p id="selectedPairs" class="m-2">Pairings: 
         <% if (selectedPairings) { %>
@@ -29,6 +29,7 @@
       <div class="text-right m-3">
         <button id="saveBtn" type="button" class="btn btn-primary btn-sm m-1">Save Pairing To Your Profile</button>
       </div>
+        <small>*Test Feature: you can compare your Key Ingredient and a pairing to see the suggested flavor combinations that BOTH ingredients will go with. Simply click on a pairing once you've chosen it from the suggested pairings.</small>
     </section>
 
     <!-- add your own pairing -->
