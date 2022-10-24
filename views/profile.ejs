@@ -9,7 +9,7 @@
     <div class="flex flex-col px-5 py-1">
         <h4 class="font-bold text-lg text-pink-600"><%= userName %></h4>
         <!-- display email and logout button if it is your profile-->
-        <%if(user._id === profileUser || user.id === profileUser){ %>
+        <%if(user._id === profileUser){ %>
           <p><strong>Email</strong>: <%= user.email %></p>
           <a href="/logout" class="mt-1 col-3 btn btn-primary btn-sm">Logout</a>
         <% } %>
@@ -19,7 +19,11 @@
 </section>
 
 <section>
-  <h2 class=" mx-10 mt-10 text-2xl font-bold">Your Pairings</h2>
+  <%if(user._id === profileUser){ %>
+    <h2 class=" mx-10 mt-10 text-2xl font-bold">Your Pairings</h2>
+  <% } else {%>
+    <h2 class=" mx-10 mt-10 text-2xl font-bold"><%= pairings.userName %></h2>
+  <% } %>
     <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
         <% if (pairings) { %>
           <% for(var i=0; i<pairings.length; i++) {%>
