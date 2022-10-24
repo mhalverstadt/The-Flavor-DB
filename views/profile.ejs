@@ -27,22 +27,26 @@
     <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
         <% if (pairings) { %>
           <% for(var i=0; i<pairings.length; i++) {%>
+
               <!--Card item-->
-              <div class="rounded overflow-hidden shadow-lg bg-base-100">
-                <% if (pairings[i].image) { %>
-                  <img class="w-full" src="<%=pairings[i].image%>" alt="picture of food made with pairings">
-                  <% } %>
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2"><%=pairings[i].keyIngredient%></div>
-                  <p><%=pairings[i].pairings.join(' + ').toLowerCase()%></p>
+              <div class="rounded overflow-hidden shadow-lg bg-base-100 flex-col justify-between flex-1 flex">
+                <div>
+                  <% if (pairings[i].image) { %>
+                    <img class="w-full" src="<%=pairings[i].image%>" alt="picture of food made with pairings">
+                    <% } %>
+                  <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2"><%=pairings[i].keyIngredient%></div>
+                    <p><%=pairings[i].pairings.join(' + ').toLowerCase()%></p>
+                  </div>
                 </div>
-                <div class="px-6 pt-4 pb-2">
+                <div class="px-6 pt-4 pb-2 m-3">
                   <div class="card-actions justify-between">
                     <small class="text-slate-500 px-2"><%=pairings[i].createdAt.toLocaleString()%></small>
                     <a href="/pairing/<%=pairings[i]._id%>" class="btn btn-primary btn-sm">View</a>
                   </div>
                 </div>
               </div>
+
           <% } %>
         <% } %>
     </div>

@@ -58,21 +58,24 @@
   </div>
   <!-- end pairing -->
   
+  <% if (!pairing.image) { %>
   <section class="">
     <!-- upload image -->
     <%if(pairing.user == user.id){ %>
-      <div class="mx-10">
+      <div class="mx-10 mb-1">
         <div class="font-bold text-1xl mb-2">
           Add an image to you pairing
         </div>
-        <div>
+        <small>*img files must be less then 5mb</small>
+        <div class="">
           <form action="addImg/<%=pairing._id%>?_method=PUT" enctype="multipart/form-data" method="POST">
             <input type="file" class="form-control" id="imageUpload" name="file">
-            <button type="submit" class="btn btn-primary fa fa-picture-o btn-sm" value="Upload"></button>
+            <button type="submit" class="btn btn-primary btn-sm" value="Upload">Upload</button>
           </form>
         </div>
       </div>
     <% } %>
+  <% } %>
     
     <!-- add note to your own pairing -->
     <%if(pairing.user == user.id){ %>

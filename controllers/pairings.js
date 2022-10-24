@@ -22,7 +22,7 @@ module.exports = {
   //render another user's profile
   getCommunityProfile: async (req, res) => {
     try {
-      const pairings = await Pairing.find({ user: req.params.id });
+      const pairings = await Pairing.find({ user: req.params.id }).sort({ createdAt: "desc" });
       const profileInfo = await User.find({ _id: req.params.id });
       res.render("profile.ejs", { pairings: pairings, user: req.params.id, userName: profileInfo[0].userName, profileUser: req.user._id});
     } catch (err) {
@@ -331,8 +331,7 @@ module.exports = {
         {_id: req.params.id},
         {cloudinaryId: result.public_id,
           image: result.secure_url
-        }
-        )
+        })
       let pairing = await Pairing.findById(req.params.id)
       console.log(pairing)
       res.render("pairing.ejs", { pairing: pairing, user: req.user, comments: comments,});
@@ -346,7 +345,7 @@ module.exports = {
     try {
       let pairing = await Pairing.findById({ _id: req.params.id });
       // Delete image from cloudinary
-      if (pairing.image){
+      if (  pairing.image){
         await cloudinary.uploader.destroy(pairing.cloudinaryId);
       }
       let comments = await Comment.deleteMany({pairing: req.params.id})
