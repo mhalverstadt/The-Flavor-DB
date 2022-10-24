@@ -44,8 +44,9 @@ selectedPairs.onclick = async function(event){
     let keyIngredientCompare = document.getElementById('keyIngredient').innerText
     //selected pairings
     let pairingArray = Array.from(document.getElementById('selectedPairs').children)
+    console.log(pairingArray)
     //all selected pairings
-    let selectedPairings = pairingArray.map(txt => txt.value.trim())
+    let selectedPairings = pairingArray.map(txt => txt.innerHTML.trim())
     let encodeSelectedPairings = encodeURIComponent(JSON.stringify(selectedPairings))
     
     //only pairings with changeColor class

@@ -22,7 +22,6 @@ module.exports = {
   //render another user's profile
   getCommunityProfile: async (req, res) => {
     try {
-      console.log(req.params)
       const pairings = await Pairing.find({ user: req.params.id });
       const profileInfo = await User.find({ _id: req.params.id });
       res.render("profile.ejs", { pairings: pairings, user: req.params.id, userName: profileInfo[0].userName, profileUser: req.user._id});
