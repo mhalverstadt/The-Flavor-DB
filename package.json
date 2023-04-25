@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tailwindcss -i ./config/input.css -o ./public/css/style.css",
     "watch": "tailwindcss -i ./config/input.css -o ./public/css/style.css --watch",
-    "dev": "nodemon -L server.js",
+    // "dev": "nodemon -L server.js",
     "sync": "browser-sync start --server --files *.js, controllers/*.js, middleware/*.js, models/*.js, public/*.js, public/css/*.css, public/imgs/*, routes/*.js, views/*.ejs, views/partials/*.ejs --config bs-config.js"
   },
   "author": "",
