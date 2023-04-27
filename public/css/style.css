@@ -2185,12 +2185,12 @@ html {
 }
 
 #login-container {
-  background-image: url("/imgs/login/citrus.jpg") !important;
+  background-image: url("/imgs/login/citrus.webp") !important;
   /* background-position: right 80% bottom 60%; */
 }
 
 #signup-container {
-  background-image: url("/imgs/signup/berries1.jpg") !important;
+  background-image: url("/imgs/signup/berries1.webp") !important;
 }
 
 #profile-page {
