@@ -293,9 +293,7 @@ module.exports = {
     try {
       await Pairing.findOneAndUpdate(
         { _id: req.params.id },
-        {
-          $pull: { likedBy: req.user._id },
-        },
+        { $pull: { likedBy: req.user._id }, },
         {safe: true}
       );
       console.log("Likes -1");
@@ -310,9 +308,7 @@ module.exports = {
     try {
       await Pairing.findOneAndUpdate(
         { _id: req.params.id },
-        {
-          $pull: { likedBy: req.user._id },
-        },
+        { $pull: { likedBy: req.user._id }, },
         {safe: true}
       );
       console.log("Likes -1");
@@ -327,7 +323,7 @@ module.exports = {
     try {
       const result = await cloudinary.uploader.upload(req.file.path);
       const comments = await Comment.find({pairing: req.params.id}).sort({ createdAt: "desc" }).lean();
-      let pairingUpdate = await Pairing.findOneAndUpdate(
+      await Pairing.findOneAndUpdate(
         {_id: req.params.id},
         {cloudinaryId: result.public_id,
           image: result.secure_url
@@ -345,7 +341,7 @@ module.exports = {
     try {
       let pairing = await Pairing.findById({ _id: req.params.id });
       // Delete image from cloudinary
-      if (  pairing.image){
+      if (pairing.image){
         await cloudinary.uploader.destroy(pairing.cloudinaryId);
       }
       let comments = await Comment.deleteMany({pairing: req.params.id})
