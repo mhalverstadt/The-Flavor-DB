@@ -18,10 +18,12 @@ $(document).ready(function () {
         minLength: 1,
         select: function(event, ui) {
             console.log(ui.item.id)
-            fetch(`https://the-flavor-db.cyclic.app/search/${ui.item.id}`)
-                .then(result => {
-                    window.location.assign(result.url)
-            })
+            window.location.assign(`https://the-flavor-db.cyclic.app/search/${ui.item.id}`)
+            // fetch(`https://the-flavor-db.cyclic.app/search/${ui.item.id}`)
+            //     .then(result => {
+            //         console.log(result.url)
+            //         window.location.assign(result.url)
+            // })
         }
     })
 })
