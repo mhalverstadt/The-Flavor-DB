@@ -16,14 +16,9 @@ $(document).ready(function () {
                 console.log(response)
         },
         minLength: 1,
-        select: function(event, ui) {
+        select: function(event, ui) {  
             console.log(ui.item.id)
             window.location.assign(`https://the-flavor-db.cyclic.app/search/${ui.item.id}`)
-            // fetch(`https://the-flavor-db.cyclic.app/search/${ui.item.id}`)
-            //     .then(result => {
-            //         console.log(result.url)
-            //         window.location.assign(result.url)
-            // })
         }
     })
 })
