@@ -81,40 +81,7 @@ module.exports = {
       console.log(err)
     }
   },
-  
-//TEST SEARCH PIPELINE NOT IN USE////////////////////
-  // getResults: async (req, res) => {
-  //   try {
-  //     let results;
-  //     if (req.query.name) {
-  //       results = await Flavor.aggregate([
-  //         {
-  //           $search: {
-  //             index: "default",
-  //             compound: {
-  //               must: [
-  //                 {
-  //                   text: {
-  //                     query: `${req.query.query}`,
-  //                     path: "ingredient",
-  //                     fuzzy: {
-  //                       maxEdits: 1,
-  //                     },
-  //                   },
-  //                 },
-  //               ],
-  //             },
-  //           },
-  //         },
-  //       ]);
-  //       res.send(results);
-  //     }
-  //     res.send([]);
-  //   } catch (error) {
-  //     console.log(error);
-  //     res.send([]);
-  //   }
-  // },
+
 
   //renders array of pairings of key ingredient from "/search/:id" route
   getPairingsList: async (req, res) =>{
