@@ -172,7 +172,7 @@ module.exports = {
       // let comparedPairingArr = await Promise.all (arrForCompared.map(element =>  
       //   Flavor.find({ingredient: element.toLowerCase()}).select('pairings -_id')))
       //   console.log(comparedPairingArr)
-        console.log('item 4 (no compares)')
+        // console.log('item 4 (no compares)')
       }
     }catch (error){
         res.status(500).send({message: error.message})
